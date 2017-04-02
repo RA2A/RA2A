@@ -8,11 +8,12 @@ RequiresMods:
 
 Packages:
 	~^Content/ra2
+
+	./mods/common: common
+	./mods/as: as
 	
 	$ra2a: ra2a
 	$cnc: cnc
-	$as: as
-	$common: common
 	
 	~ra2.mix
 	~language.mix
@@ -46,8 +47,6 @@ MapFolders:
 
 Rules:
 
-Weapons:
-
 Sequences:
 
 VoxelSequences:
@@ -57,6 +56,9 @@ Cursors:
 Chrome:
 
 Assemblies:
+	common|OpenRA.Mods.Common.dll
+	common|OpenRA.Mods.Cnc.dll
+	as|OpenRA.Mods.AS.dll
 
 ChromeLayout:
 
@@ -120,8 +122,6 @@ SpriteFormats: ShpTS, TmpTs, ShpTD
 SpriteSequenceFormat:
 
 GameSpeeds:
-
-ColorValidator:
 
 ModContent:
 	InstallPromptMessage: Red Alert 2 Advanced requires artwork and audio from the original Red Alert 2 game.
