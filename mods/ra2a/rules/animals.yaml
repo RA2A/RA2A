@@ -1,0 +1,54 @@
+cow:
+	Inherits: ^Animal
+	Tooltip:
+		Name: Cow
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 4c0
+	Voiced:
+		VoiceSet: CowVoice
+	AmbientSound:
+		SoundFile: gcowsela.wav #, gcowselb.wav, gcowselc.wav
+		Interval: 200
+	-AutoTarget:
+	-AttackMove:
+	-Guard:
+	-AttackFrontal:
+
+all:
+	Inherits: ^Animal
+	Tooltip:
+		Name: Alligator
+	Voiced:
+		VoiceSet: AlligatorVoice
+	Armament:
+		Weapon: AlligatorBite
+
+polarb:
+	Inherits: ^Animal
+	Tooltip:
+		Name: Polar Bear
+	Voiced:
+		VoiceSet: BearVoice
+	Armament:
+		Weapon: BearBite
+
+josh:
+	Inherits: ^Animal
+	Tooltip:
+		Name: Monkey
+	Voiced:
+		VoiceSet: ChimpanzeeVoice
+	Armament:
+		Weapon: ChimpBite
+	WithDeathAnimation@effect:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: false
+		DeathTypes:
+			RadiationDeath: 4
+			ElectroDeath: 6
+	-WithDeathAnimation@flames:
+	SpawnActorOnDeath@flames:
+		Actor: FLAMEGUY
+		DeathType: FlameDeath

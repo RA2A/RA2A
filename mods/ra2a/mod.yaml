@@ -2,19 +2,20 @@ Metadata:
 	Title: Red Alert 2 Advanced
 	Description: 
 	Version: {DEV_VERSION}
-	Author: RA2A Team
+	Author: the RA2A mod team
 
 RequiresMods:
 
 Packages:
 	~^Content/ra2
+	.
 
-	./mods/common: common
-	./mods/as: as
-	
 	$ra2a: ra2a
 	$cnc: cnc
-	
+
+	./mods/as: as
+	./mods/common: common
+
 	~ra2.mix
 	~language.mix
 	~multi.mix
@@ -41,19 +42,65 @@ Packages:
 	~urban.mix
 	~audio.bag
 
+	ra2a|bits
+	ra2a|bits/cameos
+	ra2a|bits/structures
+	ra2a|bits/animations
+	ra2a|uibits
+
 MapFolders:
 	ra2a|maps: System
-	~^maps/ra2a: User
+	~^maps/ra2a/{DEV_VERSION}: User
 
 Rules:
+	ra2a|rules/proxy-actors.yaml
+	ra2a|rules/misc.yaml
+	ra2a|rules/ai.yaml
+	ra2a|rules/player.yaml
+	ra2a|rules/world.yaml
+	ra2a|rules/palettes.yaml
+	ra2a|rules/defaults.yaml
+	ra2a|rules/allied-infantry.yaml
+	ra2a|rules/soviet-infantry.yaml
+	ra2a|rules/civilians.yaml
+	ra2a|rules/animals.yaml
+	ra2a|rules/allied-structures.yaml
+	ra2a|rules/soviet-structures.yaml
+	ra2a|rules/civilian-structures.yaml
+	ra2a|rules/tech-structures.yaml
+	ra2a|rules/allied-vehicles.yaml
+	ra2a|rules/soviet-vehicles.yaml
+	ra2a|rules/civilian-vehicles.yaml
+	ra2a|rules/allied-naval.yaml
+	ra2a|rules/soviet-naval.yaml
+	ra2a|rules/aircraft.yaml
+	ra2a|rules/civilian-props.yaml
+	ra2a|rules/trees.yaml
+	ra2a|rules/civilian-naval.yaml
 
 Sequences:
+	ra2a|sequences/misc.yaml
+	ra2a|sequences/aircraft.yaml
+	ra2a|sequences/allied-infantry.yaml
+	ra2a|sequences/soviet-infantry.yaml
+	ra2a|sequences/animals.yaml
+	ra2a|sequences/allied-structures.yaml
+	ra2a|sequences/soviet-structures.yaml
+	ra2a|sequences/civilians.yaml
+	ra2a|sequences/civilian-structures.yaml
+	ra2a|sequences/civilian-props.yaml
+	ra2a|sequences/tech-structures.yaml
+	ra2a|sequences/vehicles.yaml
+	ra2a|sequences/trees.yaml
 
 VoxelSequences:
+	ra2a|sequences/voxels.yaml
 
 Cursors:
+	ra2a|cursors.yaml
 
 Chrome:
+	ra2a|chrome.yaml
 
 Assemblies:
 	common|OpenRA.Mods.Common.dll
@@ -61,14 +108,62 @@ Assemblies:
 	as|OpenRA.Mods.AS.dll
 
 ChromeLayout:
+	ra2a|chrome/ingame-player.yaml
+	ra2a|chrome/ingame-infoobjectives.yaml
+	common|chrome/ingame-infostats.yaml
+	common|chrome/ingame-observerstats.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/tooltips.yaml
+	common|chrome/ingame.yaml
+	common|chrome/ingame-observer.yaml
+	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-menu.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infobriefing.yaml
+	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-perf.yaml
+	common|chrome/mainmenu.yaml
+	common|chrome/settings.yaml
+	common|chrome/credits.yaml
+	common|chrome/lobby.yaml
+	common|chrome/lobby-players.yaml
+	common|chrome/lobby-options.yaml
+	common|chrome/lobby-music.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/lobby-globalchat.yaml
+	common|chrome/multiplayer.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/multiplayer-globalchat.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/connection.yaml
+	common|chrome/replaybrowser.yaml
+	ra2a|chrome/assetbrowser.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/editor.yaml
 
 Weapons:
+	ra2a|weapons.yaml
+	ra2a|weapons/allied-infantry.yaml
+	ra2a|weapons/soviet-infantry.yaml
 
 Voices:
+	ra2a|audio/voices.yaml
 
 Notifications:
+	ra2a|audio/notifications.yaml
 
 TileSets:
+	ra2a|tilesets/temperat.yaml
+	ra2a|tilesets/snow.yaml
+	ra2a|tilesets/urban.yaml
 
 MapGrid:
 	Type: RectangularIsometric
@@ -78,14 +173,23 @@ MapGrid:
 	MaximumTerrainHeight: 16
 
 Music:
+	ra2a|audio/music.yaml
 
 Translations:
+	ra2a|languages/english.yaml
 
-LoadScreen:
+LoadScreen: LogoStripeLoadScreen
+	Image: ra2a|uibits/loadscreen.png
+	Text: Carving wooden nickels..., Preparing paratroopers..., Welcoming you to Texas..., Optimizing helium mix..., Receiving thoughts..., Igniting boosters...
 
 ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
 
 ChromeMetrics:
+	common|metrics.yaml
+	ra2a|metrics.yaml
 
 Fonts:
 	Regular:
@@ -113,15 +217,44 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size:10
 
-SupportsMapsFrom: ra2a, ra2
+SupportsMapsFrom: ra2a
 
 SoundFormats: Aud, Wav
 
-SpriteFormats: ShpTS, TmpTs, ShpTD
+SpriteFormats: ShpTS, TmpTS, ShpTD
 
-SpriteSequenceFormat:
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERATE: .tem
+		SNOW: .sno
+		URBAN: .urb
+	TilesetCodes:
+		GENERIC: g
+		SNOW: a
+		TEMPERATE: t
+		URBAN: u
 
 GameSpeeds:
+	slower:
+		Name: Slower
+		Timestep: 50
+		OrderLatency: 3
+	default:
+		Name: Default
+		Timestep: 40
+		OrderLatency: 3
+	fast:
+		Name: Fast
+		Timestep: 35
+		OrderLatency: 4
+	faster:
+		Name: Faster
+		Timestep: 30
+		OrderLatency: 4
+	fastest:
+		Name: Fastest
+		Timestep: 20
+		OrderLatency: 6
 
 ModContent:
 	InstallPromptMessage: Red Alert 2 Advanced requires artwork and audio from the original Red Alert 2 game.

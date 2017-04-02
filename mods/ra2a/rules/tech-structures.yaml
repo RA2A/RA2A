@@ -1,0 +1,107 @@
+caoild:
+	Inherits: ^TechBuilding
+	Selectable:
+		Bounds: 96, 104, -2, -26
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	EngineerRepairable:
+	CashTrickler:
+		Interval: 100
+		Amount: 20
+	Tooltip:
+		Name: Tech Oil Derrick
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 4c0
+	Armor:
+		Type: Steel
+	WithIdleOverlay@pump:
+		Sequence: idle-pump
+	WithIdleOverlay@flag:
+		Sequence: flag
+		Offset: 1000,0,0
+	GivesBuildableArea:
+	GivesCashOnCapture:
+		Amount: 1000
+
+caairp:
+	Inherits: ^TechBuilding
+	Tooltip:
+		Name: Tech Airport
+	Armor:
+		Type: concrete
+	Health:
+		HP: 800
+	Building:
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+	ProvidesPrerequisite@Allies:
+		Prerequisite: techparadrops.allies
+		Factions: america, germany, england, france, korea
+		ResetOnOwnerChange: true
+	ProvidesPrerequisite@Soviets:
+		Prerequisite: techparadrops.soviets
+		Factions: cuba, libya, iraq, russia
+		ResetOnOwnerChange: true
+	ParatroopersPower@Allies:
+		OrderName: AlliedParatroopers
+		Icon: paradrop
+		ChargeTime: 360
+		Description: Allied Paratroopers
+		LongDesc: A Cargo Plane drops six GIs\nanywhere on the map.
+		DropItems: e1,e1,e1,e1,e1,e1
+		QuantizedFacings: 8
+		UnitType: pdplane
+		CameraActor: camera
+		Prerequisites: ~techparadrops.allies
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	ParatroopersPower@Soviets:
+		OrderName: SovietParatroopers
+		Icon: paradrop
+		ChargeTime: 360
+		Description: Soviet Paratroopers
+		LongDesc: A Cargo Plane drops nine conscripts\nanywhere on the map.
+		DropItems: e2,e2,e2,e2,e2,e2,e2,e2,e2
+		QuantizedFacings: 8
+		UnitType: pdplane
+		CameraActor: camera
+		Prerequisites: ~techparadrops.soviets
+	WithIdleOverlay@decoration:
+	WithIdleOverlay@flag:
+		Sequence: flag
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+
+cahosp:
+	Inherits: ^TechBuilding
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx xxxx xxxx
+		Dimensions: 6, 4
+	Tooltip:
+		Name: Civilian Hospital
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 6c0
+	Armor:
+		Type: Concrete
+	GivesBuildableArea:
+	RepairsUnits:
+		StartRepairingNotification:
+	RallyPoint:
+	WithIdleOverlay:
+	WithIdleOverlay@flag:
+		Sequence: flag
+		Offset: 0,-500,2520
+
+cathosp:
+	Inherits: cahosp
+	EditorOnlyTooltip:
+		Name: Tech Hospital
+	RenderSprites:
+		Image: cahosp
