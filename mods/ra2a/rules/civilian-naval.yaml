@@ -10,7 +10,7 @@ tug:
 	Health:
 		HP: 200
 	Armor:
-		Type: Light
+		Type: Vehicle
 	RevealsShroud:
 		Range: 8c0
 	RenderSprites:
@@ -33,7 +33,7 @@ cruise:
 	Health:
 		HP: 300
 	Armor:
-		Type: Light
+		Type: Vehicle
 	RevealsShroud:
 		Range: 8c0
 	RenderSprites:
@@ -51,7 +51,7 @@ cdest:
 	Health:
 		HP: 600
 	Armor:
-		Type: Light
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 5
 		Speed: 105

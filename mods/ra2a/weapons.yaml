@@ -4,10 +4,11 @@ UnitExplode:
 		Damage: 50
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
-			None: 90
-			Wood: 75
-			Light: 60
-			Heavy: 25
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
@@ -31,14 +32,10 @@ DogJaw:
 		Damage: 100
 		ValidTargets: Infantry
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 0
-			Medium: 0
-			Heavy: 0
-			Wood: 0
-			Steel: 0
+			Air: 0
+			Infantry: 100
+			Vehicle: 0
+			Building: 0
 			Concrete: 0
 		DamageTypes: BulletDeath
 
@@ -64,15 +61,11 @@ RedEye2:
 		Damage: 75
 		ValidTargets: Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 100
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 100
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -94,15 +87,11 @@ BlackHawkCannon:
 		Spread: 64
 		Damage: 25
 		Versus:
-			None: 150
-			Flak: 100
-			Plate: 50
-			Light: 60
-			Medium: 10
-			Heavy: 10
-			Wood: 30
-			Steel: 20
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 
 demobomb:
@@ -113,15 +102,11 @@ demobomb:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 50
-			Heavy: 50
-			Wood: 80
-			Steel: 150
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@2Res_impact: DestroyResource
@@ -136,15 +121,11 @@ demobomb:
 		Delay: 5
 		ValidTargets: Ground, Water, Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 50
-			Heavy: 50
-			Wood: 80
-			Steel: 150
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@5Res_areanuke1: DestroyResource
 		Size: 2
@@ -158,15 +139,11 @@ demobomb:
 		Delay: 10
 		ValidTargets: Ground, Water, Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 50
-			Heavy: 50
-			Wood: 80
-			Steel: 150
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@8Res_areanuke2: DestroyResource
 		Size: 3
@@ -178,15 +155,11 @@ demobomb:
 		Delay: 15
 		ValidTargets: Ground, Water, Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 50
-			Heavy: 50
-			Wood: 80
-			Steel: 150
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@10Res_areanuke3: DestroyResource
 		Size: 4
@@ -206,15 +179,11 @@ CoilBolt:
 		Spread: 42
 		Damage: 200
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 85
-			Medium: 100
-			Heavy: 100
-			Wood: 50
-			Steel: 50
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
 		DamageTypes: ElectroDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: tesla_impact
@@ -238,15 +207,11 @@ OPCoilBolt:
 		Spread: 64
 		Damage: 30
 		Versus:
-			None: 100
-			Flak: 80
-			Plate: 70
-			Light: 50
-			Medium: 20
-			Heavy: 20
-			Wood: 20
-			Steel: 15
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffpiff
@@ -265,14 +230,10 @@ OPCoilBolt:
 		Spread: 128
 		Damage: 50
 		Versus:
-			None: 100
-			Flak: 90
-			Plate: 80
-			Light: 60
-			Medium: 40
-			Heavy: 40
-			Wood: 50
-			Steel: 40
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
 			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -298,15 +259,11 @@ OPCoilBolt:
 		Spread: 128
 		Damage: 65
 		Versus:
-			None: 25
-			Flak: 25
-			Plate: 25
-			Light: 75
-			Medium: 100
-			Heavy: 100
-			Wood: 65
-			Steel: 45
-			Concrete: 60
+			Air: 100
+			Infantry: 25
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -327,15 +284,11 @@ OPCoilBolt:
 	Warhead@1Dam: SpreadDamage
 		Damage: 55
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 100
-			Wood: 65
-			Steel: 45
-			Concrete: 60
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 	Warhead@2Eff: CreateEffect
 		Explosions: elite_explosion
 		ImpactSounds: gexpapoa.wav
@@ -354,15 +307,11 @@ TerrorBomb:
 		Damage: 400
 		Falloff: 1024, 1024, 512, 512, 256, 256, 0
 		Versus:
-			None: 150
-			Flak: 100
-			Plate: 100
-			Light: 90
-			Medium: 50
-			Heavy: 50
-			Wood: 100
-			Steel: 150
-			Concrete: 30
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone70Percent, TriggerProne, FlameDeath
 	Warhead@2Eff: CreateEffect
@@ -384,15 +333,11 @@ GrandCannonWeapon:
 		Spread: 128
 		Damage: 150
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 100
-			Wood: 50
-			Steel: 100
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 50
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_explosion
@@ -412,15 +357,11 @@ GrandCannonWeapon:
 		Spread: 128
 		Damage: 90
 		Versus:
-			None: 25
-			Flak: 25
-			Plate: 25
-			Light: 75
-			Medium: 100
-			Heavy: 100
-			Wood: 65
-			Steel: 45
-			Concrete: 60
+			Air: 100
+			Infantry: 25
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -441,15 +382,11 @@ GrandCannonWeapon:
 	Warhead@1Dam: SpreadDamage
 		Damage: 85
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 100
-			Wood: 50
-			Steel: 100
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: elite_explosion
@@ -473,15 +410,11 @@ GrandCannonWeapon:
 		Spread: 128
 		Damage: 100
 		Versus:
-			None: 25
-			Flak: 25
-			Plate: 25
-			Light: 75
-			Medium: 100
-			Heavy: 100
-			Wood: 100
-			Steel: 100
-			Concrete: 70
+			Air: 100
+			Infantry: 25
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: apoc_explosion
@@ -500,9 +433,11 @@ GrandCannonWeapon:
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 	Warhead@2Eff: CreateEffect
 		Explosions: elite_explosion
 	Warhead@3EffWater: CreateEffect
@@ -534,15 +469,11 @@ MammothTusk:
 		Damage: 80
 		ValidTargets: Air
 		Versus:
-			None: 100
-			Flak: 90
-			Plate: 80
-			Light: 70
-			Medium: 35
-			Heavy: 35
-			Wood: 75
-			Steel: 40
-			Concrete: 20
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 75
+			Concrete: 25
 		DamageTypes: ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_bang
@@ -601,19 +532,15 @@ BlimpBomb:
 		Palette: player
 		Arm: 10
 	Warhead@1Dam: SpreadDamage
-		Spread: 400
+		Spread: 600
 		Damage: 250
 		ValidTargets: Building, Ground, Water
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 70
-			Medium: 35
-			Heavy: 35
-			Wood: 85
-			Steel: 75
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -637,15 +564,11 @@ FlakTrackGun:
 		Spread: 64
 		Damage: 25
 		Versus:
-			None: 150
-			Flak: 100
-			Plate: 50
-			Light: 60
-			Medium: 10
-			Heavy: 10
-			Wood: 30
-			Steel: 20
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 25
+			Building: 50
+			Concrete: 25
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: flak_puff
@@ -662,15 +585,11 @@ FlakTrackAAGun:
 		Damage: 35
 		ValidTargets: Air
 		Versus:
-			None: 150
-			Flak: 80
-			Plate: 50
-			Light: 100
-			Medium: 20
-			Heavy: 20
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: flak_puff_AA
@@ -698,15 +617,11 @@ sabot:
 		Spread: 190
 		Damage: 150
 		Versus:
-			None: 2
-			Flak: 2
-			Plate: 2
-			Light: 100
-			Medium: 40
-			Heavy: 100
-			Wood: 2
-			Steel: 2
-			Concrete: 2
+			Air: 100
+			Infantry: 25
+			Vehicle: 100
+			Building: 25
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -739,15 +654,11 @@ SubTorpedo:
 		Damage: 100
 		ValidTargets: Water, Underwater, Bridge
 		Versus:
-			None: 25
-			Flak: 25
-			Plate: 25
-			Light: 75
-			Medium: 100
-			Heavy: 100
-			Wood: 65
-			Steel: 65
-			Concrete: 60
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: ExplosionDeath
 	Warhead@2EffWater: CreateEffect
 		Explosions: large_watersplash
@@ -781,8 +692,11 @@ SonicZap:
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
-			Heavy: 80
-			Concrete: 60
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		ValidTargets: Water, Underwater
 	Warhead@2Dam: SpreadDamage
@@ -792,8 +706,11 @@ SonicZap:
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:
-			Heavy: 80
-			Concrete: 60
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		ValidTargets: Water, Underwater
 
@@ -824,15 +741,11 @@ SquidPunch:
 		Spread: 128
 		Damage: 60
 		Versus:
-			None: 100
-			Flak: 80
-			Plate: 60
-			Light: 100
-			Medium: 60
-			Heavy: 60
-			Wood: 100
-			Steel: 80
-			Concrete: 60
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -872,15 +785,11 @@ Medusa:
 		Damage: 100
 		ValidTargets: Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 100
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 75
+			Concrete: 25
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -914,15 +823,11 @@ HoverMissile:
 		Damage: 25
 		ValidTargets: Ground, Air
 		Versus:
-			None: 100
-			Flak: 90
-			Plate: 80
-			Light: 70
-			Medium: 35
-			Heavy: 35
-			Wood: 75
-			Steel: 40
-			Concrete: 20
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_grey_explosion
@@ -970,15 +875,11 @@ CRTerrorBomb:
 		Damage: 425
 		Falloff: 1024, 1024, 512, 512, 256, 256, 0
 		Versus:
-			None: 150
-			Flak: 100
-			Plate: 100
-			Light: 90
-			Medium: 50
-			Heavy: 50
-			Wood: 100
-			Steel: 150
-			Concrete: 30
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 75
+			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone70Percent, TriggerProne, FlameDeath
 	Warhead@2Eff: CreateEffect
@@ -997,15 +898,11 @@ Comet:
 		Spread: 800
 		Damage: 100
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 75
-			Medium: 50
-			Heavy: 50
-			Wood: 200
-			Steel: 200
-			Concrete: 200
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 100
+			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ElectroDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -1033,14 +930,10 @@ vulcan:
 		Spread: 64
 		Damage: 50
 		Versus:
-			None: 100
-			Flak: 80
-			Plate: 70
-			Light: 50
-			Medium: 25
-			Heavy: 25
-			Wood: 75
-			Steel: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
 			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -1061,15 +954,11 @@ PrismShot:
 		Spread: 42
 		Damage: 120
 		Versus:
-			None: 200
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 50
-			Wood: 50
-			Steel: 50
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 75
+			Building: 50
+			Concrete: 25
 		DamageTypes: ElectroDeath
 
 MirageGun:
@@ -1085,15 +974,11 @@ MirageGun:
 		Spread: 64
 		Damage: 100
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 80
-			Light: 100
-			Medium: 100
-			Heavy: 100
-			Wood: 30
-			Steel: 20
-			Concrete: 20
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 25
+			Concrete: 25
 		DamageTypes: FlameDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: iron_fx
@@ -1119,15 +1004,11 @@ TankBolt:
 		Spread: 120
 		Damage: 135
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 85
-			Medium: 100
-			Heavy: 100
-			Wood: 50
-			Steel: 50
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 50
+			Concrete: 25
 		DamageTypes: ElectroDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: tesla_impact
@@ -1148,15 +1029,11 @@ NukePayload:
 		Falloff: 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2
 		ValidTargets: Ground, Water, Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 200
-			Medium: 100
-			Heavy: 100
-			Wood: 60
-			Steel: 100
-			Concrete: 8
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, RadiationDeath
 	Warhead@2Res_impact: DestroyResource

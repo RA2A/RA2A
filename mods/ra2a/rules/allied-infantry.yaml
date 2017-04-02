@@ -26,6 +26,8 @@ engineer:
 	-AutoTarget:
 	RevealsShroud:
 		Range: 4c0
+	Armor:
+		Type: Infantry
 	Voiced:
 		VoiceSet: AlliedEngineerVoice
 	Guard:
@@ -56,6 +58,8 @@ dog:
 		PipType: Yellow
 	RevealsShroud:
 		Range: 5c0
+	Armor:
+		Type: Infantry
 	Armament:
 		Weapon: DogJaw
 	AttackLeap:
@@ -103,6 +107,8 @@ e1:
 		PipType: Green
 	RevealsShroud:
 		Range: 5c0
+	Armor:
+		Type: Infantry
 	AttackFrontal:
 		Voice: Attack
 	Armament@primary:
@@ -150,7 +156,7 @@ snipe:
 	RevealsShroud:
 		Range: 8c0
 	Armor:
-		Type: None
+		Type: Infantry
 	Armament@primary:
 		Weapon: awp
 	AttackFrontal:
@@ -171,18 +177,20 @@ spy:
 		Prerequisites: gatech, ~gapile
 		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\n  Unarmed\nSpecial Ability: Disguises
 	Valued:
-		Cost: 500
+		Cost: 1000
 	DisguiseTooltip:
 		Name: Spy
 		GenericName: Soldier
 	Selectable:
 		Bounds: 24, 28, -1, -8
 	Health:
-		HP: 25
+		HP: 100
 	Mobile:
 		Speed: 56
 	RevealsShroud:
 		Range: 5c0
+	Armor:
+		Type: Infantry
 	Passenger:
 		PipType: Yellow
 	TakeCover:
@@ -246,10 +254,10 @@ ghost:
 			Water: 70
 	RevealsShroud:
 		Range: 8c0
+	Armor:
+		Type: Infantry
 	Demolition:
 		Voice: SpecialAttack
-	Armor:
-		Type: Flak
 	Passenger:
 		PipType: Red
 	Armament@primary:
@@ -283,7 +291,7 @@ tany:
 		BuildLimit: 1
 		Description: Elite commando infantry, armed with \ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\nSpecial Ability: Destroy Building with C4\n\nMaximum 1 can be trained.
 	Valued:
-		Cost: 1000
+		Cost: 2000
 	Tooltip:
 		Name: Tanya
 	Selectable:
@@ -309,10 +317,10 @@ tany:
 			Water: 70
 	RevealsShroud:
 		Range: 6c0
+	Armor:
+		Type: Infantry
 	Demolition:
 		Voice: Attack
-	Armor:
-		Type: Flak
 	Passenger:
 		PipType: Red
 	Armament@primary:
@@ -358,7 +366,7 @@ jumpjet:
 		Range: 8c0
 		Type: CenterPosition
 	Armor:
-		Type: None
+		Type: Infantry
 	Armament@primary:
 		Weapon: 20mm
 		RequiresCondition: !rank-elite
@@ -427,6 +435,8 @@ cleg:
 		Speed: 51
 	RevealsShroud:
 		Range: 8c0
+	Armor:
+		Type: Infantry
 	Passenger:
 		PipType: Red
 	-Crushable:

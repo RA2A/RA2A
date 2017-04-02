@@ -16,7 +16,7 @@ caoild:
 	RevealsShroud:
 		Range: 4c0
 	Armor:
-		Type: Steel
+		Type: Building
 	WithIdleOverlay@pump:
 		Sequence: idle-pump
 	WithIdleOverlay@flag:
@@ -31,7 +31,7 @@ caairp:
 	Tooltip:
 		Name: Tech Airport
 	Armor:
-		Type: concrete
+		Type: Building
 	Health:
 		HP: 800
 	Building:
@@ -89,7 +89,7 @@ cahosp:
 	RevealsShroud:
 		Range: 6c0
 	Armor:
-		Type: Concrete
+		Type: Building
 	GivesBuildableArea:
 	RepairsUnits:
 		StartRepairingNotification:

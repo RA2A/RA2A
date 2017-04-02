@@ -5,7 +5,7 @@ shad:
 	Health:
 		HP: 175
 	Armor:
-		Type: Light
+		Type: Air
 	Armament:
 		Weapon: BlackHawkCannon
 	Voiced:
@@ -50,7 +50,7 @@ shadhusk:
 		Name: Night Hawk Down
 		GenericName: Destroyed Helicopter
 	Armor:
-		Type: Light
+		Type: Air
 	Health:
 		HP: 140
 	Aircraft:
@@ -88,14 +88,14 @@ zep:
 	Aircraft:
 		CruiseAltitude: 5600
 		TurnSpeed: 5
-		Speed: 50
+		Speed: 25
 		Voice: Move
 		AirborneCondition: airborne
 		CanHover: True
 	Health:
 		HP: 2000
 	Armor:
-		Type: Light
+		Type: Air
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition
@@ -122,7 +122,7 @@ zephusk:
 	Tooltip:
 		Name: Kirov Airship
 	Armor:
-		Type: Light
+		Type: Air
 	Health:
 		HP: 140
 	Aircraft:
@@ -166,7 +166,7 @@ orca:
 	Health:
 		HP: 150
 	Armor:
-		Type: Light
+		Type: Air
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition
@@ -243,6 +243,8 @@ pdplane:
 		Speed: 100
 	Health:
 		HP: 1000
+	Armor:
+		Type: Air
 	RevealsShroud:
 		Range: 6c0
 		Type: CenterPosition

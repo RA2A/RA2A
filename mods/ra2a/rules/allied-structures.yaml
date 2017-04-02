@@ -11,9 +11,9 @@ gacnst:
 	Selectable:
 		Bounds: 220, 155, 0, -20
 	Health:
-		HP: 1000
+		HP: 5000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 8c0
 	Valued:
@@ -74,7 +74,7 @@ gapowr:
 	Health:
 		HP: 750
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 4c0
 	WithIdleOverlay@glow:
@@ -115,7 +115,7 @@ gapile:
 	Health:
 		HP: 500
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	RallyPoint:
@@ -148,7 +148,7 @@ gapile:
 	WithIdleOverlay@flag:
 		Sequence: idle-flag
 	Power:
-		Amount: -10
+		Amount: -35
 	InfiltrateForSupportPower:
 		Proxy: barracks.infiltrated
 	Targetable:
@@ -164,7 +164,7 @@ garefn:
 	Selectable:
 		Bounds: 176, 150, 0, -20
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Ore Refinery
 	ProvidesPrerequisite:
@@ -174,9 +174,9 @@ garefn:
 		Footprint: xxx= xxx= xxx=
 		Dimensions: 4,3
 	Health:
-		HP: 1000
+		HP: 2000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:
@@ -191,7 +191,7 @@ garefn:
 		PipCount: 0
 		Capacity: 999999
 	CustomSellValue:
-		Value: 300
+		Value: 250
 	InfiltrateForCash:
 		Percentage: 50
 		Notification: CreditsStolen
@@ -218,7 +218,7 @@ gaairc:
 		Prerequisites: garefn, ~structures.allies, ~!structures.america
 		Description: Provides radar\nSupports 4 aircraft.
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: Airforce Command Headquarters
 	ProvidesPrerequisite:
@@ -235,9 +235,9 @@ gaairc:
 	Selectable:
 		Bounds: 142, 150, -3, -42
 	Health:
-		HP: 600
+		HP: 1000
 	Armor:
-		Type: Steel
+		Type: Building
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: ts-mouse
@@ -262,7 +262,7 @@ gaairc:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	Power:
-		Amount: -50
+		Amount: -75
 	Reservable:
 	Exit@1:
 		SpawnOffset: -350,350,0
@@ -337,9 +337,9 @@ gaweap:
 		Footprint: xxxxx xxxxx xxxxx
 		Dimensions: 5,3
 	Health:
-		HP: 1000
+		HP: 2000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 4c0
 	RallyPoint:
@@ -371,7 +371,7 @@ gaweap:
 	WithExitOverlay@ramp:
 		Sequence: build-ramp
 	Power:
-		Amount: -25
+		Amount: -50
 	InfiltrateForSupportPower:
 		Proxy: warfactory.infiltrated
 	Targetable:
@@ -400,7 +400,7 @@ gayard:
 	Health:
 		HP: 1500
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 10c0
 	# X -2 column
@@ -489,7 +489,7 @@ gayard:
 		FinishRepairingNotification: UnitRepaired
 	ProductionBar:
 	Power:
-		Amount: -20
+		Amount: -50
 	WithIdleOverlay@crane:
 		Sequence: idle-crane
 	WithIdleOverlay@waves:
@@ -517,9 +517,9 @@ gadept:
 		Footprint: x== x== x==
 		Dimensions: 3,3
 	Health:
-		HP: 1200
+		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	Reservable:
@@ -550,7 +550,7 @@ gatech:
 	Selectable:
 		Bounds: 122, 216, 0, -81
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Battle Lab
 	ProvidesPrerequisite@default:
@@ -558,15 +558,15 @@ gatech:
 		Footprint: xx xx xx
 		Dimensions: 3,2
 	Health:
-		HP: 500
+		HP: 3000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 6c0
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 	Power:
-		Amount: -100
+		Amount: -150
 	InfiltrateForSupportPower:
 		Proxy: allies.tech.infiltrated
 	Targetable:
@@ -597,9 +597,9 @@ gapill:
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 400
+		HP: 500
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 7c0
 	Selectable:
@@ -635,9 +635,9 @@ nasam:
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 900
+		HP: 1000
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 7c0
 	Selectable:
@@ -682,9 +682,9 @@ gtgcan:
 		Footprint: xx xx
 		Dimensions: 2, 2
 	Health:
-		HP: 900
+		HP: 2000
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 10c0
 	Selectable:
@@ -739,9 +739,9 @@ gaorep:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 900
+		HP: 1500
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	WithIdleOverlay@glow:
@@ -766,9 +766,9 @@ gaspysat:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 1000
+		HP: 1500
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	WithIdleOverlay@dish:
@@ -804,9 +804,9 @@ gagap:
 		Dimensions: 1,2
 	RequiresPower:
 	Health:
-		HP: 600
+		HP: 750
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	CreatesShroud:
@@ -840,9 +840,9 @@ gaweat:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 1000
+		HP: 5000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	Power:
@@ -871,9 +871,9 @@ gacsph:
 		Footprint: xxx xxx xxx xxx
 		Dimensions: 4,3
 	Health:
-		HP: 750
+		HP: 3000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	Power:
@@ -917,9 +917,9 @@ atesla:
 	Selectable:
 		Bounds: 44, 102, 0, -40
 	Health:
-		HP: 600
+		HP: 750
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 8c0
 	WithTeslaChargeAnimation:

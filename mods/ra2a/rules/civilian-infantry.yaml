@@ -7,7 +7,7 @@ cow:
 	Valued:
 		Cost: 10
 	Armor:
-		Type: None
+		Type: Infantry
 	RevealsShroud:
 		Range: 4c0
 	Mobile:

@@ -46,6 +46,8 @@ Packages:
 	ra2a|bits/cameos
 	ra2a|bits/structures
 	ra2a|bits/animations
+	ra2a|bits/vehicles
+	ra2a|bits/vehicles/allied
 	ra2a|uibits
 
 MapFolders:

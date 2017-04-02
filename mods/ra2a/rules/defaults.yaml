@@ -113,6 +113,8 @@
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^IronCurtainable
 	-DrawLineToTarget:
+    Buildable:
+        BuildDurationModifier: 40
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -306,11 +308,13 @@
 	Inherits@3: ^GainsExperience
 	Inherits@4: ^ChronoDisable
 	Inherits@5: ^CrateStatModifiers
+    Buildable:
+        BuildDurationModifier: 40
 	Health:
 		Shape: Circle
 			Radius: 128
 	Armor:
-		Type: None
+		Type: Infantry
 	RevealsShroud:
 		Range: 4c0
 	Mobile:
@@ -486,6 +490,8 @@
 	Inherits@3: ^IronCurtainable
 	Inherits@4: ^ChronoDisable
 	Inherits@5: ^CrateStatModifiers
+    Buildable:
+        BuildDurationModifier: 40
 	Mobile:
 		Voice: Move
 		Crushes: crate
@@ -565,6 +571,8 @@
 
 ^NeutralAircraft:
 	Inherits@1: ^ExistsInWorld
+    Buildable:
+        BuildDurationModifier: 40
 	Targetable@airborne:
 		TargetTypes: Air
 		RequiresCondition: airborne
@@ -646,6 +654,8 @@
 	Inherits@3: ^IronCurtainable
 	Inherits@4: ^ChronoDisable
 	Inherits@5: ^CrateStatModifiers
+    Buildable:
+        BuildDurationModifier: 40
 	Mobile:
 		Voice: Move
 		Crushes: crate

@@ -14,7 +14,7 @@ sapc:
 	Health:
 		HP: 300
 	Armor:
-		Type: Heavy
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 10
 		Speed: 75
@@ -59,7 +59,7 @@ sub:
 	Health:
 		HP: 600
 	Armor:
-		Type: Heavy
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 4
 		Speed: 71
@@ -120,7 +120,7 @@ hyd:
 	Health:
 		HP: 300
 	Armor:
-		Type: Heavy
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 6
 		Speed: 75
@@ -152,7 +152,7 @@ sqd:
 	Tooltip:
 		Name: Giant Squid
 	Armor:
-		Type: Light
+		Type: Vehicle
 	Health:
 		HP: 200
 	SelfHealing:

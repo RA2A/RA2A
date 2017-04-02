@@ -20,6 +20,8 @@ e2:
 		PipType: Green
 	RevealsShroud:
 		Range: 5c0
+	Armor:
+		Type: Infantry
 	AttackFrontal:
 		Voice: Attack
 	Armament@primary:
@@ -59,6 +61,8 @@ flakt:
 		PipType: Green
 	RevealsShroud:
 		Range: 5c0
+	Armor:
+		Type: Infantry
 	AttackFrontal:
 		Voice: Attack
 	Armament@primary:
@@ -105,7 +109,7 @@ shk:
 	RevealsShroud:
 		Range: 6c0
 	Armor:
-		Type: Plate
+		Type: Infantry
 	Passenger:
 		PipType: Red
 	AttackFrontal:
@@ -148,7 +152,7 @@ terror:
 		Prerequisites: naradr, ~infantry.cuba
 		Description: Carries C4 charges taped to his body and kamikazes enemies\nblowing them up quickly and efficiently.\n  Strong vs Ground units\n  Weak vs Aircraft
 	Valued:
-		Cost: 200
+		Cost: 400
 	Tooltip:
 		Name: Terrorist
 	Selectable:
@@ -160,7 +164,7 @@ terror:
 	RevealsShroud:
 		Range: 6c0
 	Armor:
-		Type: Flak
+		Type: Infantry
 	Passenger:
 		PipType: Red
 	Explodes:
@@ -186,19 +190,19 @@ deso:
 		Prerequisites: naradr, ~infantry.iraq
 		Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 200
+		Cost: 600
 	Tooltip:
 		Name: Desolator
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
-		HP: 150
+		HP: 700
 	Mobile:
 		Speed: 41
 	RevealsShroud:
 		Range: 6c0
 	Armor:
-		Type: Plate
+		Type: Infantry
 	Passenger:
 		PipType: Red
 	Armament@primary:
@@ -235,13 +239,13 @@ ivan:
 	Voiced:
 		VoiceSet: CrazyIvanVoice
 	Health:
-		HP: 125
+		HP: 200
 	Mobile:
 		Speed: 60
 	RevealsShroud:
 		Range: 6c0
 	Armor:
-		Type: None
+		Type: Infantry
 	Passenger:
 		PipType: Red
 	Explodes:

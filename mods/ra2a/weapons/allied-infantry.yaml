@@ -8,14 +8,10 @@ M60:
 		Spread: 64
 		Damage: 20
 		Versus:
-			None: 100
-			Flak: 80
-			Plate: 70
-			Light: 50
-			Medium: 25
-			Heavy: 25
-			Wood: 75
-			Steel: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
 			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -42,14 +38,10 @@ para:
 		Spread: 64
 		Damage: 15
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 70
-			Light: 60
-			Medium: 40
-			Heavy: 40
-			Wood: 75
-			Steel: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -71,14 +63,10 @@ MP5:
 		Spread: 64
 		Damage: 125
 		Versus:
-			None: 100
-			Flak: 80
-			Plate: 70
-			Light: 50
-			Medium: 25
-			Heavy: 25
-			Wood: 75
-			Steel: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
 			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -96,15 +84,11 @@ DoublePistols:
 	Warhead@1Dam: SpreadDamage
 		Damage: 125
 		Versus:
-			None: 200
-			Flak: 100
-			Plate: 100
-			Light: 0
-			Medium: 0
-			Heavy: 0
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -127,15 +111,11 @@ awp:
 		Spread: 42
 		Damage: 125
 		Versus:
-			None: 200
-			Flak: 100
-			Plate: 100
-			Light: 0
-			Medium: 0
-			Heavy: 0
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 25
+			Building: 25
+			Concrete: 25
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -157,14 +137,10 @@ AWPE:
 		Damage: 25
 		ValidTargets: Ground, Air
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 70
-			Light: 60
-			Medium: 40
-			Heavy: 40
-			Wood: 75
-			Steel: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 75
+			Building: 75
 			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect

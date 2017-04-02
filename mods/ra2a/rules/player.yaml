@@ -8,6 +8,7 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: true
+        BuildTimeSpeedReduction: 100 , 75 , 60 , 50
 	ClassicProductionQueue@Support:
 		Type: Support
 		BuildSpeed: 40
@@ -15,26 +16,31 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: true
+        BuildTimeSpeedReduction: 100 , 75 , 60 , 50
 	ClassicProductionQueue@Vehicle:
 		Type: Vehicle
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: true
+        BuildTimeSpeedReduction: 100 , 75 , 60 , 50
 	ClassicProductionQueue@Infantry:
 		Type: Infantry
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: true
+        BuildTimeSpeedReduction: 100 , 75 , 60 , 50
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: true
+        BuildTimeSpeedReduction: 100 , 75 , 60 , 50
 	ClassicProductionQueue@Ship:
 		Type: Ship
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
 		SpeedUp: true
+        BuildTimeSpeedReduction: 100 , 75 , 60 , 50
 	PlaceBuilding:
 		Palette: effect75alpha
 	SupportPowerManager:

@@ -13,9 +13,9 @@ nacnst:
 	ProvidesPrerequisite@soviets:
 		Prerequisite: structures.soviets
 	Health:
-		HP: 1000
+		HP: 5000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 8c0
 	Valued:
@@ -54,7 +54,7 @@ napowr:
 		Prerequisites: ~structures.soviets
 		Description: Provides power for other structures.
 	Valued:
-		Cost: 600
+		Cost: 400
 	Tooltip:
 		Name: Tesla Reactor
 	ProvidesPrerequisite:
@@ -65,15 +65,15 @@ napowr:
 	Selectable:
 		Bounds: 126, 94, 2, -16
 	Health:
-		HP: 750
+		HP: 400
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 4c0
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 	Power:
-		Amount: 150
+		Amount: 100
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	ScalePowerWithHealth:
@@ -111,7 +111,7 @@ nahand:
 	Health:
 		HP: 500
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 6c0
 	Exit@n1_0:
@@ -166,7 +166,7 @@ nahand:
 		RequiresCondition: primary
 	ProductionBar:
 	Power:
-		Amount: -10
+		Amount: -35
 	ConditionManager:
 	InfiltrateForSupportPower:
 		Proxy: barracks.infiltrated
@@ -183,7 +183,7 @@ narefn:
 	Selectable:
 		Bounds: 170, 150, -6, -33
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Ore Refinery
 	ProvidesPrerequisite:
@@ -193,9 +193,9 @@ narefn:
 		Footprint: xxx= xxx= xxx=
 		Dimensions: 4,3
 	Health:
-		HP: 1000
+		HP: 2000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:
@@ -210,7 +210,7 @@ narefn:
 		PipCount: 0
 		Capacity: 999999
 	CustomSellValue:
-		Value: 300
+		Value: 250
 	InfiltrateForCash:
 		Percentage: 50
 		Notification: CreditsStolen
@@ -237,7 +237,7 @@ naradr:
 		Prerequisites: power, narefn, ~structures.soviets
 		Description: Provides radar.
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: Radar Tower
 	ProvidesPrerequisite:
@@ -251,7 +251,7 @@ naradr:
 	Health:
 		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Building
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: ts-mouse
@@ -268,7 +268,7 @@ naradr:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	InfiltrateForExploration:
 	Power:
-		Amount: -50
+		Amount: -75
 	GrantConditionOnDisabled@IDISABLE:
 		Condition: disabled
 
@@ -296,9 +296,9 @@ naweap:
 		Footprint: xxxxx xxxxx xxxxx
 		Dimensions: 5,3
 	Health:
-		HP: 1000
+		HP: 2000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 4c0
 	RallyPoint:
@@ -327,7 +327,7 @@ naweap:
 	WithIdleOverlay@bib:
 		Sequence: bib
 	Power:
-		Amount: -25
+		Amount: -50
 	InfiltrateForSupportPower:
 		Proxy: warfactory.infiltrated
 	Targetable:
@@ -356,7 +356,7 @@ nayard:
 	Health:
 		HP: 1500
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 10c0
 	# X -2 column
@@ -445,7 +445,7 @@ nayard:
 		FinishRepairingNotification: UnitRepaired
 	ProductionBar:
 	Power:
-		Amount: -20
+		Amount: -50
 	WithIdleOverlay@crane:
 		Sequence: idle-crane
 	WithIdleOverlay@waves:
@@ -476,9 +476,9 @@ nadept:
 		Footprint: x=== x=== x===
 		Dimensions: 4,3
 	Health:
-		HP: 1200
+		HP: 1000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	Reservable:
@@ -506,7 +506,7 @@ nanrct:
 		Prerequisites: natech, ~structures.soviets
 		Description: Provides power for other structures.
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: Nuclear Reactor
 	ProvidesPrerequisite:
@@ -517,9 +517,9 @@ nanrct:
 	Selectable:
 		Bounds: 167, 130, 9, -31
 	Health:
-		HP: 1000
+		HP: 2000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	WithIdleOverlay@lights:
@@ -546,7 +546,7 @@ natech:
 		Prerequisites: naweap, naradr, ~structures.soviets
 		Description: Allows deployment of advanced units.
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Battle Lab
 	ProvidesPrerequisite@default:
@@ -556,13 +556,13 @@ natech:
 	Selectable:
 		Bounds: 152, 164, 0, -50
 	Health:
-		HP: 500
+		HP: 3000
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 6c0
 	Power:
-		Amount: -100
+		Amount: -150
 	InfiltrateForSupportPower:
 		Proxy: soviets.tech.infiltrated
 	Targetable:
@@ -586,9 +586,9 @@ naclon:
 	Selectable:
 		Bounds: 108, 134, 0, -48
 	Health:
-		HP: 1000
+		HP: 1500
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	Power:
@@ -655,14 +655,14 @@ napsis:
 	Selectable:
 		Bounds: 82, 150, -1, -55
 	Health:
-		HP: 750
+		HP: 1500
 	Armor:
-		Type: Wood
+		Type: Building
 	RevealsShroud:
-		Range: 10c0
+		Range: 15c0
 	RenderDetectionCircle:
 	DetectCloaked:
-		Range: 6c0
+		Range: 15c0
 	WithIdleOverlay@spin:
 		Sequence: idle-spin
 		PauseOnLowPower: true
@@ -692,9 +692,9 @@ nairon:
 	Selectable:
 		Bounds: 136, 100, 0, -20
 	Health:
-		HP: 750
+		HP: 3000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 4c0
 	Power:
@@ -735,9 +735,9 @@ namisl:
 	Selectable:
 		Bounds: 152, 104, 0, -50
 	Health:
-		HP: 1000
+		HP: 5000
 	Armor:
-		Type: Concrete
+		Type: Building
 	RevealsShroud:
 		Range: 4c0
 	Power:
@@ -793,9 +793,9 @@ naflak:
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 900
+		HP: 1000
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 5c0
 	Selectable:
@@ -839,9 +839,9 @@ tesla:
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 600
+		HP: 750
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 8c0
 	Selectable:
@@ -895,9 +895,9 @@ nalasr:
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 400
+		HP: 500
 	Armor:
-		Type: Steel
+		Type: Building
 	RevealsShroud:
 		Range: 7c0
 	Selectable:

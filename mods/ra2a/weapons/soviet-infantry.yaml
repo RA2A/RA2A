@@ -8,14 +8,10 @@ M1Carbine:
 		Spread: 64
 		Damage: 15
 		Versus:
-			None: 100
-			Flak: 80
-			Plate: 70
-			Light: 50
-			Medium: 25
-			Heavy: 25
-			Wood: 75
-			Steel: 50
+			Air: 100
+			Infantry: 50
+			Vehicle: 50
+			Building: 50
 			Concrete: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -41,15 +37,11 @@ RadBeamWeapon:
 		Spread: 42
 		Damage: 125
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 20
-			Medium: 15
-			Heavy: 10
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 25
+			Concrete: 25
 		DamageTypes: RadiationDeath
 
 RadBeamWeaponE:
@@ -75,15 +67,11 @@ FlakGuyGun:
 		Spread: 64
 		Damage: 20
 		Versus:
-			None: 150
-			Flak: 100
-			Plate: 50
-			Light: 60
-			Medium: 10
-			Heavy: 10
-			Wood: 30
-			Steel: 20
-			Concrete: 10
+			Air: 100
+			Infantry: 100
+			Vehicle: 25
+			Building: 50
+			Concrete: 25
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: flak_puff
@@ -112,15 +100,11 @@ FlakGuyAAGun:
 		Damage: 20
 		ValidTargets: Air
 		Versus:
-			None: 150
-			Flak: 100
-			Plate: 50
-			Light: 80
-			Medium: 20
-			Heavy: 20
-			Wood: 0
-			Steel: 0
-			Concrete: 0
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: flak_puff_AA
@@ -140,17 +124,13 @@ ElectricBolt:
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
-		Damage: 50
+		Damage: 75
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 85
-			Medium: 100
-			Heavy: 100
-			Wood: 50
-			Steel: 50
-			Concrete: 50
+			Air: 100
+			Infantry: 100
+			Vehicle: 75
+			Building: 50
+			Concrete: 25
 		DamageTypes: ElectroDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: tesla_impact
@@ -200,15 +180,11 @@ IvanBomber:
 		Damage: 400
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
-			None: 100
-			Flak: 100
-			Plate: 100
-			Light: 100
-			Medium: 100
-			Heavy: 250
-			Wood: 20
-			Steel: 100
-			Concrete: 100
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 25
 		DamageTypes: FlameDeath, Prone100Percent
 	Warhead@2Eff: CreateEffect
 		Delay: 100

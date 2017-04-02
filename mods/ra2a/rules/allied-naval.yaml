@@ -14,7 +14,7 @@ lcrf:
 	Health:
 		HP: 300
 	Armor:
-		Type: Light
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 10
 		Speed: 75
@@ -61,7 +61,7 @@ dest:
 	Health:
 		HP: 600
 	Armor:
-		Type: Heavy
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 5
 		Speed: 105
@@ -109,7 +109,7 @@ aegis:
 	Health:
 		HP: 800
 	Armor:
-		Type: Light
+		Type: Vehicle
 	Mobile:
 		TurnSpeed: 5
 		Speed: 45
@@ -143,7 +143,7 @@ dlph:
 	Tooltip:
 		Name: Dolphin
 	Armor:
-		Type: Light
+		Type: Vehicle
 	Health:
 		HP: 200
 	Mobile:
