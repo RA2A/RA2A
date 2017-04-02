@@ -1,0 +1,72 @@
+Metadata:
+	Title: Red Alert 2 Advanced
+	Description: 
+	Version: {DEV_VERSION}
+	Author: RA2A Team
+
+RequiresMods:
+
+Packages:
+	~^Content/ra2
+	$ra2a: ra2a
+	$cnc: cnc
+	$as: as
+	$common: common
+
+MapFolders:
+	ra2a|maps: System
+	~^maps/ra2a: User
+
+Rules:
+
+Weapons:
+
+Sequences:
+
+VoxelSequences:
+
+Cursors:
+
+Chrome:
+
+Assemblies:
+
+ChromeLayout:
+
+Weapons:
+
+Voices:
+
+Notifications:
+
+TileSets:
+
+MapGrid:
+
+Music:
+
+Translations:
+
+LoadScreen:
+
+ServerTraits:
+
+ChromeMetrics:
+
+Fonts:
+
+SupportsMapsFrom: ra2a, ra2
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpTS, TmpTs, ShpTD
+
+SpriteSequenceFormat:
+
+GameSpeeds:
+
+ColorValidator:
+
+ModContent:
+
+
