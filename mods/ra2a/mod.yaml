@@ -8,10 +8,37 @@ RequiresMods:
 
 Packages:
 	~^Content/ra2
+	
 	$ra2a: ra2a
 	$cnc: cnc
 	$as: as
 	$common: common
+	
+	~ra2.mix
+	~language.mix
+	~multi.mix
+	~audio.mix
+	~cache.mix
+	~cameo.mix
+	~conquer.mix
+	~generic.mix
+	~isogen.mix
+	~isosnow.mix
+	~isotemp.mix
+	~isourb.mix
+	~load.mix
+	~local.mix
+	~neutral.mix
+	~sidec01.mix
+	~sidec02.mix
+	~sno.mix
+	~snow.mix
+	~tem.mix
+	~temperat.mix
+	~theme.mix
+	~urb.mix
+	~urban.mix
+	~audio.bag
 
 MapFolders:
 	ra2a|maps: System
@@ -42,6 +69,11 @@ Notifications:
 TileSets:
 
 MapGrid:
+	Type: RectangularIsometric
+	TileSize: 60,30
+	SubCellsOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	DefaultSubCell: 2
+	MaximumTerrainHeight: 16
 
 Music:
 
@@ -54,6 +86,30 @@ ServerTraits:
 ChromeMetrics:
 
 Fonts:
+	Regular:
+		Font: common|FreeSans.ttf
+		Size:14
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size:14
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size:32
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size:24
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size:18
+	Small:
+		Font: common|FreeSans.ttf
+		Size:12
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size:10
 
 SupportsMapsFrom: ra2a, ra2
 
@@ -68,5 +124,17 @@ GameSpeeds:
 ColorValidator:
 
 ModContent:
-
-
+	InstallPromptMessage: Red Alert 2 Advanced requires artwork and audio from the original Red Alert 2 game.
+	HeaderMessage: The original game content must be copied from an original game disc.
+	Packages:
+		base: Base Game Files
+			TestFiles: ^Content/ra2/ra2.mix, ^Content/ra2/language.mix
+			Sources: ra2, origin, tfd
+			Required: true
+		music: Base Game Music
+			TestFiles: ^Content/ra2/theme.mix
+			Sources: ra2, origin, tfd
+	Sources:
+		ra2a|installer/ra2.yaml
+		ra2a|installer/origin.yaml
+		ra2a|installer/firstdecade.yaml
