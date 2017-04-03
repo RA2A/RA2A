@@ -12,6 +12,7 @@ addons:
     - lua5.1
 
 script:
+  - ./setup.sh
   - travis_retry ./rebuild.sh
 
 notifications:
