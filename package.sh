@@ -10,6 +10,7 @@ BUILDDIR="RA2A-$1"
 REPODIR=$(realpath $(dirname $0))
 VERSION="$1"
 
+mkdir -p "$2"
 pushd "$2" >/dev/null
 
 rm -rf "$BUILDDIR" "$BUILDDIR.zip"

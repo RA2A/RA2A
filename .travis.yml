@@ -12,7 +12,8 @@ git:
 addons:
   apt:
     packages:
-    - lua5.1
+      - lua5.1
+      - coreutils
 
 script:
   - rm -r engine
