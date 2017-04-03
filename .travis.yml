@@ -6,13 +6,16 @@ cache:
   directories:
   - engine/thirdparty/download
 
+git:
+  submodules: false
+
 addons:
   apt:
     packages:
     - lua5.1
 
 script:
-  - ./setup.sh
+  - ./setup-travis.sh
   - travis_retry ./rebuild.sh
 
 notifications:
