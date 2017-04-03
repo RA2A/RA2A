@@ -7,7 +7,7 @@ fi
 
 MOD="RA2A"
 BUILDDIR="RA2A-$1"
-REPODIR=$(realpath $(dirname $0))
+REPODIR=$(readlink -f $(dirname $0))
 VERSION="$1"
 
 mkdir -p "$2"
