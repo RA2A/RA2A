@@ -13,7 +13,7 @@ VERSION="$1"
 rm -rf "$BUILDDIR" "$BUILDDIR.zip"
 mkdir -p "$BUILDDIR"
 
-echo "Preparing standalone installation"
+echo "Preparing standalone installation for tag \"$VERSION\" into \"$BUILDDIR\""
 cp -r engine/*.{exe,dll,dll.config} "$BUILDDIR"
 cp -r "engine/mods" "engine/glsl" "engine/global mix database.dat" "$BUILDDIR"
 cp -r engine/thirdparty/download/windows/*.dll "$BUILDDIR"
