@@ -18,20 +18,24 @@ script:
   - rm -r engine
   - ./setup-travis.sh
   - travis_retry ./rebuild.sh
-  - if [[ -z "${TRAVIS_TAG}" ]]; then echo "NO TAG"; done
 
 notifications:
  
 before_deploy:
-  - ./package.sh "${TRAVIS_TAG}" "${PWD}/build/"
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=$TRAVIS_BRANCH-$(git rev-parse HEAD)
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git push -q https://$TAGPERM@github.com/RA2A/RA2A --tags
+  - ./package.sh "$GIT_TAG" "${PWD}/build/"
 
 deploy:
   provider: releases
   api_key:
     secure: FLNsFVaq/8z40bbpYbKO7uD+3SRNV98He0iGlX0oT0bzN6Y1DvSnlxuQvG1R36wFCTbJlPJlFTVkp+bQgE0F4qrZI7QRvYL/r2ffMfZwPYGDMnh6dlmWF14Z8OPgg9SSRDBsorRglvztiwIgueeV3jSG/7lVUkuadQP7x24fF1JWYTAEpe1WOTiYeByYsSiMpJQijnsWx5l2TeN3zeTRQ85ETHJ1VsEWz6haqOugGm2WH3gHqJH9BKsf5v1Zz8K2irqsDenS18Ymm8BL77vLvKX0a+5VvWpoVKevjz3mj9I0T0fPkwlGPien9B6ueBp7wM/0DL4lrAjgKVHxjQeyNHFez/APyJGSPezi+a4s4DzyEWKfP09o+u7+dL1tEOVaaGRL3PadoUHhv0wQ9HAyr7jQGDhG07bN+swpIB1MCoBAK0wRhlJhTGWkxm4YSD4BHX5BCI7SJ+QcSOWl36EJS/dc+Y9BBxmo98aqFztqUtpPJqzUNXsze7PyKJ9J7rCBGAn6w8X/u/M6a4TXN58STJv/JQdELofJJ2OFv/0FN/qQ3KDgLvB+xi16roUHzmhX4qVTRdUJDXpXQ8qBeqdsidI73Rk/2Aol6GlYuUOb+rOmmDhmqozm7qrX9aUCbAIHsAdm7MzbmvZ/+EsotK0/sTVkYdWXiU6qYiyLqTeMhVU=
   file:
-    - build/RA2A-${TRAVIS_TAG}.*
+    - build/RA2A-${GIT_TAG}.*
   skip_cleanup: true
   on:
-    tags: true
+    all_branches: true
     repo: RA2A/RA2A
