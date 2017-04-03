@@ -6,18 +6,20 @@ if [ $# -ne "2" ]; then
 fi
 
 MOD="RA2A"
-BUILDDIR="$2/RA2A-$1"
+BUILDDIR="RA2A-$1"
+REPODIR=$(realpath $(dirname $0))
 VERSION="$1"
 
+pushd "$2" >/dev/null
 
 rm -rf "$BUILDDIR" "$BUILDDIR.zip"
 mkdir -p "$BUILDDIR"
 
-echo "Preparing standalone installation for tag \"$VERSION\" into \"$BUILDDIR\""
-cp -r engine/*.{exe,dll,dll.config} "$BUILDDIR"
-cp -r "engine/mods" "engine/glsl" "engine/global mix database.dat" "$BUILDDIR"
-cp -r engine/thirdparty/download/windows/*.dll "$BUILDDIR"
-cp -r "mods" "$BUILDDIR"
+echo "Preparing standalone installation for tag \"$VERSION\" into \"$(pwd)/$BUILDDIR\""
+cp -r $REPODIR/engine/*.{exe,dll,dll.config} "$BUILDDIR"
+cp -r "$REPODIR/engine/mods" "$REPODIR/engine/glsl" "$REPODIR/engine/lua" "$REPODIR/engine/global mix database.dat" "$BUILDDIR"
+cp -r $REPODIR/engine/thirdparty/download/windows/*.dll "$BUILDDIR"
+cp -r "$REPODIR/mods" "$BUILDDIR"
 
 echo "Creating $BUILDDIR.zip"
 zip -rq "$BUILDDIR.zip" "$BUILDDIR"
@@ -27,3 +29,5 @@ echo "Creating $BUILDDIR.tar.bz"
 tar cfj "$BUILDDIR.tar.bz" "$BUILDDIR"
 
 echo "Finished"
+
+popd >/dev/null
