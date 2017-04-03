@@ -27,7 +27,7 @@ before_deploy:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$TRAVIS_BRANCH-$(git rev-parse HEAD)
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$TAGPERM@github.com/RA2A/RA2A --tags
+  - git push -q git@github.com:RA2A/RA2A --tags
   - ./package.sh "$GIT_TAG" "${PWD}/build/"
 
 deploy:
