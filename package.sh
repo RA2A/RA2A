@@ -22,6 +22,8 @@ cp -r "$REPODIR/engine/mods" "$REPODIR/engine/glsl" "$REPODIR/engine/lua" "$REPO
 cp -r $REPODIR/engine/thirdparty/download/windows/*.dll "$BUILDDIR"
 cp -r "$REPODIR/mods" "$BUILDDIR"
 
+find -type f -print0 | xargs -0 sed -i 's/{DEV_VERSION}/'commit-$(git rev-parse HEAD)'/g'
+
 echo "Creating $BUILDDIR.zip"
 zip -rq "$BUILDDIR.zip" "$BUILDDIR"
 echo "Creating $BUILDDIR.tar.gz"
