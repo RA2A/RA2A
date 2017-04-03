@@ -15,7 +15,7 @@ addons:
     - lua5.1
 
 script:
-  - rmdir engine
+  - rm -r engine
   - ./setup-travis.sh
   - travis_retry ./rebuild.sh
 
