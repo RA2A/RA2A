@@ -22,7 +22,7 @@ script:
 notifications:
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "prod" ]; then declare -r SSH_FILE="$(mktemp -u ~/.ssh/XXXXX)" && echo "$SSH_FILE" && openssl aes-256-cbc -K $encrypted_8c393341f536_key -iv $encrypted_8c393341f536_iv -in .travis/github_deploy_key.enc -out "$SSH_FILE" -d && chmod 600 "$SSH_FILE" && printf "%s\n" "Host github.com" "  IdentityFile $SSH_FILE" "  LogLevel ERROR" >> ~/.ssh/config && git config --global user.email "builds@travis-ci.com" && git config --global user.name "Travis CI" && export GIT_TAG=$TRAVIS_BRANCH-$(git rev-parse HEAD) && git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER" && git push -q git@github.com:RA2A/RA2A --tags ; fi
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then declare -r SSH_FILE="$(mktemp -u ~/.ssh/XXXXX)" && echo "$SSH_FILE" && openssl aes-256-cbc -K $encrypted_8c393341f536_key -iv $encrypted_8c393341f536_iv -in .travis/github_deploy_key.enc -out "$SSH_FILE" -d && chmod 600 "$SSH_FILE" && printf "%s\n" "Host github.com" "  IdentityFile $SSH_FILE" "  LogLevel ERROR" >> ~/.ssh/config && git config --global user.email "builds@travis-ci.com" && git config --global user.name "Travis CI" && export GIT_TAG=$TRAVIS_BRANCH-$(git rev-parse HEAD) && git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER" && git push -q git@github.com:RA2A/RA2A --tags ; fi
 
 before_deploy:
   - ./package.sh "$GIT_TAG" "${PWD}/build/"
