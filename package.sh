@@ -17,7 +17,7 @@ rm -rf "$BUILDDIR" "$BUILDDIR.zip"
 mkdir -p "$BUILDDIR"
 
 echo "Preparing standalone installation for tag \"$VERSION\" into \"$(pwd)/$BUILDDIR\""
-cp -r $REPODIR/engine/*.{exe,dll,dll.config} "$BUILDDIR"
+cp -r $REPODIR/engine/*.{exe,exe.config,dll,dll.config} "$BUILDDIR"
 cp -r "$REPODIR/engine/mods" "$REPODIR/engine/glsl" "$REPODIR/engine/lua" "$REPODIR/engine/global mix database.dat" "$BUILDDIR"
 cp -r $REPODIR/engine/thirdparty/download/windows/*.dll "$BUILDDIR"
 cp -r "$REPODIR/mods" "$BUILDDIR"
