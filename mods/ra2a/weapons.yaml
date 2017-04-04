@@ -1,7 +1,7 @@
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 50
+		Damage: 10
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Air: 100
@@ -17,15 +17,15 @@ UnitExplode:
 UnitExplodeSmall:
 	Inherits: UnitExplode
 	Warhead@1Dam: SpreadDamage
-		Damage: 40
+		Damage: 5
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_brnl
 		ImpactSounds: expnew13.wav
 
 DogJaw:
 	ValidTargets: Infantry
-	ReloadDelay: 10
-	Range: 3c0
+	ReloadDelay: 25
+	Range: 1c612
 	Report: idogatta.wav, idogatca.wav
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
@@ -81,7 +81,7 @@ BlackHawkCannon:
 	ReloadDelay: 40
 	Range: 6c0
 	Report: vblhatta.wav, vblhattb.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -177,7 +177,7 @@ CoilBolt:
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 200
+		Damage: 100
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -195,13 +195,13 @@ OPCoilBolt:
 	Projectile: TeslaZap
 		Image: litningupg
 	Warhead@1Dam: SpreadDamage
-		Damage: 300
+		Damage: 200
 
 20mmrapid:
 	ReloadDelay: 20
 	Range: 5c512
 	Report: vwaratta.wav, vwarattb.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -220,8 +220,8 @@ OPCoilBolt:
 	ReloadDelay: 50
 	Range: 5c512
 	Report: vrhiatta.wav, vrhiattb.wav, vrhiattc.wav, vrhiattd.wav
-	Projectile: Bullet
-		Speed: 40c0
+	Projectile: BulletAS
+		Speed: 0c768
 		Image: 120mm
 		Palette: ra
 		Shadow: true
@@ -249,8 +249,8 @@ OPCoilBolt:
 	ReloadDelay: 60
 	Range: 5c0
 	Report: vgriatta.wav, vgriattb.wav, vgriattc.wav
-	Projectile: Bullet
-		Speed: 40c0
+	Projectile: BulletAS
+		Speed: 0c768
 		Image: 120mm
 		Palette: ra
 		Shadow: true
@@ -300,7 +300,7 @@ TerrorBomb:
 	ReloadDelay: 20
 	Range: 4c0
 	Report: gexpbara.wav, gexpbarb.wav, gexpbarc.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
@@ -322,16 +322,16 @@ GrandCannonWeapon:
 	Report: bgraatta.wav
 	Range: 15c0
 	MinRange: 3c0
-	Projectile: Bullet
+	Projectile: BulletAS
 		Blockable: false
-		Speed: 682
+		Speed: 512
 		Image: 120mm
 		Palette: ra
 		Shadow: true
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 150
+		Damage: 450
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -347,8 +347,8 @@ GrandCannonWeapon:
 	ReloadDelay: 65
 	Range: 5c768
 	Report: vrhiatta.wav, vrhiattb.wav, vrhiattc.wav, vrhiattd.wav
-	Projectile: Bullet
-		Speed: 40c0
+	Projectile: BulletAS
+		Speed: 0c768
 		Image: 120mm
 		Palette: ra
 		Shadow: true
@@ -400,7 +400,7 @@ GrandCannonWeapon:
 	Range: 5c768
 	Report: vapoat1a.wav
 	Burst: 2
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 40c0
 		Image: 120mm
 		Palette: ra
@@ -558,7 +558,7 @@ FlakTrackGun:
 	ReloadDelay: 25
 	Range: 5c0
 	Report: vflaat1a.wav, vflaat1b.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 50c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -578,7 +578,7 @@ FlakTrackAAGun:
 	ReloadDelay: 25
 	Range: 10c0
 	Report: vflaat2a.wav, vflaat2b.wav, vflaat2c.wav, vflaat2d.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
@@ -602,13 +602,13 @@ FlakWeapon:
 	Warhead@1Dam: SpreadDamage
 		Damage: 40
 
-sabot:
+TankDestroyerGun:
 	ValidTargets: Ground, Water
 	Range: 5c0
 	ReloadDelay: 25
 	Report: vtadatta.wav, vtadattb.wav, vtadattc.wav
-	Projectile: Bullet
-		Speed: 100c0
+	Projectile: BulletAS
+		Speed: 1c0
 		Image: 120mm
 		Palette: ra
 		Shadow: true
@@ -643,7 +643,7 @@ SubTorpedo:
 	BurstDelay: 20
 	Projectile: Missile
 		Image: missile
-		Speed: 102
+		Speed: 256
 		TrailImage: bbblelrg
 		HorizontalRateOfTurn: 12
 		RangeLimit: 8c409
@@ -688,7 +688,7 @@ SonicZap:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 4
+		Damage: 30
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
@@ -702,7 +702,7 @@ SonicZap:
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 50, 50
-		Damage: 4
+		Damage: 8
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:
@@ -719,7 +719,7 @@ SquidPunch:
 	Range: 1c856
 	Report: vsquat1a.wav
 	ValidTargets: Water, Underwater
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
@@ -731,8 +731,8 @@ SquidPunch:
 	ReloadDelay: 110
 	Range: 8c0
 	Report: vdesatta.wav, vrdesattb.wav
-	Projectile: Bullet
-		Speed: 40c0
+	Projectile: BulletAS
+		Speed: 0c768
 		Image: 120mm
 		Palette: ra
 		Shadow: true
@@ -800,10 +800,11 @@ Medusa:
 		ImpactSounds: gexpwasa.wav
 		ValidImpactTypes: Water
 
-HoverMissile:
+IFVMissile:
 	ReloadDelay: 50
 	Burst: 2
 	Range: 6c0
+    Minrange: 1c512
 	Report: vifvatta.wav
 	ValidTargets: Ground, Air
 	Projectile: Missile
@@ -811,20 +812,25 @@ HoverMissile:
 		Arm: 2
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 128
 		Image: DRAGON
 		Palette: ra
-		HorizontalRateOfTurn: 8
+		HorizontalRateOfTurn: 16
 		RangeLimit: 7c204
 		ContrailColor: D8D8FF
 		ContrailLength: 16
+        ContrailWidth: 0c32 # has to be set in 1D world distance
+        MaximumLaunchSpeed: 0c256
+        MinimumLaunchSpeed: 0c64
+        MinimumLaunchAngle: 180
+        MaximumLaunchAngle: 180
+        CruiseAltitude: 3c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 50
 		ValidTargets: Ground, Air
 		Versus:
 			Air: 100
-			Infantry: 100
+			Infantry: 75
 			Vehicle: 50
 			Building: 50
 			Concrete: 25
@@ -840,8 +846,8 @@ HoverMissile:
 	Warhead@5: LeaveSmudge
 		SmudgeType: SmallCrater
 
-HoverMissileE:
-	Inherits: HoverMissile
+IFVMissileE:
+	Inherits: IFVMissile
 	Burst: 4
 	Report: vifvatta.wav
 	ValidTargets: Ground, Air
@@ -853,22 +859,39 @@ HoverMissileE:
 		InvalidImpactTypes: Water
 
 RepairBullet:
-	ReloadDelay: 80
-	Range: 1c819
+	ReloadDelay: 20
 	Report: vifvrepa.wav
 	ValidTargets: Repair
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -50
+		Damage: -15
+		ValidTargets: Repair
+        
+RepairBulletVisual:
+	ReloadDelay: 20
+	Range: 1c819
+    Burst: 6
+    BurstDelay: 0
+	ValidTargets: Repair
+	Projectile: BulletAS
+        Image: spark
+		Speed: 0c128
+        Inaccuracy: 1c0
+		ContrailColor: F78909
+		ContrailLength: 6
+        ContrailWidth: 0c016
+	Warhead@1Dam: SpreadDamage #dummy wh
+		Spread: 213
+		Damage: 0
 		ValidTargets: Repair
 
 CRTerrorBomb:
 	ReloadDelay: 20
 	Range: 4c0
 	Report: gexpbara.wav, gexpbarb.wav, gexpbarc.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
@@ -885,7 +908,7 @@ CRTerrorBomb:
 	Warhead@2Eff: CreateEffect
 		Explosions: terrorist_explosion
 
-Comet:
+PrismGun:
 	ValidTargets: Ground, Water
 	ReloadDelay: 100
 	Range: 10c0
@@ -914,17 +937,52 @@ Comet:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater, SmallScorch
+    Warhead@5op: FireShrapnel
+        Weapon: PrismGunShard
+        Amount: 3
 
-SuperComet:
-	Inherits: Comet
+PrismGunE:
+	Inherits: PrismGun
 	Warhead@1Dam: SpreadDamage
 		Damage: 150
-
+    Warhead@5op: FireShrapnel
+        Amount: 5
+        
+PrismGunShard:
+	ValidTargets: Ground, Water
+	ReloadDelay: 100
+	Range: 3c0
+	Report: vpriatta.wav
+	Projectile: LaserZap
+		Width: 25
+		BeamDuration: 15
+		UsePlayerColor: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 25
+		Versus:
+			Air: 100
+			Infantry: 100
+			Vehicle: 50
+			Building: 100
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, ElectroDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSounds: gexp14a.wav
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSounds: gexpwasa.wav
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater, SmallScorch
+    
 vulcan:
 	ReloadDelay: 26
 	Range: 5c512
 	Report: bsenatta.wav, bsenattb.wav, bsenattc.wav, bsenattd.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -952,7 +1010,7 @@ PrismShot:
 		UsePlayerColor: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 120
+		Damage: 200
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -965,7 +1023,7 @@ MirageGun:
 	ReloadDelay: 70
 	Range: 7c0
 	Report: vmiratta.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 		Image: 120mm
 		Palette: ra
@@ -1048,7 +1106,7 @@ AlligatorBite:
 	Range: 1c512
 	Report: galiatta.wav, galiattb.wav
 	ValidTargets: Ground
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
@@ -1069,6 +1127,7 @@ atomic:
 		Explosion: nuke_ball
 		ImpactSound: snukintr.wav
 	Warhead@1Dam_impact: SpreadDamage
+		Damage: 1200
 		DamageTypes: RadiationDeath
 		Delay: 25
 	Warhead@2Res_impact: DestroyResource
@@ -1077,3 +1136,41 @@ atomic:
 		Delay: 25
 	Warhead@4Smu_areanuke: LeaveSmudge
 		Delay: 25
+        
+#used for explosions of units/buildings
+# SmallDebris:
+    # ReloadDelay: 60
+    # Range: 4c0
+    # Report:
+    # Projectile: BulletAS
+        # Speed: 50, 125
+        # LaunchAngle: 45, 135
+        # Image: dbrislg
+        # TrailImage: small_smoke_trail
+        # TrailPalette: effect
+        # Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        # Shadow: true
+
+LargeDebris:
+    ReloadDelay: 60
+    Range: 4c0
+    Report:
+    Projectile: BulletAS
+        Speed: 50, 125
+        LaunchAngle: 45, 135
+        Image: dbrislg
+        TrailImage: durasmoke
+        TrailPalette: effect
+        Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        Shadow: true
+
+Sparky: # used for IFV / vehicles
+    ReloadDelay: 10
+    Range: 4c0
+    Report:
+    Projectile: BulletAS
+        Speed: 32, 64, 96, 32, 64, 96, 32, 64, 96, 32, 64, 96
+        LaunchAngle: 25, 45, 65, 85, 120, 135, 155, 175, 195, 210, 225, 245
+        Image: spark
+        Sequences: 1
+        Shadow: false

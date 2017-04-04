@@ -321,7 +321,7 @@ gaweap:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
-		Prerequisites: garefn, gapile, ~structures.allies
+		Prerequisites: garefn, ~structures.allies
 		Description: Produces vehicles.
 	Selectable:
 		Bounds: 212, 158, -7, -28
@@ -751,11 +751,11 @@ gaorep:
 
 gaspysat:
 	Inherits: ^Building
-	Buildable:
-		Queue: Support
-		BuildPaletteOrder: 90
-		Prerequisites: gatech, ~structures.allies
-		Description: Reveals the entire battlefield.
+	# Buildable:
+		# Queue: Support
+		# BuildPaletteOrder: 90
+		# Prerequisites: gatech, ~structures.allies
+		# Description: Reveals the entire battlefield.
 	Selectable:
 		Bounds: 96, 98, -4, -30
 	Valued:
@@ -785,6 +785,15 @@ gaspysat:
 		PowerdownSpeech: BuildingOffline
 	GrantConditionOnDisabled@IDISABLE:
 		Condition: disabled
+	GpsPower: #TODO
+		Icon: gps
+		OneShot: yes
+		ChargeTime: 1
+		Description: GPS Satellite
+		LongDesc: Reveals map terrain and provides tactical\ninformation. Requires power and active radar.
+		RevealDelay: 15
+		# LaunchSpeechNotification: SatelliteLaunched
+		DisplayTimerStances: Ally, Neutral, Enemy
 
 gagap:
 	Inherits: ^SupportBuilding
@@ -888,7 +897,7 @@ gacsph:
 	ChronoshiftPower@chronoshift:
 		OrderName: Chronoshift
 		Icon: chrono
-		ChargeTime: 120
+		ChargeTime: 300
 		Description: Chronoshift
 		LongDesc: Teleports a group of units across\nthe map.
 		# Those sounds don't work: OpenRA/OpenRA#10540
@@ -899,6 +908,7 @@ gacsph:
 		KillCargo: False
 		SelectionCursor: chronosphere
 		TargetCursor: chronosphere
+        Range: 2
 
 atesla:
 	Inherits: ^SupportBuilding
@@ -928,7 +938,7 @@ atesla:
 		LocalOffset: 0,0,2500
 	AttackTesla:
 		Voice: Attack
-		ReloadTime: 60
+		ReloadTime: 120
 		ChargeAudio: bpripow.wav
 	Power:
 		Amount: -75

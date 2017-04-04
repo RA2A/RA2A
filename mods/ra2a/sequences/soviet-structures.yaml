@@ -130,7 +130,7 @@ narefn:
 			URBAN: URBAN
 	idle-drill: ngrefnl1
 		Length: 3
-		Tick: 1500
+		Tick: 250
 	idle-bib: ngrefnbb
 		ShadowStart: 3
 		ZOffset: -512

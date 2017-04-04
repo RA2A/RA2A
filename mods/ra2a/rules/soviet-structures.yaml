@@ -277,7 +277,7 @@ naweap:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
-		Prerequisites: refinery, nahand, ~structures.soviets
+		Prerequisites: refinery, ~structures.soviets
 		Description: Produces vehicles.
 	Selectable:
 		Bounds: 196, 178, -6, -48
@@ -528,7 +528,7 @@ nanrct:
 		Weapon: NukePayload
 		EmptyWeapon: NukePayload
 	Power:
-		Amount: 2000
+		Amount: 1000
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	ScalePowerWithHealth:
@@ -537,6 +537,7 @@ nanrct:
 	PowerTooltip:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+    -Sellable: #fuck everybody using it xD
 
 natech:
 	Inherits: ^Building
@@ -701,7 +702,7 @@ nairon:
 		Amount: -200
 	GrantExternalConditionPower@IRONCURTAIN:
 		Icon: invuln
-		ChargeTime: 120
+		ChargeTime: 300
 		Description: Invulnerability
 		LongDesc: Makes a group of units invulnerable\nfor 20 seconds.
 		Duration: 500
@@ -710,6 +711,7 @@ nairon:
 		OnFireSound: siroon.wav
 		DisplayRadarPing: True
 		Condition: invulnerability
+        Range: 2
 	SupportPowerChargeBar:
 	RequiresPower:
 	CanPowerDown:
@@ -859,7 +861,7 @@ tesla:
 		RequiresCondition: charged
 	AttackTesla:
 		Voice: Attack
-		MaxCharges: 3
+		MaxCharges: 2
 		ReloadTime: 120
 		ChargeAudio: tslachg2.aud
 	AutoTarget:

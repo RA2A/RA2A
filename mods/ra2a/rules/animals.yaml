@@ -8,9 +8,9 @@ cow:
 		Range: 4c0
 	Voiced:
 		VoiceSet: CowVoice
-	AmbientSound:
-		SoundFile: gcowsela.wav #, gcowselb.wav, gcowselc.wav
-		Interval: 200
+	# AmbientSound:
+		# SoundFile: gcowsela.wav #, gcowselb.wav, gcowselc.wav
+		# Interval: 200
 	-AutoTarget:
 	-AttackMove:
 	-Guard:

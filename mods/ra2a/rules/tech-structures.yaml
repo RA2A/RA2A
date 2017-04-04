@@ -24,7 +24,7 @@ caoild:
 		Offset: 1000,0,0
 	GivesBuildableArea:
 	GivesCashOnCapture:
-		Amount: 1000
+		Amount: 500
 
 caairp:
 	Inherits: ^TechBuilding

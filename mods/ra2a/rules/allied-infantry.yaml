@@ -1,4 +1,4 @@
-engineer:
+engineer: #also soviet one
 	Inherits: ^Infantry
 	Buildable:
 		Queue: Infantry
@@ -20,9 +20,11 @@ engineer:
 	EngineerRepair:
 	RepairsBridges:
 		RepairNotification: BridgeRepaired
+	ExternalCaptures:
+		CaptureTypes: building
+        ConsumeActor: true
 	Captures:
-		Sabotage: false
-		CaptureTypes: building, husk
+		CaptureTypes: husk
 	-AutoTarget:
 	RevealsShroud:
 		Range: 4c0
@@ -36,8 +38,8 @@ engineer:
 		Voice: Action
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-
-dog:
+ 
+dog: #also for soviets
 	Inherits: ^Infantry
 	Buildable:
 		Queue: Infantry
@@ -62,8 +64,9 @@ dog:
 		Type: Infantry
 	Armament:
 		Weapon: DogJaw
-	AttackLeap:
-		Voice: Attack
+	# AttackLeap:
+		# Voice: Attack
+    AttackFrontal:
 	AutoTarget:
 		InitialStance: AttackAnything
 	RenderSprites:
@@ -342,6 +345,7 @@ tany:
 		DefaultAttackSequence: shoot
 	-TakeCover: # TODO: allow multiple sequence modifiers
 	WithSwimSuit:
+    -Crushable:
 
 jumpjet:
 	Inherits: ^Infantry
@@ -451,7 +455,7 @@ cleg:
 	Voiced:
 		VoiceSet: ChronoLegionnaireVoice
 	Armament@Temporal:
-		Weapon: NeutronRifle
+		Weapon: ChronoLegionnaireGun
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

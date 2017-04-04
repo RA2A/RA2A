@@ -53,11 +53,11 @@ cmin:
 		Priority: 7
 		Bounds: 64, 52, 0, -6
 	Harvester:
-		Capacity: 10
+		Capacity: 5
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
-        BaleLoadDelay: 4
-        BaleUnloadDelay: 2
+        BaleLoadDelay: 16
+        BaleUnloadDelay: 4
 		SearchFromProcRadius: 24
 		SearchFromOrderRadius: 12
 		HarvestVoice: Move
@@ -96,7 +96,7 @@ mtnk:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: ~gaweap, ~!structures.america
+		Prerequisites: ~gaweap#, ~!structures.america enable with abrams
 		Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
 		Speed: 90
@@ -132,6 +132,8 @@ mtnk:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
+    CustomSelectionSize:
+        CustomBounds: 12, 12
 
 tnkd:
 	Inherits: ^Vehicle
@@ -155,7 +157,7 @@ tnkd:
 	RevealsShroud:
 		Range: 8c0
 	Armament@Primary:
-		Weapon: sabot
+		Weapon: TankDestroyerGun
 		LocalOffset: 640,0,384
 	AttackFrontal:
 		Voice: Attack
@@ -184,7 +186,7 @@ fv:
 		Description: Multi-Purpose Vehicle.\nWithout passenger:\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Ships\nSpecial Ability: Armament depends on passenger.
 	Mobile:
 		Speed: 128
-		TurnSpeed: 5
+		TurnSpeed: 8
 		RequiresCondition: !notmobile
 	Health:
 		HP: 200
@@ -193,7 +195,7 @@ fv:
 	RevealsShroud:
 		Range: 8c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 8
 	Cargo:
 		Types: Infantry
 		MaxWeight: 1
@@ -211,13 +213,13 @@ fv:
 			tany: ifv-hero
 			ghost: ifv-hero
 	Armament@primary:
-		Weapon: HoverMissile
-		LocalOffset: 640, 0, 384
+		Weapon: IFVMissile
+		LocalOffset: 128, 0, 512 #640
 		RequiresCondition: !ifv-machinegun && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-deso && !ifv-hero
 	Armament@elite:
-		Weapon: HoverMissileE
-		LocalOffset: 640, 0, 384
-		RequiresCondition: rank-elite
+		Weapon: IFVMissileE
+		LocalOffset: 128, 0, 512
+		RequiresCondition: rank-elite && !ifv-machinegun && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-deso && !ifv-hero
 	Armament@machinegun:
 		Weapon: CRM60
 		LocalOffset: 188,32,600
@@ -226,6 +228,14 @@ fv:
 		MuzzleSplitFacings: 8
 	Armament@repair:
 		Weapon: RepairBullet
+		LocalOffset: 164,0,864
+		RequiresCondition: ifv-repair
+		Cursor: goldwrench
+		OutsideRangeCursor: goldwrench
+		TargetStances: Ally
+		ForceTargetStances: None
+	Armament@repairvisual:
+		Weapon: RepairBulletVisual
 		LocalOffset: 164,0,864
 		RequiresCondition: ifv-repair
 		Cursor: goldwrench
@@ -244,7 +254,7 @@ fv:
 		Weapon: ElectricBolt
 		RequiresCondition: ifv-tesla
 	Armament@desolator:
-		Weapon: RadBeamWeapon
+		Weapon: DesolatorGun
 		RequiresCondition: ifv-deso
 	Armament@flak-ground:
 		Weapon: FlakGuyGun
@@ -315,11 +325,11 @@ sref:
 		TurnSpeed: 10
 		Offset: -30,0,85
 	Armament@primary:
-		Weapon: Comet
+		Weapon: PrismGun
 		LocalOffset: 640, 0, 427
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: SuperComet
+		Weapon: PrismGunE
 		LocalOffset: 640, 0, 427
 		RequiresCondition: rank-elite
 	AttackTurreted:
@@ -388,11 +398,11 @@ aabram:
 		Cost: 900
 	Tooltip:
 		Name: Abrams Tank
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 20
-		Prerequisites: ~gaweap, ~structures.america
-		Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 20
+		# Prerequisites: ~gaweap, ~structures.america
+		# Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
 		Speed: 90
 		TurnSpeed: 5

@@ -122,7 +122,7 @@ garefn:
 			URBAN: URBAN
 	idle-drill: ggrefnl1
 		Length: 6
-		Tick: 1500
+		Tick: 250#1500
 	idle-bib: ggrefnbb
 		ShadowStart: 2
 		ZOffset: -512

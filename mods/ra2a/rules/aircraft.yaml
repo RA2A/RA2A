@@ -43,7 +43,7 @@ shad:
 		PipCount: 5
 		UnloadVoice: Move
 	SpawnActorOnDeath:
-		Actor: shadhusk
+		Actor: shadhusk    
 
 shadhusk:
 	Tooltip:
@@ -93,7 +93,7 @@ zep:
 		AirborneCondition: airborne
 		CanHover: True
 	Health:
-		HP: 2000
+		HP: 4000
 	Armor:
 		Type: Air
 	RevealsShroud:
@@ -125,13 +125,12 @@ zephusk:
 		Type: Air
 	Health:
 		HP: 140
-	Aircraft:
-		TurnSpeed: 10
-		Speed: 50
-		CanHover: True
-		Voice: Move
+    Aircraft:
+        TurnSpeed: 1
+        Speed: 10
 	FallsToEarth:
-		Spins: False # TODO: In the original they did spin, but that just looks weird.
+		Spins: True # TODO: In the original they did spin, but that just looks weird.
+#        Velocity: 0c010
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition

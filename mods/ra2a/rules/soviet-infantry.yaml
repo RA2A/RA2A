@@ -25,10 +25,10 @@ e2:
 	AttackFrontal:
 		Voice: Attack
 	Armament@primary:
-		Weapon: M1Carbine
+		Weapon: ConscriptGun
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: M1CarbineE
+		Weapon: ConscriptGunE
 		RequiresCondition: rank-elite
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -44,7 +44,7 @@ flakt:
 	Inherits@2: ^Parachutable
 	Buildable:
 		Queue: Infantry
-		Prerequisites: naradr, ~nahand
+		Prerequisites: ~nahand
 		BuildPaletteOrder: 20
 		Description: Anti-Air/Anti-Infantry unit.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Valued:
@@ -142,6 +142,7 @@ shk:
 		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+	-Crushable:
 
 terror:
 	Inherits: ^Infantry
@@ -190,7 +191,7 @@ deso:
 		Prerequisites: naradr, ~infantry.iraq
 		Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
-		Cost: 600
+		Cost: 700
 	Tooltip:
 		Name: Desolator
 	Selectable:
@@ -206,10 +207,10 @@ deso:
 	Passenger:
 		PipType: Red
 	Armament@primary:
-		Weapon: RadBeamWeapon
+		Weapon: DesolatorGun
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: RadBeamWeaponE
+		Weapon: DesolatorGunE
 		RequiresCondition: rank-elite
 	AttackFrontal:
 		Voice: Attack
@@ -221,6 +222,7 @@ deso:
 		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+	-Crushable:
 
 ivan:
 	Inherits: ^Infantry

@@ -1,4 +1,4 @@
-M1Carbine:
+ConscriptGun:
 	ReloadDelay: 25
 	Range: 4c0
 	Report: iconatta.wav, iconattb.wav, iconattc.wav, iconattd.wav, iconatte.wav
@@ -9,7 +9,7 @@ M1Carbine:
 		Damage: 15
 		Versus:
 			Air: 100
-			Infantry: 50
+			Infantry: 75
 			Vehicle: 50
 			Building: 50
 			Concrete: 25
@@ -17,15 +17,16 @@ M1Carbine:
 	Warhead@2Eff: CreateEffect
 		Explosions: piffpiff
 
-M1CarbineE:
-	Inherits: M1Carbine
+ConscriptGunE:
+	Inherits: ConscriptGun
 	ReloadDelay: 20
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 20
 
-RadBeamWeapon:
+DesolatorGun:
 	ValidTargets: Ground
+    InvalidTargets: Structure
 	Range: 6c0
 	ReloadDelay: 100
 	Report: idesat1a.wav
@@ -39,19 +40,20 @@ RadBeamWeapon:
 		Versus:
 			Air: 100
 			Infantry: 100
-			Vehicle: 100
+			Vehicle: 25
 			Building: 25
 			Concrete: 25
 		DamageTypes: RadiationDeath
 
-RadBeamWeaponE:
-	Inherits: RadBeamWeapon
+DesolatorGunE:
+	Inherits: DesolatorGun
 	Range: 8c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 200
 
-CRRadBeamWeapon:
-	Inherits: RadBeamWeapon
+ChronoLegionnaireGun:
+	Inherits: DesolatorGun
+    -InvalidTargets:
 	Range: 7c0
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
@@ -62,13 +64,13 @@ FlakGuyGun:
 	Range: 5c0
 	Report: vflaat1a.wav, vflaat1b.wav
 	Projectile: Bullet
-		Speed: 50c0
+		Speed: 768
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
 		Damage: 20
 		Versus:
 			Air: 100
-			Infantry: 100
+			Infantry: 50
 			Vehicle: 25
 			Building: 50
 			Concrete: 25

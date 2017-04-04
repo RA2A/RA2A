@@ -223,7 +223,11 @@ dragon:
 	idle:
 		Facings: 32
 
-smokey2:
+smokey2: #small smoke
+	idle:
+		Length: *
+        
+smokey: #big smoke, requires TS palette
 	idle:
 		Length: *
 
@@ -493,4 +497,27 @@ flameguy:
 		Start: 44
 		Facings: 1
 		Length: 104
-
+        
+dbrislg:
+    Defaults:
+        Length:*   
+        ZOffset: 1023
+    1: dbris1lg
+    2: dbris2lg
+    3: dbris3lg 
+    4: dbris4lg 
+    5: dbris5lg   
+    6: dbris6lg
+    7: dbris7lg
+    8: dbris8lg
+    9: dbris9lg
+    10: dbrs10lg
+    
+durasmoke:
+    idle:
+        Length:*
+        
+spark:
+    idle:
+        Length:*   
+        ZOffset: 1023

@@ -220,7 +220,7 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size:10
 
-SupportsMapsFrom: ra2a
+SupportsMapsFrom: ra2a, ra2, as
 
 SoundFormats: Aud, Wav
 
