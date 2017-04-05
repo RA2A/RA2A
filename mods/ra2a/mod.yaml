@@ -12,9 +12,9 @@ Packages:
 
 	$ra2a: ra2a
 	$cnc: cnc
+	$as: as
 
 	./mods/common: common
-	./mods/as: as
 
 	~ra2.mix
 	~language.mix

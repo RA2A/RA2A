@@ -1,0 +1,35 @@
+Metadata:
+	Title: Attaque superior (only .dll)
+	Version: {DEV_VERSION}
+	Author: GraionDilach
+	Hidden: true
+	Description: 
+
+RequiresMods:
+
+Packages:
+	.
+	./mods/common: common
+
+Cursors:
+
+Chrome:
+
+Assemblies:
+	common|OpenRA.Mods.Common.dll
+
+ChromeLayout:
+
+Notifications:
+
+LoadScreen: BlankLoadScreen
+
+ChromeMetrics:
+
+Fonts:
+
+SoundFormats:
+
+SpriteFormats:
+
+SpriteSequenceFormat: DefaultSpriteSequence

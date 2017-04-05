@@ -2,3 +2,9 @@
 	path = engine
 	url = git@github.com:RA2A/OpenRA.git
 	branch = ra2a
+[submodule "mods/ra2a/OpenRA.Mods.RA2A"]
+	path = mods/ra2a/OpenRA.Mods.RA2A
+	url = git@github.com:RA2A/OpenRA.Mods.RA2A.git
+[submodule "mods/as/OpenRA.Mods.AS"]
+	path = mods/as/OpenRA.Mods.AS
+	url = git@github.com:GraionDilach/OpenRA.Mods.AS.git
