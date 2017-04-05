@@ -5,6 +5,8 @@ Metadata:
 	Author: the RA2A mod team
 
 RequiresMods:
+	as: {DEV_VERSION}
+	yupgi_alert: {DEV_VERSION}
 
 Packages:
 	~^Content/ra2
@@ -13,6 +15,7 @@ Packages:
 	$ra2a: ra2a
 	$cnc: cnc
 	$as: as
+	$yupgi_alert: yupgi_alert
 
 	./mods/common: common
 
@@ -108,6 +111,7 @@ Assemblies:
 	common|OpenRA.Mods.Common.dll
 	common|OpenRA.Mods.Cnc.dll
 	as|OpenRA.Mods.AS.dll
+	yupgi_alert|OpenRA.Mods.yupgi_alert.dll
 	ra2a|OpenRA.Mods.RA2A.dll
 
 ChromeLayout:

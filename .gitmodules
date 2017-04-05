@@ -1,10 +1,13 @@
 [submodule "engine"]
 	path = engine
 	url = git@github.com:RA2A/OpenRA.git
-	branch = ra2a
+	branch = bleed
 [submodule "mods/ra2a/OpenRA.Mods.RA2A"]
 	path = mods/ra2a/OpenRA.Mods.RA2A
 	url = git@github.com:RA2A/OpenRA.Mods.RA2A.git
 [submodule "mods/as/OpenRA.Mods.AS"]
 	path = mods/as/OpenRA.Mods.AS
-	url = git@github.com:GraionDilach/OpenRA.Mods.AS.git
+	url = git@github.com:RA2A/OpenRA.Mods.AS.git
+[submodule "mods/yupgi_alert"]
+	path = mods/yupgi_alert
+	url = git@github.com:RA2A/yupgi_alert0.git
