@@ -1,12 +1,12 @@
 Metadata:
 	Title: Red Alert 2 Advanced
 	Description: 
-	Version: {DEV_VERSION}
+	Version: commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a
 	Author: the RA2A mod team
 
 RequiresMods:
-	as: {DEV_VERSION}
-	yupgi_alert: {DEV_VERSION}
+	as: commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a
+	yupgi_alert: commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a
 
 Packages:
 	~^Content/ra2
@@ -55,7 +55,7 @@ Packages:
 
 MapFolders:
 	ra2a|maps: System
-	~^maps/ra2a/{DEV_VERSION}: User
+	~^maps/ra2a/commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a: User
 
 Rules:
 	ra2a|rules/proxy-actors.yaml
@@ -264,17 +264,16 @@ GameSpeeds:
 		OrderLatency: 6
 
 ModContent:
-	InstallPromptMessage: Red Alert 2 Advanced requires artwork and audio from the original Red Alert 2 game.
+	InstallPromptMessage: Red Alert 2 Advanced requires artwork and audio from the original Red Alert 2 (including YR) game.
 	HeaderMessage: The original game content must be copied from an original game disc.
 	Packages:
 		base: Base Game Files
-			TestFiles: ^Content/ra2/ra2.mix, ^Content/ra2/language.mix
-			Sources: ra2, origin, tfd
+			TestFiles: ^Content/ra2/ra2.mix, ^Content/ra2/language.mix, ^Content/ra2/ra2md.mix, ^Content/ra2/langmd.mix
+			Sources: origin, tfd
 			Required: true
 		music: Base Game Music
-			TestFiles: ^Content/ra2/theme.mix
-			Sources: ra2, origin, tfd
+			TestFiles: ^Content/ra2/theme.mix, ^Content/ra2/thememd.mix
+			Sources: origin, tfd
 	Sources:
-		ra2a|installer/ra2.yaml
 		ra2a|installer/origin.yaml
 		ra2a|installer/firstdecade.yaml
