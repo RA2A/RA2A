@@ -55,13 +55,13 @@ paraE:
 
 MP5:
 	ReloadDelay: 10
-	Range: 6c0
+	Range: 5c0
 	Report: iseaatta.wav, iseaattb.wav
 	Projectile: Bullet
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 125
+		Damage: 25
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -75,10 +75,11 @@ MP5:
 MP5E:
 	Inherits: MP5
 
-DoublePistols:
+TanyaGun:
 	ReloadDelay: 10
-	Range: 6c0
+	Range: 5c0
 	Report: itanatta.wav, itanattb.wav
+    InvalidTargets: Structure
 	Projectile: Bullet
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
@@ -93,12 +94,12 @@ DoublePistols:
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 
-DoublePistolsE:
-	Inherits: DoublePistols
+TanyaGunE:
+	Inherits: TanyaGun
 	Range: 8c0
 
 CRMP5:
-	Inherits: DoublePistols
+	Inherits: TanyaGun
 
 awp:
 	ValidTargets: Infantry
@@ -124,9 +125,9 @@ AWPE:
 	Inherits: awp
 	ReloadDelay: 60
 
-20mm:
+RocketeerGun:
 	ReloadDelay: 20
-	Range: 5c0
+	Range: 4c0
 	MinRange: 0c001
 	Report: irocatta.wav
 	ValidTargets: Ground, Air
@@ -146,8 +147,8 @@ AWPE:
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 
-20mme:
-	Inherits: 20mm
+RocketeerGunE:
+	Inherits: RocketeerGun
 	Burst: 2
 
 NeutronRifle:

@@ -144,6 +144,7 @@
 		Sequences: building, large_bang, large_brnl, verylarge_clsn, large_tumu
 	RepairableBuilding:
 		IndicatorPalette: mouse
+        RepairInterval: 12
 	EngineerRepairable:
 		Voice: Attack
 	EmitInfantryOnSell@allies:
@@ -528,7 +529,7 @@
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
-		Bounds: 32,32
+		Bounds: 32, 25, 0, -3
 	Targetable:
 		TargetTypes: Ground, Repair, DetonateAttack
 	Repairable:

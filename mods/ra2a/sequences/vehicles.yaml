@@ -156,3 +156,10 @@ wini:
     
 aabram: #Abrams
     icon: aabramscameo
+    
+voidtank:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+	icon: tnkdicon
