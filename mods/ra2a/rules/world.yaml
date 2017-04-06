@@ -132,6 +132,7 @@ World:
 	SpawnMapActors:
 	MapBuildRadius:
 	MapOptions:
+        ShortGameEnabled: true
 	CreateMPPlayers:
 	MPStartUnits@amcv:
 		Class: none
@@ -192,6 +193,7 @@ World:
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	CrateSpawner:
+        Enabled: False
 		Minimum: 1
 		Maximum: 3
 		SpawnInterval: 3000

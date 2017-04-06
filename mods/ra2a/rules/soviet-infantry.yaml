@@ -15,7 +15,7 @@ e2:
 	Health:
 		HP: 125
 	Mobile:
-		Speed: 34
+		Speed: 40
 	Passenger:
 		PipType: Green
 	RevealsShroud:
@@ -44,11 +44,11 @@ flakt:
 	Inherits@2: ^Parachutable
 	Buildable:
 		Queue: Infantry
-		Prerequisites: ~nahand
+		Prerequisites: ~nahand, naradr
 		BuildPaletteOrder: 20
 		Description: Anti-Air/Anti-Infantry unit.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles
 	Valued:
-		Cost: 100
+		Cost: 150
 	Tooltip:
 		Name: Flak Trooper
 	Selectable:
@@ -56,11 +56,11 @@ flakt:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 34
+		Speed: 40
 	Passenger:
 		PipType: Green
 	RevealsShroud:
-		Range: 5c0
+		Range: 6c0
 	Armor:
 		Type: Infantry
 	AttackFrontal:
@@ -103,9 +103,9 @@ shk:
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
-		HP: 130
+		HP: 160
 	Mobile:
-		Speed: 51
+		Speed: 40
 	RevealsShroud:
 		Range: 6c0
 	Armor:
@@ -143,6 +143,7 @@ shk:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	-Crushable:
+	-TakeCover:
 
 terror:
 	Inherits: ^Infantry
@@ -199,7 +200,7 @@ deso:
 	Health:
 		HP: 700
 	Mobile:
-		Speed: 41
+		Speed: 40
 	RevealsShroud:
 		Range: 6c0
 	Armor:

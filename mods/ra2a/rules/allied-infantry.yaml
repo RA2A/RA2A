@@ -67,6 +67,7 @@ dog: #also for soviets
 	# AttackLeap:
 		# Voice: Attack
     AttackFrontal:
+        Voice: Attack
 	AutoTarget:
 		InitialStance: AttackAnything
 	RenderSprites:
@@ -105,7 +106,7 @@ e1:
 	Health:
 		HP: 125
 	Mobile:
-		Speed: 31
+		Speed: 35
 	Passenger:
 		PipType: Green
 	RevealsShroud:
@@ -151,13 +152,13 @@ snipe:
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Mobile:
-		Speed: 35
+		Speed: 40
 	Health:
 		HP: 125
 	Passenger:
 		PipType: Red
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	Armor:
 		Type: Infantry
 	Armament@primary:
@@ -245,7 +246,7 @@ ghost:
 		TargetTypes: Underwater
 		RequiresCondition: water-borne
 	Mobile:
-		Speed: 71
+		Speed: 60
 		TerrainSpeeds:
 			Clear: 100
 			Rough: 100
@@ -256,7 +257,7 @@ ghost:
 			Gems: 80
 			Water: 70
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	Armor:
 		Type: Infantry
 	Demolition:
@@ -327,10 +328,10 @@ tany:
 	Passenger:
 		PipType: Red
 	Armament@primary:
-		Weapon: DoublePistols
+		Weapon: TanyaGun
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: DoublePistolsE
+		Weapon: TanyaGunE
 		RequiresCondition: rank-elite
 	AttackFrontal:
 		Voice: Attack
@@ -372,10 +373,10 @@ jumpjet:
 	Armor:
 		Type: Infantry
 	Armament@primary:
-		Weapon: 20mm
+		Weapon: RocketeerGun
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: 20mmE
+		Weapon: RocketeerGunE
 		RequiresCondition: rank-elite
 	AttackFrontal:
 		Voice: Attack
