@@ -227,6 +227,10 @@ zep: #Kirov Reporting!
 #zbomb: #Kirov bomb needs voxel projectiles
 #	idle:
 aabram: #Abrams
-	idle: aabram
-	turret: aabramtur
-	barrel: aabrambarl
+    idle: aabram
+    turret: aabramtur
+    barrel: aabrambarl
+    
+voidtank:
+    idle: voidtank
+    barrel: voidtankbarl
