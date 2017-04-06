@@ -1,23 +1,24 @@
 Metadata:
 	Title: Red Alert 2 Advanced
 	Description: 
-	Version: commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a
+	Version: {DEV_VERSION}
 	Author: the RA2A mod team
 
 RequiresMods:
-	as: commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a
-	yupgi_alert: commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a
+	common: {DEV_VERSION}
+	cnc: {DEV_VERSION}
+	as: {DEV_VERSION}
+	yupgi_alert: {DEV_VERSION}
 
 Packages:
 	~^Content/ra2
 	.
 
-	$ra2a: ra2a
+	$common: common
 	$cnc: cnc
 	$as: as
 	$yupgi_alert: yupgi_alert
-
-	./mods/common: common
+	$ra2a: ra2a
 
 	~ra2.mix
 	~language.mix
@@ -55,7 +56,7 @@ Packages:
 
 MapFolders:
 	ra2a|maps: System
-	~^maps/ra2a/commit-6afd518f60e8eed3dfe388a2a11eea2169622a0a: User
+	~^maps/ra2a/{DEV_VERSION}: User
 
 Rules:
 	ra2a|rules/proxy-actors.yaml
