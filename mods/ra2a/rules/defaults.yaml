@@ -199,6 +199,9 @@
 		Range: 4c0
 	Tooltip:
 		Name: Civilian Building
+	MustBeDestroyed:
+		RequiredForShortGame: false
+
 
 ^Rubble:
 	Inherits@1: ^SpriteActor
@@ -391,8 +394,6 @@
 	DeathSounds@radiation:
 		Voice: Melted
 		DeathTypes: RadiationDeath
-	MustBeDestroyed:
-		RequiredForShortGame: true
 	Cloneable:
 		Types: infantry
 	Voiced:
@@ -459,8 +460,6 @@
 	ProximityCaptor:
 		Types: CivilianInfantry
 	ScaredyCat:
-	MustBeDestroyed:
-		RequiredForShortGame: true
 	-TakeCover:
 	Voiced:
 		VoiceSet: CivilianAlliedMaleVoice
@@ -561,8 +560,6 @@
 		LightPitch: 150
 		LightAmbientColor: -0.75,-0.75,-0.75
 		LightDiffuseColor: 1.4,1.4,1.4 #1.4,1.4,1.4
-	MustBeDestroyed:
-		RequiredForShortGame: true
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
 	Chronoshiftable:
@@ -739,8 +736,6 @@
 		LightPitch: 150
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
-	MustBeDestroyed:
-		RequiredForShortGame: true
 	Voiced:
 		VoiceSet: SovietNavalVoice
 	Chronoshiftable:

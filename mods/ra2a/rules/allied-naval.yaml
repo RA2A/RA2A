@@ -189,8 +189,6 @@ dlph:
 		Voice: Attack
 	Guardable:
 	DeathSounds:
-	MustBeDestroyed:
-		RequiredForShortGame: true
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	Chronoshiftable:
