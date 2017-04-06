@@ -97,7 +97,6 @@ sub:
 	Explodes:
 		Weapon: UnitExplode
 		EmptyWeapon: UnitExplode
-	-MustBeDestroyed:
 	WithVoxelBody:
 	RenderSprites:
 	Targetable@underwater:
