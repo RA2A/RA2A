@@ -17,9 +17,9 @@ Container@MAINMENU:
 			ImageCollection: logos
 			ImageName: logo
 		Label@VERSION_LABEL:
-			X: WINDOW_RIGHT - 500
+			X: WINDOW_RIGHT - 542
 			Y: 296 - 20
-			Width: 296 - 20
+			Width: 542 - 30
 			Height: 25
 			Align: Center
 			Font: Regular
