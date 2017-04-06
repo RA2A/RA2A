@@ -230,7 +230,13 @@ smokey2: #small smoke
 smokey: #big smoke, requires TS palette
 	idle:
 		Length: *
-
+        
+gunfire: #standard muzzle
+    idle:
+        Length: *
+        ZOffset: 1023
+        BlendMode: Additive
+        
 120mm:
 	idle:
 

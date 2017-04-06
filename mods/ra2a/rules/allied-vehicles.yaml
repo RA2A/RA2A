@@ -51,13 +51,13 @@ cmin:
 		Name: Chrono Miner
 	Selectable:
 		Priority: 7
-		Bounds: 64, 52, 0, -6
+		#Bounds: 64, 52, 0, -6
 	Harvester:
 		Capacity: 5
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
-        BaleLoadDelay: 16
-        BaleUnloadDelay: 4
+        BaleLoadDelay: 32
+        BaleUnloadDelay: 12
 		SearchFromProcRadius: 24
 		SearchFromOrderRadius: 12
 		HarvestVoice: Move
@@ -107,7 +107,7 @@ mtnk:
 	Armor:
 		Type: Vehicle
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	Turreted:
 		TurnSpeed: 5
 	Armament@primary:
@@ -123,7 +123,7 @@ mtnk:
 	AutoTarget:
 	RenderSprites:
 	Selectable:
-		Bounds: 64, 52, 0, -6
+		#Bounds: 64, 52, 0, -6
 	RenderVoxels:
 	WithVoxelBody:
 	WithVoxelTurret:
@@ -132,8 +132,6 @@ mtnk:
 		VoiceSet: AlliedVehicleVoice
 	ProducibleWithLevel:
 		Prerequisites: warfactory.infiltrated
-    CustomSelectionSize:
-        CustomBounds: 12, 12
 
 tnkd:
 	Inherits: ^Vehicle
@@ -155,7 +153,7 @@ tnkd:
 	Armor:
 		Type: Vehicle
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	Armament@Primary:
 		Weapon: TankDestroyerGun
 		LocalOffset: 640,0,384
@@ -164,7 +162,7 @@ tnkd:
 	AutoTarget:
 	RenderSprites:
 	Selectable:
-		Bounds: 64, 52, 0, -6
+		#Bounds: 64, 52, 0, -6
 	RenderVoxels:
 		NormalsPalette: ts-normals
 	WithVoxelBody:
@@ -266,7 +264,7 @@ fv:
 		Voice: Attack
 	AutoTarget:
 	Selectable:
-		Bounds: 64, 52, 0, -6
+		#Bounds: 64, 52, 0, -6
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -311,7 +309,7 @@ sref:
 	Tooltip:
 		Name: Prism Tank
 	Selectable:
-		Bounds: 64, 52, 0, -10
+		#Bounds: 64, 52, 0, -10
 	Health:
 		HP: 150
 	Armor:
@@ -359,7 +357,7 @@ mgtk:
 	Tooltip:
 		Name: Mirage Tank
 	Selectable:
-		Bounds: 64, 52, 0, -6
+		#Bounds: 64, 52, 0, -6
 	Health:
 		HP: 200
 	Armor:
@@ -368,7 +366,7 @@ mgtk:
 		TurnSpeed: 5
 		Speed: 105
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 	Armament@primary:
 		Weapon: MirageGun
 		LocalOffset: 640, 0, 427
@@ -420,7 +418,7 @@ aabram:
 		LocalOffset: 640,0,384
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: 120mmxE
+		Weapon: GrandCannonWeapon #test
 		LocalOffset: 640,0,384
 		RequiresCondition: rank-elite
 	AttackTurreted:
@@ -428,7 +426,7 @@ aabram:
 	AutoTarget:
 	RenderSprites:
 	Selectable:
-		Bounds: 64, 52, 0, -6
+		#Bounds: 64, 52, 0, -6
 	RenderVoxels:
         Scale: 8
 	WithVoxelBody:
@@ -440,3 +438,49 @@ aabram:
 		Prerequisites: warfactory.infiltrated
     BodyOrientation:
         QuantizedFacings: 32
+        
+voidtank:
+    Inherits: ^Vehicle
+    Valued:
+        Cost: 1200
+    Tooltip:
+        Name: Die JagdTigerchen
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 20
+        Prerequisites: ~vehicles.germany, ~techlevel.stupidshit
+        Description: Weird WIP thing
+    Mobile:
+        Speed: 70
+        TurnSpeed: 5
+        Crushes: fence, crate, infantry
+    Health:
+        HP: 400
+    Armor:
+        Type: Vehicle
+    RevealsShroud:
+        Range: 8c0
+    Armament@Primary:
+        Weapon: GrandCannonWeapon
+        LocalOffset: 640,0,384
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
+    AttackFrontal:
+        Voice: Attack
+    Turreted:
+    WithMuzzleOverlay:
+    WithVoxelBarrel:
+    AutoTarget:
+    AttackMove:
+    RenderSprites:
+    Selectable:
+        Bounds: 32, 25, 0, -3
+    RenderVoxels:
+        #NormalsPalette: ts-normals
+    WithVoxelBody:
+    Voiced:
+        VoiceSet: AlliedVehicleVoice
+    ProducibleWithLevel:
+        Prerequisites: warfactory.infiltrated 

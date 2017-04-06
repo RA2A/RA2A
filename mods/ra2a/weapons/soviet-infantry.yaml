@@ -27,7 +27,7 @@ ConscriptGunE:
 DesolatorGun:
 	ValidTargets: Ground
     InvalidTargets: Structure
-	Range: 6c0
+	Range: 5c0
 	ReloadDelay: 100
 	Report: idesat1a.wav
 	Projectile: LaserZap
@@ -91,7 +91,7 @@ CRFlakGuyGun:
 
 FlakGuyAAGun:
 	ReloadDelay: 25
-	Range: 8c0
+	Range: 6c0
 	Report: vflaat2a.wav, vflaat2b.wav, vflaat2c.wav, vflaat2d.wav
 	ValidTargets: Air
 	Projectile: Bullet
@@ -116,7 +116,7 @@ FlakGuyAAGunE:
 	Burst: 2
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
-		Damage: 8 # Westwood decision: Flak Trooper elite AA weapon DPS is smaller than rookie one, see line 17724 of rules.ini
+		Damage: 12
 
 ElectricBolt:
 	Range: 3c0
@@ -178,9 +178,8 @@ IvanBomber:
 		ExplosionPalette: mouse
 	Warhead@1Dam: SpreadDamage
 		Delay: 100
-		Spread: 213
+		Spread: 0c512
 		Damage: 400
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			Air: 100
 			Infantry: 100
