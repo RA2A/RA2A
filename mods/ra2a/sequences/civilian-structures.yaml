@@ -1329,8 +1329,9 @@ castl05h:
 		Start: 3
 		ShadowStart: 7
 		ZOffset: -1c0
+        
 
-cacolo01:
+cacolo01: #used for rommels academy
 	Defaults:
 		UseTilesetCode: true
 		Offset: -30,-60
@@ -1343,6 +1344,11 @@ cacolo01:
 		Start: 3
 		ShadowStart: 7
 		ZOffset: -1c0
+    make: #to not make the game crash
+		ShadowStart: 4
+	icon: cacolo01cameo
+		Offset: 0,0
+		UseTilesetCode: false
 
 caind01:
 	Defaults:

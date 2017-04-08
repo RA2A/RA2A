@@ -96,6 +96,8 @@ World:
 	HelpCommand:
 	ScreenShaker:
 	BuildingInfluence:
+	RadioactivityLayer:
+		Color: 00FF00
 	ProductionQueueFromSelection:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	DomainIndex:

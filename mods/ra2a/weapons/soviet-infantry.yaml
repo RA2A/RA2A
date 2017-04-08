@@ -31,9 +31,9 @@ DesolatorGun:
 	ReloadDelay: 100
 	Report: idesat1a.wav
 	Projectile: LaserZap
-		Width: 20
-		BeamDuration: 7
-		Color: B900FF00
+		Width: 70
+		BeamDuration: 15
+		Color: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 125
@@ -50,6 +50,15 @@ DesolatorGunE:
 	Range: 8c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 200
+        
+DesolatorAoEWeapon:
+    ReloadDelay: 60
+	Report: idesat2a.wav
+	Warhead@1Radio: CreateRadioactivity
+		Range: 4, 6, 8, 10
+		Level: 100
+		Falloff: 100, 90, 50, 0
+        MaxLevel: 500
 
 ChronoLegionnaireGun:
 	Inherits: DesolatorGun

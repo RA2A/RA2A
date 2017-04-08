@@ -467,7 +467,7 @@ nadept:
 	Selectable:
 		Bounds: 156, 150, 0, -38
 	Valued:
-		Cost: 800
+		Cost: 1200
 	Tooltip:
 		Name: Service Depot
 	ProvidesPrerequisite:
@@ -537,7 +537,7 @@ nanrct:
 	PowerTooltip:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-    -Sellable: #fuck everybody using it xD
+    -Sellable: #fuck everybody for using it xD
 
 natech:
 	Inherits: ^Building
@@ -641,11 +641,11 @@ naclon:
 
 napsis:
 	Inherits: ^Building
-	Buildable:
-		Queue: Support
-		BuildPaletteOrder: 40
-		Prerequisites: natech, ~structures.soviets
-		Description: Detects enemy units and strikepoints
+	# Buildable:
+		# Queue: Support
+		# BuildPaletteOrder: 40
+		# Prerequisites: natech, ~structures.soviets
+		# Description: Detects enemy units and strikepoints
 	Valued:
 		Cost: 2000
 	Tooltip:

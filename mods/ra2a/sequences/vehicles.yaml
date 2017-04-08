@@ -47,27 +47,51 @@ flata:
 	icon: xxicon
 
 fv:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: fvicon
 
 mgtk:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: rtnkicon
 
 gtgcan:
 	icon: gcanicon
 
 mtnk:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: gtnkicon
 
 harv:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	harvest: oregath
 		Length: 15
 		Facings: 8
 	icon: harvicon
 
 htk:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: htkicon
 
 htnk:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: htnkicon
 
 howi:
@@ -86,6 +110,10 @@ ltnk:
 	icon: xxicon
 
 apoc:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: mtnkicon
 
 pick:
@@ -122,6 +150,10 @@ taxi:
 	icon: xxicon
 
 tnkd:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
 	icon: tnkdicon
 
 tractor:
@@ -155,6 +187,10 @@ wini:
 	icon: xxicon
     
 aabram: #Abrams
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
     icon: aabramscameo
     
 voidtank:
@@ -162,4 +198,18 @@ voidtank:
         Length: *
     muzzle: gunfire
         Length: *
-	icon: tnkdicon
+    icon: tnkdicon
+    
+bfrt:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    icon: bfrticon
+    
+robo:
+    Defaults:
+        Length: *
+    muzzle: gunfire
+        Length: *
+    icon: roboicon

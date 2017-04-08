@@ -9,8 +9,6 @@ engineer: #also soviet one
 		Cost: 500
 	Tooltip:
 		Name: Engineer
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Health:
 		HP: 75
 	Mobile:
@@ -51,7 +49,7 @@ dog: #also for soviets
 	Tooltip:
 		Name: Attack Dog
 	Selectable:
-		Bounds: 30, 24, 0, -5
+		Bounds: 26, 20, 0, -4
 	Health:
 		HP: 100
 	Mobile:
@@ -83,8 +81,6 @@ dog: #also for soviets
 		Range: 5c0
 	Voiced:
 		VoiceSet: DogVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	-TakeCover:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
@@ -101,8 +97,6 @@ e1:
 		Cost: 200
 	Tooltip:
 		Name: G.I.
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Health:
 		HP: 125
 	Mobile:
@@ -133,8 +127,6 @@ e1:
 		DefaultAttackSequence: shoot
 	Voiced:
 		VoiceSet: GIVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 
@@ -149,8 +141,6 @@ snipe:
 		BuildPaletteOrder: 80
 		Prerequisites: radar, ~infantry.england
 		Description: Special anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Mobile:
 		Speed: 40
 	Health:
@@ -167,8 +157,6 @@ snipe:
 		Voice: Attack
 	Voiced:
 		VoiceSet: SniperVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 
@@ -178,15 +166,13 @@ spy:
 		Queue: Infantry
 		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 90
-		Prerequisites: gatech, ~gapile
+		Prerequisites: gatech, ~gapile, ~infantry.england
 		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\n  Unarmed\nSpecial Ability: Disguises
 	Valued:
 		Cost: 1000
 	DisguiseTooltip:
 		Name: Spy
 		GenericName: Soldier
-	Selectable:
-		Bounds: 24, 28, -1, -8
 	Health:
 		HP: 100
 	Mobile:
@@ -235,8 +221,6 @@ ghost:
 		Cost: 1000
 	Tooltip:
 		Name: Navy SEAL
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Health:
 		HP: 125
 	GrantConditionOnTerrain:
@@ -276,8 +260,6 @@ ghost:
 		Image: seal
 	Voiced:
 		VoiceSet: SealVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -298,8 +280,6 @@ tany:
 		Cost: 2000
 	Tooltip:
 		Name: Tanya
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Health:
 		HP: 125
 	GrantConditionOnTerrain:
@@ -338,8 +318,6 @@ tany:
 	AnnounceOnBuild:
 	Voiced:
 		VoiceSet: TanyaVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -362,8 +340,6 @@ jumpjet:
 		Cost: 600
 	Tooltip:
 		Name: Rocketeer
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Health:
 		HP: 125
 	-Mobile:
@@ -409,8 +385,6 @@ jumpjet:
 	WithShadow:
 	Voiced:
 		VoiceSet: RocketeerVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	Targetable@ground:
@@ -420,8 +394,6 @@ jumpjet:
 
 cleg:
 	Inherits: ^Infantry
-	Selectable:
-		Bounds: 20, 30, 0, -11
 	Tooltip:
 		Name: Chrono Legionnaire
 	Buildable:
@@ -430,8 +402,6 @@ cleg:
 		BuildPaletteOrder: 100
 		Prerequisites: ~gapile, gatech
 		Description: High-tech soldier.\n Strong vs Infantry, Vehicles\n Weak vs Aircraft
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	Valued:
 		Cost: 1500
 	Health:

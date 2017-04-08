@@ -51,7 +51,6 @@ cmin:
 		Name: Chrono Miner
 	Selectable:
 		Priority: 7
-		#Bounds: 64, 52, 0, -6
 	Harvester:
 		Capacity: 5
 		Resources: Ore, Gems
@@ -96,7 +95,7 @@ mtnk:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: ~gaweap#, ~!structures.america enable with abrams
+		Prerequisites: ~gaweap, repairpad, ~!vehicles.korea, ~!vehicles.germany
 		Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
 		Speed: 90
@@ -114,24 +113,29 @@ mtnk:
 		Weapon: 105mm
 		LocalOffset: 640,0,384
 		RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	Armament@elite:
 		Weapon: 105mmE
 		LocalOffset: 640,0,384
 		RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	AttackTurreted:
 		Voice: Attack
 	AutoTarget:
+    WithMuzzleOverlay:
 	RenderSprites:
-	Selectable:
-		#Bounds: 64, 52, 0, -6
 	RenderVoxels:
 	WithVoxelBody:
 	WithVoxelTurret:
 	WithVoxelBarrel:
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
-	ProducibleWithLevel:
-		Prerequisites: warfactory.infiltrated
 
 tnkd:
 	Inherits: ^Vehicle
@@ -142,7 +146,7 @@ tnkd:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: ~vehicles.germany
+		Prerequisites: ~vehicles.germany, repairpad
 		Description: Special anti-armor unit.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
 		Speed: 70
@@ -157,21 +161,20 @@ tnkd:
 	Armament@Primary:
 		Weapon: TankDestroyerGun
 		LocalOffset: 640,0,384
-	AttackFrontal:
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+	AttackFrontal: #todo split barl
 		Voice: Attack
 	AutoTarget:
+    WithMuzzleOverlay:
 	RenderSprites:
-	Selectable:
-		#Bounds: 64, 52, 0, -6
 	RenderVoxels:
 		NormalsPalette: ts-normals
 	WithVoxelBody:
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
-	ProducibleWithLevel:
-		Prerequisites: warfactory.infiltrated
 
-fv:
+fv: #IFV
 	Inherits: ^Vehicle
 	Valued:
 		Cost: 600
@@ -212,12 +215,20 @@ fv:
 			ghost: ifv-hero
 	Armament@primary:
 		Weapon: IFVMissile
-		LocalOffset: 128, 0, 512 #640
+		LocalOffset: 212, 128, 640, 212, -128, 640
 		RequiresCondition: !ifv-machinegun && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-deso && !ifv-hero
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	Armament@elite:
 		Weapon: IFVMissileE
-		LocalOffset: 128, 0, 512
+		LocalOffset: 212, 128, 640, 212, -128, 640
 		RequiresCondition: rank-elite && !ifv-machinegun && !ifv-repair && !ifv-sniper && !ifv-flak && !ifv-tesla && !ifv-deso && !ifv-hero
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	Armament@machinegun:
 		Weapon: CRM60
 		LocalOffset: 188,32,600
@@ -263,8 +274,6 @@ fv:
 	AttackTurreted:
 		Voice: Attack
 	AutoTarget:
-	Selectable:
-		#Bounds: 64, 52, 0, -6
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
@@ -294,9 +303,8 @@ fv:
 		RequiresCondition: ifv-hero
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
-	ProducibleWithLevel:
-		Prerequisites: warfactory.infiltrated
-
+    WithMuzzleOverlay:
+    
 sref:
 	Inherits: ^Vehicle
 	Buildable:
@@ -308,8 +316,6 @@ sref:
 		Cost: 1200
 	Tooltip:
 		Name: Prism Tank
-	Selectable:
-		#Bounds: 64, 52, 0, -10
 	Health:
 		HP: 150
 	Armor:
@@ -342,10 +348,8 @@ sref:
 	WithVoxelBody:
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
-	ProducibleWithLevel:
-		Prerequisites: warfactory.infiltrated
 
-mgtk:
+mgtk: #todo add special muzzle for mirage
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
@@ -356,8 +360,6 @@ mgtk:
 		Cost: 1000
 	Tooltip:
 		Name: Mirage Tank
-	Selectable:
-		#Bounds: 64, 52, 0, -6
 	Health:
 		HP: 200
 	Armor:
@@ -371,10 +373,18 @@ mgtk:
 		Weapon: MirageGun
 		LocalOffset: 640, 0, 427
 		RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	Armament@elite:
 		Weapon: MirageGunE
 		LocalOffset: 640, 0, 427
 		RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -387,10 +397,9 @@ mgtk:
 	WithVoxelBody:
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
-	ProducibleWithLevel:
-		Prerequisites: warfactory.infiltrated
+    WithMuzzleOverlay:
         
-aabram:
+aabram: #todo shrink voxels
 	Inherits: ^Vehicle
 	Valued:
 		Cost: 900
@@ -417,16 +426,22 @@ aabram:
 		Weapon: 120mmx
 		LocalOffset: 640,0,384
 		RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	Armament@elite:
 		Weapon: GrandCannonWeapon #test
 		LocalOffset: 640,0,384
 		RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        Recoil: 200
+        RecoilRecovery: 10
 	AttackTurreted:
 		Voice: Attack
 	AutoTarget:
 	RenderSprites:
-	Selectable:
-		#Bounds: 64, 52, 0, -6
 	RenderVoxels:
         Scale: 8
 	WithVoxelBody:
@@ -434,8 +449,6 @@ aabram:
 	WithVoxelBarrel:
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
-	ProducibleWithLevel:
-		Prerequisites: warfactory.infiltrated
     BodyOrientation:
         QuantizedFacings: 32
         
@@ -482,5 +495,178 @@ voidtank:
     WithVoxelBody:
     Voiced:
         VoiceSet: AlliedVehicleVoice
-    ProducibleWithLevel:
-        Prerequisites: warfactory.infiltrated 
+        
+bfrt:
+    Inherits: ^Vehicle
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 109 #just before mcv
+        Prerequisites: gatech, ~gaweap#, ~techlevel.stupidshit
+        Description: Has 5 weapons atm, 3 Navy Seal guns, 2 IFV guns
+        BuildDuration: 625 #build duration in frames, however it applies buildtime multiplier instead of replacing it lol
+        BuildDurationModifier: 100 # to make frames counted normally 
+        BuildLimit: 1
+    Valued:
+        Cost: 5000
+    Tooltip:
+        Name: Battle Fortress
+    Selectable:
+        Bounds: 64, 52, 0, -10
+    Health:
+        HP: 2000
+    Armor:
+        Type: Vehicle
+    Mobile:
+        TurnSpeed: 6
+        Speed: 50
+    RevealsShroud:
+        Range: 10c0
+        #Offset: -30,0,85
+    # Armament@primary:
+        # Weapon: BattleFortressGun
+        # LocalOffset: 640, 0, 427
+        # RequiresCondition: !rank-elite
+    # Armament@elite:
+        # Weapon: BattleFortressGunE
+        # LocalOffset: 640, 0, 427
+        # RequiresCondition: rank-elite
+    Armament@inf1:
+        Weapon: MP5
+        LocalOffset: 640, 0, 256
+        RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf2:
+        Weapon: MP5
+        LocalOffset: 256, 384, 256
+        RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf3:
+        Weapon: MP5
+        LocalOffset: 256, -384, 256
+        RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf4:
+        Weapon: IFVMissile
+        LocalOffset: -256, 384, 256
+        RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf5:
+        Weapon: IFVMissile
+        LocalOffset: -256, -384, 256
+        RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf1E:
+        Weapon: MP5E
+        LocalOffset: 640, 0, 256
+        RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf2E:
+        Weapon: MP5E
+        LocalOffset: 256, 384, 256
+        RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf3E:
+        Weapon: MP5E
+        LocalOffset: 256, -384, 256
+        RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf4E:
+        Weapon: IFVMissileE
+        LocalOffset: -256, 384, 256
+        RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    Armament@inf5E:
+        Weapon: IFVMissileE
+        LocalOffset: -256, -384, 256
+        RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+    # AttackFrontal:
+        # Voice: Attack
+    AttackTurreted:
+        Voice: Attack
+    Turreted:
+        TurnSpeed: 255
+    AutoTarget:
+    Explodes:
+        Weapon: UnitExplodeSmall
+        EmptyWeapon: UnitExplodeSmall
+    RenderSprites:
+    RenderVoxels:
+        Scale: 11.7
+    WithVoxelBody:
+    Voiced:
+        VoiceSet: AlliedVehicleVoice
+    WithMuzzleOverlay:
+    # SelfHealing:
+        # HealthIfBelow: 100
+    
+robo:
+    Inherits: ^Vehicle
+    Valued:
+        Cost: 750
+    Tooltip:
+        Name: Robot Tank
+    Buildable:
+        Queue: Vehicle
+        BuildPaletteOrder: 1
+        Prerequisites: ~gaweap, ~vehicles.korea, repairpad
+        Description: Korean main fighting unit.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
+    Mobile:
+        Speed: 90
+        TerrainSpeeds:
+            Clear: 100
+            Rough: 100
+            Rail: 100
+            Road: 100
+            DirtRoad: 100
+            Beach: 100
+            Ore: 100
+            Gems: 100
+            Water: 70
+            TurnSpeed: 5
+        Crushes: fence, crate, infantry
+    Hovers:
+    Health:
+        HP: 300
+    Armor:
+        Type: Vehicle
+    RevealsShroud:
+        Range: 6c0
+    Turreted:
+        TurnSpeed: 5
+    Armament@primary:
+        Weapon: 105mm
+        LocalOffset: 640,0,384
+        RequiresCondition: !rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        # Recoil: 200
+        # RecoilRecovery: 10
+    Armament@elite:
+        Weapon: 105mmE
+        LocalOffset: 640,0,384
+        RequiresCondition: rank-elite
+        MuzzleSequence: muzzle
+        MuzzlePalette: effect
+        # Recoil: 200
+        # RecoilRecovery: 10
+    AttackTurreted:
+        Voice: Attack
+    AutoTarget:
+    WithMuzzleOverlay:
+    RenderSprites:
+    RenderVoxels:
+    WithVoxelBody:
+    WithVoxelTurret:
+    Voiced:
+        VoiceSet: AlliedVehicleVoice

@@ -117,6 +117,7 @@ zep:
 		VoiceSet: KirovVoice
 	SpawnActorOnDeath:
 		Actor: zephusk
+    SelfHealing:
 
 zephusk:
 	Tooltip:
@@ -127,7 +128,7 @@ zephusk:
 		HP: 140
     Aircraft:
         TurnSpeed: 1
-        Speed: 10
+        Speed: 50
 	FallsToEarth:
 		Spins: True # TODO: In the original they did spin, but that just looks weird.
 #        Velocity: 0c010
@@ -154,7 +155,7 @@ orca:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~aircraft.allies
+		Prerequisites: ~aircraft.allies, ~!aircraft.korea
 		Description: Fast assault fighter\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Aircraft:
 		TurnSpeed: 3

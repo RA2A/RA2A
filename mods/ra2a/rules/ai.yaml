@@ -21,6 +21,7 @@ Player:
 			gaweap: 2
 			naweap: 2
 			gaairc: 2
+            engineer: 3
 		BuildingFractions:
 			garefn: 30%
 			narefn: 30%
@@ -46,7 +47,7 @@ Player:
 			e1: 90%
 			e2: 90%
 			dog: 5%
-			engineer: 5%
+			engineer: 1%
 			flakt: 3%
 			shk: 3%
 			terror: 1%
@@ -58,6 +59,7 @@ Player:
 			htnk: 3%
 			htk: 1%
 			mtnk: 3%
+            robo: 3%
 			fv: 1%
 			sref: 0.5%
 			mgtk: 0.5%
@@ -65,4 +67,6 @@ Player:
 			dtruck: 1%
 			tnkd: 1%
 			ttnk: 1%
-		SquadSize: 5
+            bfrt: 0.5%
+            voidtank: 0.5%
+		SquadSize: 8

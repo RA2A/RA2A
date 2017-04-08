@@ -68,6 +68,7 @@
 		ReferencePoint: Bottom, Right
 		RequiresCondition: rank-elite
 		ZOffset: 256
+    RevealOnFire:
 
 ^CrateStatModifiers:
 	FirepowerMultiplier@CRATES:
@@ -343,7 +344,8 @@
 	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips
-	Selectable:
+	Selectable: #infantry
+		Bounds: 17, 25, 0, -5
 	Targetable:
 		TargetTypes: Ground, Infantry, DetonateAttack, Disguise
 	WithInfantryBody:
@@ -419,6 +421,12 @@
 		Condition: invulnerability
     RenderSprites:
         Scale: 0.65
+    DamagedByRadioactivity: #Damage = DamageCoeff * RadioactivityLevel / 1000
+        DamageCoeff: 20
+        DamageInterval: 16
+        DamageTypes: RadiationDeath
+    ProducibleWithLevel:
+        Prerequisites: barracks.infiltrated
 
 ^Parachutable:
 	WithSpriteBody@Parachute:
@@ -444,7 +452,7 @@
 ^CivilianInfantry:
 	Inherits: ^Infantry
 	Selectable:
-		Bounds: 20, 30, 0, -11
+		Bounds: 20, 30, 0, -5
 	Valued:
 		Cost: 10
 	Tooltip:
@@ -528,7 +536,7 @@
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
-		Bounds: 32, 25, 0, -3
+		Bounds: 32, 30, 0, -3
 	Targetable:
 		TargetTypes: Ground, Repair, DetonateAttack
 	Repairable:
@@ -590,6 +598,12 @@
         Palette: effect
     CustomSelectionSize:
         CustomBounds: 36, 36
+    DamagedByRadioactivity: #Damage = DamageCoeff * RadioactivityLevel / 1000
+        DamageCoeff: 20
+        DamageInterval: 16
+        DamageTypes: RadiationDeath
+    ProducibleWithLevel:
+        Prerequisites: warfactory.infiltrated# || vehicles.elite this shit doesn't support conditions...
 
 ^CivVehicle:
 	Inherits: ^Vehicle
@@ -606,7 +620,7 @@
 	RevealsShroud:
 		Range: 5c0
 	Selectable:
-		Bounds: 64, 52, 0, -6
+		Bounds: 32, 30, 0, -6
 	WithVoxelBody:
 	Voiced:
 		VoiceSet: CarVoice

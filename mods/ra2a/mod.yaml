@@ -19,7 +19,7 @@ Packages:
 	$as: as
 	$yupgi_alert: yupgi_alert
 	$ra2a: ra2a
-
+#
 	~ra2.mix
 	~language.mix
 	~multi.mix
@@ -45,7 +45,21 @@ Packages:
 	~urb.mix
 	~urban.mix
 	~audio.bag
-
+#Yuri's content
+	~ra2md.mix
+    # ~isodes.mix
+    # ~isourb.mix
+    # ~isodes.mix
+    # ~isolun.mix
+    # ~ntrlmd.mix
+    # ~lunar.mix
+    # ~lun.mix
+    ~localmd.mix
+    ~loadmd.mix
+    ~langmd.mix
+	~cameomd.mix
+	~audiomd.mix
+#
 	ra2a|bits
 	ra2a|bits/cameos
 	ra2a|bits/structures

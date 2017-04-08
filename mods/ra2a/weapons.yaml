@@ -98,7 +98,7 @@ demobomb:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c0
-		Damage: 150
+		Damage: 80
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
@@ -116,7 +116,7 @@ demobomb:
 		ImpactSounds: vdemdiea.wav
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 2c0
-		Damage: 60
+		Damage: 40
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
 		ValidTargets: Ground, Water, Air
@@ -134,7 +134,7 @@ demobomb:
 		Delay: 5
 	Warhead@7Dam_areanuke2: SpreadDamage
 		Spread: 3c0
-		Damage: 60
+		Damage: 25
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
 		ValidTargets: Ground, Water, Air
@@ -150,7 +150,7 @@ demobomb:
 		Delay: 10
 	Warhead@9Dam_areanuke3: SpreadDamage
 		Spread: 4c0
-		Damage: 60
+		Damage: 25
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground, Water, Air
@@ -168,6 +168,11 @@ demobomb:
 		SmudgeType: LargeScorch
 		Size: 2
 		Delay: 15
+	Warhead@8: CreateRadioactivity
+		Range: 10
+		Level: 500
+		Falloff: 100, 90, 50, 0
+        MaxLevel: 500
 
 CoilBolt:
 	ReloadDelay: 3
@@ -522,7 +527,7 @@ Maverick2:
 
 BlimpBomb:
 	ReloadDelay: 45
-	Range: 1c20
+	Range: 0c512
 	MinRange: 0c001
 	Report: vkiratta.wav
 	Projectile: GravityBomb
@@ -533,7 +538,7 @@ BlimpBomb:
 		Arm: 10
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
-		Damage: 250
+		Damage: 500
 		ValidTargets: Building, Ground, Water
 		Versus:
 			Air: 100
@@ -559,7 +564,7 @@ FlakTrackGun:
 	Range: 5c0
 	Report: vflaat1a.wav, vflaat1b.wav
 	Projectile: BulletAS
-		Speed: 50c0
+		Speed: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
 		Damage: 25
@@ -804,7 +809,7 @@ IFVMissile:
 	ReloadDelay: 50
 	Burst: 2
 	Range: 6c0
-    Minrange: 1c512
+    MinRange: 1c512
 	Report: vifvatta.wav
 	ValidTargets: Ground, Air
 	Projectile: Missile
@@ -857,6 +862,14 @@ IFVMissileE:
 		Explosions: medium_grey_explosion
 		ImpactSounds: gexp15a.wav
 		InvalidImpactTypes: Water
+        
+GuardianGIMissile:
+	Inherits: IFVMissile
+    Burst: 1
+    
+GuardianGIMissileE:
+	Inherits: IFVMissileE
+    Burst: 1
 
 RepairBullet:
 	ReloadDelay: 20
@@ -1050,11 +1063,11 @@ MirageGunE:
 	Warhead@1Dam: SpreadDamage
 		Damage: 150
 
-TankBolt:
+TeslaTankGun:
 	Range: 4c0
-	ReloadDelay: 75
+	ReloadDelay: 125
 	Burst: 2
-	BurstDelay: 75
+	BurstDelay: 25
 	Report: vtesatta.wav, vtesattb.wav
 	Projectile: TeslaZap
 		Speed: 100c0
@@ -1071,11 +1084,11 @@ TankBolt:
 	Warhead@2Eff: CreateEffect
 		Explosions: tesla_impact
 
-TankBoltE:
-	Inherits: TankBolt
+TeslaTankGunE:
+	Inherits: TeslaTankGun
 	Range: 6c0
-	ReloadDelay: 60
-	BurstDelay: 60
+	ReloadDelay: 110
+	BurstDelay: 15
 	Warhead@1Dam: SpreadDamage
 		Damage: 150
 
@@ -1099,7 +1112,11 @@ NukePayload:
 	Warhead@3Eff_impact: CreateEffect
 		Explosions: nuke_explosion
 		ImpactSounds: snukexpl.wav
-	# TODO: RadLevel=500
+	Warhead@4: CreateRadioactivity
+		Range: 10
+		Level: 500
+		Falloff: 100, 90, 50, 0
+        MaxLevel: 500
 
 AlligatorBite:
 	ReloadDelay: 30

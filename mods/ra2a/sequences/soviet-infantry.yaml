@@ -244,6 +244,8 @@ terror:
 
 deso:
 	Defaults:
+    idle: invis #it's 1 black pixel to not fuck up with idle overlay
+    	Facings: 1
 	stand:
 		Facings: 8
 	run:
@@ -286,6 +288,15 @@ deso:
 		Length: 6
 		Facings: 8
 		Tick: 80
+    deploy:
+        Start: 299
+        Length: 15
+        Facings: 1
+    deploy-shoot:
+        Start: 292
+        Length: 7
+        Facings: 1
+        Tick: 240
 	icon: desoicon
 
 ivan:

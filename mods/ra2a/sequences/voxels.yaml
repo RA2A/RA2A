@@ -231,6 +231,14 @@ aabram: #Abrams
     turret: aabramtur
     barrel: aabrambarl
     
-voidtank:
+voidtank: #JagdtigerChen xD
     idle: voidtank
     barrel: voidtankbarl
+    
+bfrt: #battle fortress
+    idle: bfrt
+    
+robo:
+    idle: robo
+    turret: robotur
+    #barrel: robobarl TODO split barrel

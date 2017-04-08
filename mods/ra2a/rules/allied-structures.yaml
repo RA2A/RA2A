@@ -44,6 +44,12 @@ gacnst:
 	ProvidesPrerequisite@france:
 		Prerequisite: structures.france
 		Factions: france
+	ProvidesPrerequisite@germany:
+		Prerequisite: structures.germany
+		Factions: germany
+	ProvidesPrerequisite@korea:
+		Prerequisite: structures.korea
+		Factions: korea
 	Power:
 		Amount: 0
 	EmitInfantryOnSell@allies:
@@ -332,6 +338,9 @@ gaweap:
 	ProvidesPrerequisite@germany:
 		Prerequisite: vehicles.germany
 		Factions: germany
+	ProvidesPrerequisite@korea:
+		Prerequisite: vehicles.korea
+		Factions: korea
 	ProvidesPrerequisite@default:
 	Building:
 		Footprint: xxxxx xxxxx xxxxx
@@ -509,7 +518,7 @@ gadept:
 	Selectable:
 		Bounds: 144, 88, -12, -16
 	Valued:
-		Cost: 800
+		Cost: 1200
 	Tooltip:
 		Name: Service Depot
 	ProvidesPrerequisite@default:
@@ -721,14 +730,14 @@ gtgcan:
 		PowerupSpeech: BuildingOnline
 		PowerdownSpeech: BuildingOffline
 
-gaorep:
+gaorep: #todo implement functionality 
 	Inherits: ^Building
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 80
-		Prerequisites: garefn, gatech, ~structures.allies
-		BuildLimit: 1
-		Description: Refines all forms of income by 25%.
+	# Buildable:
+		# Queue: Building
+		# BuildPaletteOrder: 80
+		# Prerequisites: garefn, gatech, ~structures.allies
+		# BuildLimit: 1
+		# Description: Refines all forms of income by 25%.
 	Selectable:
 		Bounds: 134, 102, -10, -21
 	Valued:
@@ -917,7 +926,7 @@ atesla:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Prism Cannon
+		Name: Prism Tower
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Building:
 		Footprint: x
@@ -952,7 +961,42 @@ atesla:
 		IndicatorPalette: ts-mouse
 		PowerupSpeech: BuildingOnline
 		PowerdownSpeech: BuildingOffline
+        
+cacolo01: #rommel's academy
+    Inherits: ^Building
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 300
+        Prerequisites: gatech, ~structures.germany
+        Description: Makes all your vehicles be veterans
+    Selectable:
+        Bounds: 212, 158, -7, -28
+    Valued:
+        Cost: 2000
+    Tooltip:
+        Name: Rommel's Academy
+    ProvidesPrerequisite@academy:
+        Prerequisite: warfactory.infiltrated
+        ResetOnOwnerChange: true
+    Building:
+        Footprint: xxxxx xxxxx xxxxx
+        Dimensions: 5,3
+    Health:
+        HP: 3000
+    Armor:
+        Type: Building
+    RevealsShroud:
+        Range: 4c0
+    Power:
+        Amount: -200
+    InfiltrateForSupportPower:
+        Proxy: warfactory.infiltrated
+    Targetable:
+        TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+    SpawnActorOnDeath:
+        Actor: cacolo01.rubble
 
+        
 power:
 	AlwaysVisible:
 	Tooltip:

@@ -34,8 +34,6 @@ e2:
 		DefaultAttackSequence: shoot
 	Voiced:
 		VoiceSet: ConscriptVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 
@@ -82,8 +80,6 @@ flakt:
 		IdleAnimation:
 	Voiced:
 		VoiceSet: FlakTrooperVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 
@@ -138,8 +134,6 @@ shk:
 		Range: 1c256
 	Voiced:
 		VoiceSet: TeslaTrooperVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	-Crushable:
@@ -188,8 +182,8 @@ deso:
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Infantry
-		BuildPaletteOrder: 120
-		Prerequisites: naradr, ~infantry.iraq
+		BuildPaletteOrder: 200
+		Prerequisites: naradr, ~infantry.iraq, natech
 		Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Valued:
 		Cost: 700
@@ -198,7 +192,7 @@ deso:
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
-		HP: 700
+		HP: 400
 	Mobile:
 		Speed: 40
 	RevealsShroud:
@@ -217,13 +211,26 @@ deso:
 		Voice: Attack
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+		RequiresCondition: !deployed
 	Voiced:
 		VoiceSet: DesolatorVoice
-	ProducibleWithLevel:
-		Prerequisites: barracks.infiltrated
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	-Crushable:
+	-TakeCover: # no prone
+	-DamagedByRadioactivity:
+	WithSpriteBody: #required for deploying animation stuff 
+	WithIdleOverlay@DEPLOYED:
+		Sequence: deploy-shoot
+		RequiresCondition: deployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		CanDeployOnRamps: true
+		DeployAnimation: deploy
+	ExplodeWeapon: # radioactivity
+		Weapon: DesolatorAoEWeapon
+		ResetReloadWhenEnabled: false
+		RequiresCondition: deployed
 
 ivan:
 	Inherits: ^Infantry
