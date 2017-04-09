@@ -57,13 +57,13 @@ harv:
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
         BaleLoadDelay: 32
-        BaleUnloadDelay: 6
+        BaleUnloadDelay: 9
 		SearchFromProcRadius: 24
 		SearchFromOrderRadius: 12
 		HarvestVoice: Move
 		DeliverVoice: Move
 	Health:
-		HP: 1500
+		HP: 800
 	Armor:
 		Type: Vehicle
 	Armament@primary:
@@ -229,7 +229,7 @@ apoc: #todo fix offsets and split barrels
 		TurnSpeed: 5
 		Crushes: fence, crate, infantry
 	Health:
-		HP: 800
+		HP: 1200
 	Armor:
 		Type: Vehicle
 	RevealsShroud:
@@ -270,6 +270,10 @@ apoc: #todo fix offsets and split barrels
 	Voiced:
 		VoiceSet: SovietVehicleVoice
     SelfHealing:
+        PercentageStep: 1
+        Step: 0
+        Delay: 25
+        HealthIfBelow: 100
 
 ttnk:
 	Inherits: ^Vehicle

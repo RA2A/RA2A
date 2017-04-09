@@ -2,7 +2,7 @@ ConscriptGun:
 	ReloadDelay: 25
 	Range: 4c0
 	Report: iconatta.wav, iconattb.wav, iconattc.wav, iconattd.wav, iconatte.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -72,7 +72,7 @@ FlakGuyGun:
 	ReloadDelay: 25
 	Range: 5c0
 	Report: vflaat1a.wav, vflaat1b.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 768
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -103,11 +103,11 @@ FlakGuyAAGun:
 	Range: 6c0
 	Report: vflaat2a.wav, vflaat2b.wav, vflaat2c.wav, vflaat2d.wav
 	ValidTargets: Air
-	Projectile: Bullet
+	Projectile: BulletAS
 		Inaccuracy: 128
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 120
+		Spread: 256
 		Damage: 20
 		ValidTargets: Air
 		Versus:
@@ -122,6 +122,7 @@ FlakGuyAAGun:
 
 FlakGuyAAGunE:
 	Inherits: FlakGuyAAGun
+    ReloadDelay: 20
 	Burst: 2
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
@@ -178,7 +179,7 @@ IvanBomber:
 	ReloadDelay: 50
 	Range: 1c849
 	Report: icraatta.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 425
 		Blockable: false
 	Warhead@0Eff: CreateEffect

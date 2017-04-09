@@ -186,6 +186,8 @@
 	Inherits: ^Building
 	-GivesBuildableArea:
 	-Capturable:
+    -ExternalCapturable:
+    -ExternalCapturableBar:
 	-MustBeDestroyed:
 	-GivesExperience:
 	-CaptureNotification:
@@ -232,6 +234,11 @@
 		Range: 4c0
 	Tooltip:
 		Description: Tech Building
+    -ExternalCapturable:
+        #CaptureCompleteTime: 0
+    -ExternalCapturableBar:
+    Capturable:
+        CaptureThreshold: 100
 	CaptureNotification:
 		Notification: TechBuildingCaptured
 		LoseNotification: TechBuildingLost
@@ -422,7 +429,7 @@
     RenderSprites:
         Scale: 0.65
     DamagedByRadioactivity: #Damage = DamageCoeff * RadioactivityLevel / 1000
-        DamageCoeff: 20
+        DamageCoeff: 50
         DamageInterval: 16
         DamageTypes: RadiationDeath
     ProducibleWithLevel:
@@ -537,8 +544,16 @@
 		Palette: pips
 	Selectable:
 		Bounds: 32, 30, 0, -3
+    Crushable:
+        CrushClasses: vehicles
 	Targetable:
 		TargetTypes: Ground, Repair, DetonateAttack
+    Targetable@2:
+        TargetTypes: WeaponRepairable
+        RequiresCondition: WeaponRepairable
+    GrantConditionOnDamageState:
+        Condition: WeaponRepairable
+        ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
 		Voice: Move
 		RepairBuildings: gadept,nadept
@@ -599,7 +614,7 @@
     CustomSelectionSize:
         CustomBounds: 36, 36
     DamagedByRadioactivity: #Damage = DamageCoeff * RadioactivityLevel / 1000
-        DamageCoeff: 20
+        DamageCoeff: 50
         DamageInterval: 16
         DamageTypes: RadiationDeath
     ProducibleWithLevel:

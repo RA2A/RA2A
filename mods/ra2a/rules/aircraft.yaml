@@ -43,8 +43,82 @@ shad:
 		PipCount: 5
 		UnloadVoice: Move
 	SpawnActorOnDeath:
-		Actor: shadhusk    
-
+		Actor: shadhusk
+        
+carriertest:
+    Inherits: shad
+	Tooltip:
+		Name: Carrier
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 200
+		Prerequisites: ~gaweap, gatech, ~techlevel.stupidshit, ~aircraft.korea
+		Description: Testing stupid mechanic, WARNING PERFORMANCE HEAVY WHEN SPAMMED
+	Valued:
+		Cost: 2500
+	RenderSprites:
+        Image: shad
+	Aircraft:
+		CruiseAltitude: 5600
+		LandWhenIdle: false
+	Armament:
+		Weapon: ^DummyTarget
+	RevealsShroud:
+		Range: 15c0
+		Type: CenterPosition
+    RenderVoxels:
+        Image: shad
+        Scale: 15
+    -Cargo:
+    Spawner:
+        SlaveUnit: inteceptortest
+        Count: 5
+	SpawnActorOnDeath:
+		Actor: carriertesthusk
+    AutoTarget:
+        
+carriertesthusk:
+    Inherits: shadhusk
+	WithVoxelBody:
+        Scale: 15
+        
+inteceptortest:
+    Inherits: beag
+	Valued:
+		Cost: 300
+	Tooltip:
+        Name: Interceptor
+    -Buildable:
+    Aircraft:
+        IdealSeparation: 1
+        AltitudeVelocity: 100c0
+    Spawned:
+        LandingDistance: 2c0
+	Armament:
+		Weapon: Maverick3
+	AmmoPool:
+		Ammo: 2
+		PipCount: 0
+	Voiced:
+		VoiceSet: BlackEagleVoice
+	RevealsShroud:
+		Range: 2c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: beag
+        Scale: 0.6
+	RenderVoxels:
+		Image: beag
+        Scale: 6
+    -Selectable:
+	SpawnActorOnDeath:
+		Actor: inteceptortesthusk
+    
+inteceptortesthusk:
+    Inherits: beaghusk
+    RenderVoxels
+        Scale: 6
+        
 shadhusk:
 	Tooltip:
 		Name: Night Hawk Down
@@ -118,6 +192,10 @@ zep:
 	SpawnActorOnDeath:
 		Actor: zephusk
     SelfHealing:
+        PercentageStep: 1
+        Step: 0
+        Delay: 25
+        HealthIfBelow: 100
 
 zephusk:
 	Tooltip:
@@ -128,10 +206,10 @@ zephusk:
 		HP: 140
     Aircraft:
         TurnSpeed: 1
-        Speed: 50
+        Speed: 200
 	FallsToEarth:
 		Spins: True # TODO: In the original they did spin, but that just looks weird.
-#        Velocity: 0c010
+        Velocity: 256
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition
@@ -159,7 +237,7 @@ orca:
 		Description: Fast assault fighter\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Aircraft:
 		TurnSpeed: 3
-		Speed: 140
+		Speed: 200
 		RearmBuildings: gaairc, amradr
 	Selectable:
 		Bounds: 30,24
@@ -175,6 +253,9 @@ orca:
 	AttackPlane:
 		FacingTolerance: 20
 		Voice: Attack
+    # AttackTurreted:
+        # Voice: Attack
+    # Turreted:
 	Voiced:
 		VoiceSet: HarrierVoice
 	AmmoPool:
@@ -196,7 +277,7 @@ orcahusk:
 		Name: Destroyed Harrier
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 140
+		Speed: 180
 	RenderVoxels:
 		Image: falc
 
@@ -210,8 +291,9 @@ beag:
 		Actor: beaghusk
 	Armament:
 		Weapon: Maverick2
-	Health:
-		HP: 200
+	AmmoPool:
+		Ammo: 2
+		PipCount: 2
 	Voiced:
 		VoiceSet: BlackEagleVoice
 	RenderSprites:

@@ -111,7 +111,7 @@ hyd:
 		Prerequisites: naradr, ~nayard
 		Description: Anti-Air/Anti-Infantry naval unit.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles, Naval Units
 	Valued:
-		Cost: 900
+		Cost: 600
 	Tooltip:
 		Name: Sea Scorpion
 	Selectable:
@@ -122,7 +122,7 @@ hyd:
 		Type: Vehicle
 	Mobile:
 		TurnSpeed: 6
-		Speed: 75
+		Speed: 105
 	RevealsShroud:
 		Range: 8c0
 	AttackFrontal:
@@ -147,14 +147,18 @@ sqd:
 		Prerequisites: natech, ~nayard
 		Description: Ocean creature\npunches enemies in close combat.\n  Strong vs Ships
 	Valued:
-		Cost: 500
+		Cost: 1000
 	Tooltip:
 		Name: Giant Squid
 	Armor:
 		Type: Vehicle
 	Health:
 		HP: 200
-	SelfHealing:
+    SelfHealing:
+        PercentageStep: 1
+        Step: 0
+        Delay: 25
+        HealthIfBelow: 100
 	Mobile:
 		ROT: 6
 		Speed: 90

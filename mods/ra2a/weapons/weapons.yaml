@@ -25,10 +25,12 @@ UnitExplodeSmall:
 DogJaw:
 	ValidTargets: Infantry
 	ReloadDelay: 25
-	Range: 1c612
+	Range: 1c768
 	Report: idogatta.wav, idogatca.wav
+	Projectile: BulletAS
+		Speed: 2c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 213
+		Spread: 1
 		Damage: 100
 		ValidTargets: Infantry
 		Versus:
@@ -38,10 +40,19 @@ DogJaw:
 			Building: 0
 			Concrete: 0
 		DamageTypes: BulletDeath
+        
+CowSound:
+	ValidTargets: Infantry
+	ReloadDelay: 250
+	Range: 1c768
+	Report: gcowsela.wav
+	Warhead@1Dam: SpreadDamage #dummy warhead for targeting
+		Damage: 0
+		DamageTypes: BulletDeath
 
-RedEye2:
-	ReloadDelay: 60
-	Range: 12c0
+PatriotMissileAA:
+	ReloadDelay: 15
+	Range: 8c0
 	Report: bpatatta.wav
 	ValidTargets: Air
 	Projectile: Missile
@@ -52,13 +63,14 @@ RedEye2:
 		Palette: ra
 		TrailImage: smokey2
 		ContrailLength: 16
+        ContrailWidth: 0c32 # has to be set in 1D world distance
 		HorizontalRateOfTurn: 55
-		Speed: 100
-		LockOnProbability: 80
-		RangeLimit: 14c409
+		Speed: 512
+		LockOnProbability: 100
+		RangeLimit: 12c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 120
-		Damage: 75
+		Spread: 256
+		Damage: 25
 		ValidTargets: Air
 		Versus:
 			Air: 100
@@ -323,7 +335,7 @@ TerrorBomb:
 		Explosions: terrorist_explosion
 
 GrandCannonWeapon:
-	ReloadDelay: 75
+	ReloadDelay: 125
 	Report: bgraatta.wav
 	Range: 15c0
 	MinRange: 3c0
@@ -490,22 +502,17 @@ MammothTusk:
 		ValidImpactTypes: Water
 
 Maverick:
-	ReloadDelay: 10
+    Inherits: ^Missile
+	ReloadDelay: 5
 	Range: 6c0
 	Report: vintatta.wav
 	ValidTargets: Ground, Water
 	Projectile: Missile
-		Speed: 373
+		Speed: 768
 		Arm: 2
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 128
-		Image: DRAGON
-		Palette: ra
-		HorizontalRateOfTurn: 8
-		RangeLimit: 7c204
-		ContrailColor: D8D8FF
-		ContrailLength: 16
+		HorizontalRateOfTurn: 100
+        VerticalRateOfTurn: 10
+        AllowSnapping: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 58
 		Damage: 200
@@ -523,6 +530,21 @@ Maverick:
 
 Maverick2:
 	Inherits: Maverick
+	Report: vblaatta.wav
+    
+Maverick3: #interceptor weapon
+	Inherits: Maverick
+    ReloadDelay: 25
+    Projectile: BulletAS
+        Speed: 100c0
+        ContrailLength: 0
+    ValidTargets: Ground, Air
+    Warhead@1Dam: SpreadDamage
+		Spread: 58
+		Damage: 100
+		Versus:
+			Concrete: 125
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Report: vblaatta.wav
 
 BlimpBomb:
@@ -586,7 +608,7 @@ FlakTrackAAGun:
 	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 120
+		Spread: 256
 		Damage: 35
 		ValidTargets: Air
 		Versus:
@@ -728,7 +750,7 @@ SquidPunch:
 		Speed: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: 50
+		Damage: 100
 		DamageTypes: BulletDeath
 		ValidTargets: Water, Underwater
 
@@ -769,7 +791,6 @@ SquidPunch:
 
 Medusa:
 	ReloadDelay: 100
-	Damage: 100
 	Range: 12c0
 	Report: vaegatta.wav, vaegattb.wav
 	ValidTargets: Air
@@ -782,7 +803,7 @@ Medusa:
 		Palette: ra
 		ContrailLength: 35
 		HorizontalRateOfTurn: 55
-		Speed: 100
+		Speed: 512
 		LockOnProbability: 85
 		RangeLimit: 14c409
 	Warhead@1Dam: SpreadDamage
@@ -813,7 +834,7 @@ IFVMissile:
 	Report: vifvatta.wav
 	ValidTargets: Ground, Air
 	Projectile: Missile
-		Speed: 213
+		Speed: 384
 		Arm: 2
 		Blockable: false
 		Shadow: true
@@ -872,22 +893,23 @@ GuardianGIMissileE:
     Burst: 1
 
 RepairBullet:
+    ValidTargets: WeaponRepairable
 	ReloadDelay: 20
+    Range: 2c128
 	Report: vifvrepa.wav
-	ValidTargets: Repair
 	Projectile: BulletAS
-		Speed: 1c682
+		Speed: 2c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 213
+		Spread: 1
 		Damage: -25
-		ValidTargets: Repair
+		ValidTargets: WeaponRepairable
         
 RepairBulletVisual:
+    ValidTargets: WeaponRepairable
 	ReloadDelay: 20
-	Range: 1c819
+	Range: 2c128
     Burst: 6
     BurstDelay: 0
-	ValidTargets: Repair
 	Projectile: BulletAS
         Image: spark
 		Speed: 0c128
@@ -896,9 +918,9 @@ RepairBulletVisual:
 		ContrailLength: 6
         ContrailWidth: 0c016
 	Warhead@1Dam: SpreadDamage #dummy wh
-		Spread: 213
+		Spread: 1
 		Damage: 0
-		ValidTargets: Repair
+		ValidTargets: WeaponRepairable
 
 CRTerrorBomb:
 	ReloadDelay: 20
@@ -931,14 +953,14 @@ PrismGun:
 		BeamDuration: 15
 		UsePlayerColor: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 800
-		Damage: 100
+		Spread: 512
+		Damage: 50
 		Versus:
 			Air: 100
 			Infantry: 100
 			Vehicle: 50
-			Building: 100
-			Concrete: 25
+			Building: 200
+			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, ElectroDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -971,8 +993,8 @@ PrismGunShard:
 		BeamDuration: 15
 		UsePlayerColor: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 200
-		Damage: 25
+		Spread: 128
+		Damage: 20
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -1033,7 +1055,7 @@ PrismShot:
 		DamageTypes: ElectroDeath
 
 MirageGun:
-	ReloadDelay: 70
+	ReloadDelay: 100
 	Range: 7c0
 	Report: vmiratta.wav
 	Projectile: BulletAS
@@ -1065,15 +1087,15 @@ MirageGunE:
 
 TeslaTankGun:
 	Range: 4c0
-	ReloadDelay: 125
+	ReloadDelay: 90
 	Burst: 2
-	BurstDelay: 25
+	BurstDelay: 15
 	Report: vtesatta.wav, vtesattb.wav
 	Projectile: TeslaZap
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
-		Damage: 135
+		Damage: 110
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -1087,8 +1109,8 @@ TeslaTankGun:
 TeslaTankGunE:
 	Inherits: TeslaTankGun
 	Range: 6c0
-	ReloadDelay: 110
-	BurstDelay: 15
+	ReloadDelay: 80
+	BurstDelay: 10
 	Warhead@1Dam: SpreadDamage
 		Damage: 150
 

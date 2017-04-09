@@ -196,8 +196,8 @@ garefn:
 		PipColor: Yellow
 		PipCount: 0
 		Capacity: 999999
-	CustomSellValue:
-		Value: 250
+    CustomSellValue:
+        Value: 250
 	InfiltrateForCash:
 		Percentage: 50
 		Notification: CreditsStolen
@@ -537,6 +537,7 @@ gadept:
 		IsPlayerPalette: false
 	RepairsUnits:
 		Interval: 50
+		HpPerStep: 20
 		FinishRepairingNotification: UnitRepaired
 	WithIdleOverlay@side:
 		Sequence: idle-side
@@ -592,42 +593,42 @@ gawall:
 		Name: Allied Wall
 
 gapill:
-	Inherits: ^SupportBuilding
-	Buildable:
-		Queue: Support
-		BuildPaletteOrder: 20
-		Prerequisites: barracks, ~structures.allies
-		Description: Automated anti-infantry defense.
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Pill Box
-	Building:
-		Footprint: x
-		Dimensions: 1, 1
-	Health:
-		HP: 500
-	Armor:
-		Type: Building
-	RevealsShroud:
-		Range: 7c0
-	Selectable:
-		Bounds: 50, 30, 0, -4
-	Armament:
-		Weapon: vulcan2
-		LocalOffset: 768,85,512
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-	AttackTurreted:
-		Voice: Attack
-	Turreted:
-		TurnSpeed: 255
-	BodyOrientation:
-		QuantizedFacings: 8
-	WithRangeCircle:
-		Range: 6c0
-		Type: pillbox
-	AutoTarget:
+    Inherits: ^SupportBuilding
+    Buildable:
+        Queue: Support
+        BuildPaletteOrder: 20
+        Prerequisites: barracks, ~structures.allies
+        Description: Automated anti-infantry defense.
+    Valued:
+        Cost: 500
+    Tooltip:
+        Name: Pill Box
+    Building:
+        Footprint: x
+        Dimensions: 1, 1
+    Health:
+        HP: 500
+    Armor:
+        Type: Building
+    RevealsShroud:
+        Range: 7c0
+    Selectable:
+        Bounds: 50, 30, 0, -4
+    Armament:
+        Weapon: vulcan2
+        LocalOffset: 768,85,512
+        MuzzleSequence: muzzle
+        MuzzleSplitFacings: 8
+    AttackTurreted:
+        Voice: Attack
+    Turreted:
+        TurnSpeed: 255
+    BodyOrientation:
+        QuantizedFacings: 8
+    WithRangeCircle:
+        Range: 6c0
+        Type: pillbox
+    AutoTarget:
 
 nasam:
 	Inherits: ^VoxelLighting
@@ -658,7 +659,7 @@ nasam:
 	AttackTurreted:
 		Voice: Attack
 	Armament:
-		Weapon: RedEye2
+		Weapon: PatriotMissileAA
 	BodyOrientation:
 		QuantizedFacings: 16
 	RenderVoxels:
@@ -691,7 +692,7 @@ gtgcan:
 		Footprint: xx xx
 		Dimensions: 2, 2
 	Health:
-		HP: 2000
+		HP: 1000
 	Armor:
 		Type: Building
 	RevealsShroud:
@@ -723,7 +724,7 @@ gtgcan:
 		Range: 15c0
 		Type: grandcannon
 	Power:
-		Amount: -100
+		Amount: -150
 	RequiresPower:
 	CanPowerDown:
 		IndicatorPalette: ts-mouse
@@ -831,7 +832,7 @@ gagap:
 		Range: 10c0
 	RenderShroudCircle:
 	Power:
-		Amount: -100
+		Amount: -75
 	-AutoTarget:
 	CanPowerDown:
 		IndicatorPalette: ts-mouse
@@ -922,7 +923,7 @@ atesla:
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 35
-		Prerequisites: power, radar, ~structures.allies
+		Prerequisites: power, radar, ~structures.allies, ~!structures.france
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -948,7 +949,7 @@ atesla:
 		ReloadTime: 120
 		ChargeAudio: bpripow.wav
 	Power:
-		Amount: -75
+		Amount: -100
 	AutoTarget:
 	RequiresPower:
 	WithIdleOverlay@normal:
@@ -1026,3 +1027,9 @@ repairpad:
 	Tooltip:
 		Name: Service Depot
 		Description: Service Depot
+        
+techlevel.stupidshit:
+	AlwaysVisible:
+	Tooltip:
+		Name: Stupid Shit
+		Description: All weird units are here

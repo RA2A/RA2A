@@ -2,7 +2,7 @@ M60:
 	ReloadDelay: 20
 	Range: 4c0
 	Report: igiat1a.wav, igiat1b.wav, igiat1c.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -32,7 +32,7 @@ para:
 	Range: 5c0
 	ReloadDelay: 15
 	Report: igiat2a.wav, igiat2b.wav, igiat2c.wav, igiat2d.wav, igiat2c.wav, igiat2d.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -57,7 +57,7 @@ MP5:
 	ReloadDelay: 10
 	Range: 5c0
 	Report: iseaatta.wav, iseaattb.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -80,7 +80,7 @@ TanyaGun:
 	Range: 5c0
 	Report: itanatta.wav, itanattb.wav
     InvalidTargets: Structure
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 125
@@ -100,13 +100,14 @@ TanyaGunE:
 
 CRMP5:
 	Inherits: TanyaGun
+    -InvalidTargets:
 
 awp:
 	ValidTargets: Infantry
 	ReloadDelay: 100
 	Range: 14c0
 	Report: isniatta.wav
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 6c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
@@ -131,7 +132,7 @@ RocketeerGun:
 	MinRange: 0c001
 	Report: irocatta.wav
 	ValidTargets: Ground, Air
-	Projectile: Bullet
+	Projectile: BulletAS
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
