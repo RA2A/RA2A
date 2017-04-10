@@ -18,7 +18,7 @@ mkdir -p "$BUILDDIR"
 
 echo "Preparing standalone installation for tag \"$VERSION\" into \"$(pwd)/$BUILDDIR\""
 cp -r $REPODIR/engine/*.{exe,exe.config,dll,dll.config} "$BUILDDIR"
-cp -r "$REPODIR/engine/mods" "$REPODIR/engine/glsl" "$REPODIR/engine/lua" "$REPODIR/engine/global mix database.dat" "$BUILDDIR"
+cp -r "$REPODIR/engine/mods" "$REPODIR/engine/glsl" "$REPODIR/engine/lua" "$REPODIR/engine/global mix database.dat" "$REPODIR/engine/GeoLite2-Country.mmdb.gz" "$BUILDDIR"
 cp -r $REPODIR/engine/thirdparty/download/windows/*.dll "$BUILDDIR"
 cp -r "$REPODIR/mods" "$BUILDDIR"
 
