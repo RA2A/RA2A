@@ -68,7 +68,7 @@
 		Palette: resource
 		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
 		MaxDensity: 12
-		ValuePerUnit: 100
+		ValuePerUnit: 75
 		Type: Ore
 		Name: Valuable Minerals
 		PipColor: Yellow
@@ -80,7 +80,7 @@
 		Palette: resource
 		Sequences: gem01, gem02, gem03, gem04, gem05, gem06, gem07, gem08, gem09, gem10, gem11, gem12
 		MaxDensity: 12
-		ValuePerUnit: 150
+		ValuePerUnit: 125
 		Type: Gems
 		Name: Valuable Minerals
 		PipColor: Red
@@ -195,12 +195,12 @@ World:
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	CrateSpawner:
-        Enabled: False
-		Minimum: 1
-		Maximum: 3
-		SpawnInterval: 3000
-		WaterChance: 25
-		InitialSpawnDelay: 1000
+        Enabled: True
+		Minimum: 3
+		Maximum: 255
+		SpawnInterval: 750
+		WaterChance: 0
+		InitialSpawnDelay: 0
 	MPStartLocations:
 	SpawnMPUnits:
 	PathFinder:

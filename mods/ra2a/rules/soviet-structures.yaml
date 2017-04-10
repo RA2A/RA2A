@@ -205,12 +205,12 @@ narefn:
 		TickVelocity: 1
 		TickRate: 10
 		DockAngle: 160
-	StoresResources:
+    StoresResources:
 		PipColor: Yellow
 		PipCount: 0
 		Capacity: 999999
-	CustomSellValue:
-		Value: 250
+    CustomSellValue:
+        Value: 250
 	InfiltrateForCash:
 		Percentage: 50
 		Notification: CreditsStolen
@@ -486,7 +486,7 @@ nadept:
 		Palette: mouse
 		IsPlayerPalette: false
 	RepairsUnits:
-		Interval: 148
+		Interval: 50
 		HpPerStep: 20
 		FinishRepairingNotification: UnitRepaired
 	WithIdleOverlay@normal:
@@ -700,17 +700,17 @@ nairon:
 		Range: 4c0
 	Power:
 		Amount: -200
-	GrantExternalConditionPower@IRONCURTAIN:
-		Icon: invuln
-		ChargeTime: 300
-		Description: Invulnerability
-		LongDesc: Makes a group of units invulnerable\nfor 20 seconds.
-		Duration: 500
-		# TODO: This are actually no speech notifications
-		EndChargeSound: siroread.wav
-		OnFireSound: siroon.wav
-		DisplayRadarPing: True
-		Condition: invulnerability
+    GrantExternalConditionPower@IRONCURTAIN:
+        Icon: invuln
+        ChargeTime: 300
+        Description: Invulnerability
+        LongDesc: Makes a group of units invulnerable\nfor 20 seconds.
+        Duration: 500
+        # TODO: This are actually no speech notifications
+        EndChargeSound: siroread.wav
+        OnFireSound: siroon.wav
+        DisplayRadarPing: True
+        Condition: invulnerability
         Range: 2
 	SupportPowerChargeBar:
 	RequiresPower:
@@ -831,7 +831,7 @@ tesla:
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 30
-		Prerequisites: naradr, ~structures.soviets
+		Prerequisites: power, naradr, ~structures.soviets
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
 		Cost: 1500
@@ -871,7 +871,7 @@ tesla:
 		Range: 8c0
 		Type: teslacoil
 	Power:
-		Amount: -75
+		Amount: -100
 	WithIdleOverlay@powered:
 		Sequence: idle-powered
 		PauseOnLowPower: true

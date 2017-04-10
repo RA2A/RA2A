@@ -178,59 +178,61 @@ terror:
 		Sequence: stand
 
 deso:
-	Inherits: ^Infantry
-	Buildable:
-		Queue: Infantry
-		BuildAtProductionType: Infantry
-		BuildPaletteOrder: 200
-		Prerequisites: naradr, ~infantry.iraq, natech
-		Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Desolator
-	Selectable:
-		Bounds: 20, 30, 0, -11
-	Health:
-		HP: 400
-	Mobile:
-		Speed: 40
-	RevealsShroud:
-		Range: 6c0
-	Armor:
-		Type: Infantry
-	Passenger:
-		PipType: Red
-	Armament@primary:
-		Weapon: DesolatorGun
-		RequiresCondition: !rank-elite
-	Armament@elite:
-		Weapon: DesolatorGunE
-		RequiresCondition: rank-elite
-	AttackFrontal:
-		Voice: Attack
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-		RequiresCondition: !deployed
-	Voiced:
-		VoiceSet: DesolatorVoice
-	QuantizeFacingsFromSequence:
-		Sequence: stand
-	-Crushable:
-	-TakeCover: # no prone
-	-DamagedByRadioactivity:
-	WithSpriteBody: #required for deploying animation stuff 
-	WithIdleOverlay@DEPLOYED:
-		Sequence: deploy-shoot
-		RequiresCondition: deployed
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-		CanDeployOnRamps: true
-		DeployAnimation: deploy
-	ExplodeWeapon: # radioactivity
-		Weapon: DesolatorAoEWeapon
-		ResetReloadWhenEnabled: false
-		RequiresCondition: deployed
+    Inherits: ^Infantry
+    Buildable:
+        Queue: Infantry
+        BuildAtProductionType: Infantry
+        BuildPaletteOrder: 200
+        Prerequisites: naradr, ~infantry.iraq, natech
+        Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+    Valued:
+        Cost: 700
+    Tooltip:
+        Name: Desolator
+    Selectable:
+        Bounds: 20, 30, 0, -11
+    Health:
+        HP: 250
+    Mobile:
+        Speed: 40
+        RequiresCondition: !deployed
+    RevealsShroud:
+        Range: 6c0
+    Armor:
+        Type: Infantry
+    Passenger:
+        PipType: Red
+    Armament@primary:
+        Weapon: DesolatorGun
+        RequiresCondition: !rank-elite && !deployed
+    Armament@elite:
+        Weapon: DesolatorGunE
+        RequiresCondition: rank-elite && !deployed
+    AttackFrontal:
+        Voice: Attack
+    WithInfantryBody:
+        DefaultAttackSequence: shoot
+        RequiresCondition: !deployed
+    Voiced:
+        VoiceSet: DesolatorVoice
+    QuantizeFacingsFromSequence:
+        Sequence: stand
+    -Crushable:
+    -TakeCover: # no prone
+    -DamagedByRadioactivity:
+    WithSpriteBody: #required for deploying animation stuff 
+        RequiresCondition: !deployed
+    WithIdleOverlay@DEPLOYED:
+        Sequence: deploy-shoot
+        RequiresCondition: deployed
+    GrantConditionOnDeploy:
+        DeployedCondition: deployed
+        CanDeployOnRamps: true
+        DeployAnimation: deploy
+    ExplodeWeapon: # radioactivity
+        Weapon: DesolatorAoEWeapon
+        ResetReloadWhenEnabled: false
+        RequiresCondition: deployed
 
 ivan:
 	Inherits: ^Infantry

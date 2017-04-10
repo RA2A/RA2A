@@ -22,7 +22,7 @@ engineer: #also soviet one
 		CaptureTypes: building
         ConsumeActor: true
 	Captures:
-		CaptureTypes: husk
+		CaptureTypes: husk, building
 	-AutoTarget:
 	RevealsShroud:
 		Range: 4c0
@@ -38,52 +38,53 @@ engineer: #also soviet one
 		Sequence: stand
  
 dog: #also for soviets
-	Inherits: ^Infantry
-	Buildable:
-		Queue: Infantry
-		Prerequisites: ~barracks
-		BuildPaletteOrder: 50
-		Description: Anti-infantry unit.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
-	Valued:
-		Cost: 200
-	Tooltip:
-		Name: Attack Dog
-	Selectable:
-		Bounds: 26, 20, 0, -4
-	Health:
-		HP: 100
-	Mobile:
-		Speed: 99
-	Passenger:
-		PipType: Yellow
-	RevealsShroud:
-		Range: 5c0
-	Armor:
-		Type: Infantry
-	Armament:
-		Weapon: DogJaw
-	# AttackLeap:
-		# Voice: Attack
+    Inherits: ^Infantry
+    Buildable:
+        Queue: Infantry
+        Prerequisites: ~barracks
+        BuildPaletteOrder: 50
+        Description: Anti-infantry unit.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: Attack Dog
+    Selectable:
+        Bounds: 26, 20, 0, -4
+    Health:
+        HP: 100
+    Mobile:
+        Speed: 99
+    Passenger:
+        PipType: Yellow
+    RevealsShroud:
+        Range: 5c0
+    Armor:
+        Type: Infantry
+    Armament:
+        Weapon: DogJaw
+    # AttackLeap:
+        # Voice: Attack
     AttackFrontal:
         Voice: Attack
-	AutoTarget:
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: adog
-		FactionImages:
-			soviet: dog
-			cuba: dog
-			libya: dog
-			iraq: dog
-			russia: dog
-	IgnoresDisguise:
-	DetectCloaked:
-		Range: 5c0
-	Voiced:
-		VoiceSet: DogVoice
-	-TakeCover:
-	QuantizeFacingsFromSequence:
-		Sequence: stand
+    AutoTarget:
+        ScanRadius: 5
+        InitialStance: AttackAnything
+    RenderSprites:
+        Image: adog
+        FactionImages:
+            soviet: dog
+            cuba: dog
+            libya: dog
+            iraq: dog
+            russia: dog
+    IgnoresDisguise:
+    DetectCloaked:
+        Range: 5c0
+    Voiced:
+        VoiceSet: DogVoice
+    -TakeCover:
+    QuantizeFacingsFromSequence:
+        Sequence: stand
 
 e1:
 	Inherits@1: ^Infantry
@@ -281,7 +282,7 @@ tany:
 	Tooltip:
 		Name: Tanya
 	Health:
-		HP: 125
+		HP: 375
 	GrantConditionOnTerrain:
 		Condition: water-borne
 		TerrainTypes: Water
@@ -391,6 +392,7 @@ jumpjet:
 		TargetTypes: Ground, Infantry, DetonateAttack, Disguise
 		RequiresCondition: !airborne
 	-Passenger:
+    -DamagedByRadioactivity:
 
 cleg:
 	Inherits: ^Infantry

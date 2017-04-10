@@ -1,0 +1,78 @@
+^Bullet:
+	ValidTargets: Ground
+	ReloadDelay: 50
+	Range: 4c0
+	Report: igiat1a.wav, igiat1b.wav, igiat1c.wav
+	Projectile: BulletAS
+		Speed: 6c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 20
+		Versus:
+			Air: 100
+			Infantry: 100
+			Vehicle: 25
+			Building: 25
+			Concrete: 25
+		DamageTypes: BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piff
+        
+^Missile:
+	ReloadDelay: 50
+	Range: 6c0
+    MinRange: 1c512
+	Report: vifvatta.wav
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Speed: 213
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Image: DRAGON
+		Palette: ra
+		HorizontalRateOfTurn: 16
+		RangeLimit: 7c204
+		ContrailColor: D8D8FF
+		ContrailLength: 16
+        ContrailWidth: 0c32 # has to be set in 1D world distance
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+		ValidTargets: Ground, Air
+		Versus:
+			Air: 100
+			Infantry: 75
+			Vehicle: 50
+			Building: 50
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_grey_explosion
+		ImpactSounds: gexpifva.wav
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSounds: gexpwasa.wav
+		ValidImpactTypes: Water
+	Warhead@5: LeaveSmudge
+		SmudgeType: SmallCrater
+        
+^DummyTarget: #10 range
+	ValidTargets: Ground, Air
+	ReloadDelay: 25
+	Range: 10c0
+    #Report: 
+	Projectile: BulletAS
+		Speed: 2c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 0
+        ValidTargets: Ground, Air
+		Versus:
+			Air: 0
+			Infantry: 0
+			Vehicle: 0
+			Building: 0
+			Concrete: 0
+		DamageTypes: BulletDeath

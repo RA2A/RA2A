@@ -56,7 +56,7 @@ cmin:
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
         BaleLoadDelay: 32
-        BaleUnloadDelay: 12
+        BaleUnloadDelay: 18
 		SearchFromProcRadius: 24
 		SearchFromOrderRadius: 12
 		HarvestVoice: Move
@@ -66,7 +66,7 @@ cmin:
 		WarpInSound: vchrtele.wav
 		WarpOutSound: vchrtele.wav
 	Health:
-		HP: 750
+		HP: 500
 	Armor:
 		Type: Vehicle
 	Mobile:
@@ -233,8 +233,8 @@ fv: #IFV
 		Weapon: CRM60
 		LocalOffset: 188,32,600
 		RequiresCondition: ifv-machinegun
-		MuzzleSequence: mgun_muz
-		MuzzleSplitFacings: 8
+		# MuzzleSequence: mgun_muz
+		# MuzzleSplitFacings: 8
 	Armament@repair:
 		Weapon: RepairBullet
 		LocalOffset: 164,0,864
@@ -313,7 +313,7 @@ sref:
 		Prerequisites: gatech, ~gaweap
 		Description: Fires deadly beams of light.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
-		Cost: 1200
+		Cost: 1400
 	Tooltip:
 		Name: Prism Tank
 	Health:
@@ -455,13 +455,13 @@ aabram: #todo shrink voxels
 voidtank:
     Inherits: ^Vehicle
     Valued:
-        Cost: 1200
+        Cost: 2000
     Tooltip:
-        Name: Die JagdTigerchen
+        Name: Das JagdTigerchen
     Buildable:
         Queue: Vehicle
-        BuildPaletteOrder: 20
-        Prerequisites: ~vehicles.germany, ~techlevel.stupidshit
+        BuildPaletteOrder: 119
+        Prerequisites: ~vehicles.germany, gatech ~techlevel.stupidshit
         Description: Weird WIP thing
     Mobile:
         Speed: 70
@@ -489,8 +489,9 @@ voidtank:
     AttackMove:
     RenderSprites:
     Selectable:
-        Bounds: 32, 25, 0, -3
+        Bounds: 38, 30, 0, -4 #32, 25, 0, -3
     RenderVoxels:
+        Scale: 11.7
         #NormalsPalette: ts-normals
     WithVoxelBody:
     Voiced:
@@ -519,6 +520,7 @@ bfrt:
     Mobile:
         TurnSpeed: 6
         Speed: 50
+        Crushes: crate, infantry, vehicles
     RevealsShroud:
         Range: 10c0
         #Offset: -30,0,85
@@ -607,8 +609,12 @@ bfrt:
     Voiced:
         VoiceSet: AlliedVehicleVoice
     WithMuzzleOverlay:
-    # SelfHealing:
-        # HealthIfBelow: 100
+    SelfHealing:
+        PercentageStep: 1
+        Step: 0
+        Delay: 25
+        HealthIfBelow: 100
+    -Crushable:
     
 robo:
     Inherits: ^Vehicle
@@ -636,6 +642,8 @@ robo:
             TurnSpeed: 5
         Crushes: fence, crate, infantry
     Hovers:
+        MinHoveringAltitude: 512
+        OffsetModifier: -45
     Health:
         HP: 300
     Armor:

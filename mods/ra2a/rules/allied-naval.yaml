@@ -64,7 +64,7 @@ dest:
 		Type: Vehicle
 	Mobile:
 		TurnSpeed: 5
-		Speed: 105
+		Speed: 75
 	RevealsShroud:
 		Range: 7c0
 	Selectable:
@@ -81,6 +81,7 @@ dest:
 		RequiresCondition: rank-elite
 	AttackFrontal:
 		Voice: Attack
+    AutoTarget:
 	DetectCloaked:
 		CloakTypes: Underwater
 		Range: 4c0
@@ -101,7 +102,7 @@ aegis:
 		Prerequisites: radar, ~gayard
 		Description: Anti-Air naval unit.\n  Strong vs Aircraft\n  Grounds units, Ships
 	Valued:
-		Cost: 1200
+		Cost: 800
 	Tooltip:
 		Name: Aegis Cruiser
 	Selectable:

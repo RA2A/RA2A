@@ -1,7 +1,7 @@
 Metadata:
 	Title: Red Alert 2 Advanced
 	Description: 
-	Version: {DEV_VERSION}
+	Version: commit-022fd59cf259d616561c9f51002a9a4ae965ec13
 	Author: the RA2A mod team
 
 RequiresMods:
@@ -172,9 +172,10 @@ ChromeLayout:
 	common|chrome/editor.yaml
 
 Weapons:
-	ra2a|weapons.yaml
+	ra2a|weapons/weapons.yaml
 	ra2a|weapons/allied-infantry.yaml
 	ra2a|weapons/soviet-infantry.yaml
+    ra2a|weapons/defaultweaponvisuals.yaml
 
 Voices:
 	ra2a|audio/voices.yaml
