@@ -1,9 +1,9 @@
 lcrf:
 	Inherits: ^Ship
 	Buildable:
-		Queue: Ship
+		Queue: Vehicle
 		BuildPaletteOrder: 10
-		Prerequisites: ~gayard
+		Prerequisites: ~gaweap
 		Description: General-purpose naval transport.\nCan carry infantry and vehicles.\n  Unarmed
 	Valued:
 		Cost: 900

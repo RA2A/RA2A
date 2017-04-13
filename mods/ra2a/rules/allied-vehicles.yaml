@@ -354,7 +354,7 @@ mgtk: #todo add special muzzle for mirage
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 90
-		Prerequisites: gatech, ~gaweap
+		Prerequisites: gaairc, ~gaweap
 		Description: As tree disguised tank.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
 	Valued:
 		Cost: 1000

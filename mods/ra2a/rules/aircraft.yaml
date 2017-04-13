@@ -99,6 +99,7 @@ inteceptortest:
     Aircraft:
         IdealSeparation: 1
         AltitudeVelocity: 100c0
+        Repulsable: false
     Spawned:
         LandingDistance: 2c0
 	Armament:
@@ -259,7 +260,7 @@ orca:
 	Armament:
 		Weapon: Maverick
 	AttackPlane:
-		FacingTolerance: 20
+		FacingTolerance: 1
 		Voice: Attack
     # AttackTurreted:
         # Voice: Attack
@@ -272,6 +273,7 @@ orca:
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
+        InitialStance: ReturnFire
 	RenderSprites:
 		Image: falc
 	RenderVoxels:

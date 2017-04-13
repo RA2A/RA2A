@@ -237,6 +237,7 @@ gaairc:
 		Prerequisite: aircraft.korea
 		Factions: korea
 	ProvidesPrerequisite@default:
+        Prerequisite: gaairc
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2

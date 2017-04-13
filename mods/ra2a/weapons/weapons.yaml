@@ -508,11 +508,11 @@ Maverick:
 	Report: vintatta.wav
 	ValidTargets: Ground, Water
 	Projectile: Missile
-		Speed: 768
-		Arm: 2
-		HorizontalRateOfTurn: 100
-        VerticalRateOfTurn: 10
-        AllowSnapping: true
+		Speed: 2c0
+		#Arm: 0
+        Blockable: false
+		HorizontalRateOfTurn: 360
+        VerticalRateOfTurn: 6
 	Warhead@1Dam: SpreadDamage
 		Spread: 58
 		Damage: 200
