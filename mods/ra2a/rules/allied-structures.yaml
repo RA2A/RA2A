@@ -23,6 +23,8 @@ gacnst:
 	Tooltip:
 		Name: Construction Yard
 	BaseBuilding:
+	ProvidesRadar:
+		RequiresCondition: !disabled
 	Transforms:
 		IntoActor: amcv
 		Offset: 1,1
@@ -252,7 +254,7 @@ gaairc:
 	ProvidesRadar:
 		RequiresCondition: !disabled
 	RevealsShroud:
-		Range: 10c0
+		Range: 7c0
 	WithIdleOverlay@top:
 		Sequence: idle-top
 		PauseOnLowPower: true
@@ -268,7 +270,7 @@ gaairc:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	Power:
-		Amount: -75
+		Amount: -100
 	Reservable:
 	Exit@1:
 		SpawnOffset: -350,350,0
@@ -546,7 +548,7 @@ gadept:
 	WithRepairAnimation:
 		Sequence: repair
 	Power:
-		Amount: -25
+		Amount: -50
 	ProvidesPrerequisite:
 		Prerequisite: repairpad
 
@@ -808,7 +810,7 @@ gaspysat:
 gagap:
 	Inherits: ^SupportBuilding
 	Valued:
-		Cost: 1000
+		Cost: 500
 	Tooltip:
 		Name: Gap Generator
 	Buildable:
@@ -832,7 +834,7 @@ gagap:
 		Range: 10c0
 	RenderShroudCircle:
 	Power:
-		Amount: -75
+		Amount: -100
 	-AutoTarget:
 	CanPowerDown:
 		IndicatorPalette: ts-mouse

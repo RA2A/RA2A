@@ -58,7 +58,7 @@
 	Warhead@5: LeaveSmudge
 		SmudgeType: SmallCrater
         
-^DummyTarget: #10 range
+^DummyTargeter: #10 range
 	ValidTargets: Ground, Air
 	ReloadDelay: 25
 	Range: 10c0

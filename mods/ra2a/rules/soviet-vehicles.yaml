@@ -6,7 +6,7 @@ smcv:
 		Prerequisites: ~naweap, repairpad
 		Description: Deploys into a Construction Yard.
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Selectable:
@@ -81,7 +81,8 @@ harv:
 	AttackTurreted:
 		Voice: Attack
 	AutoTarget:
-		InitialStance: AttackAnything
+        InitialStance: AttackAnything
+        InitialStanceAI: AttackAnything
 	Turreted:
 		TurnSpeed: 10
 		Offset: -30,0,85
@@ -294,7 +295,7 @@ ttnk:
 	Armor:
 		Type: Vehicle
 	RevealsShroud:
-		Range: 6c0
+		Range: 7c0
 	Turreted:
 		TurnSpeed: 5
 	Armament@primary:

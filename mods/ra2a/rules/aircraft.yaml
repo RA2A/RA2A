@@ -58,11 +58,14 @@ carriertest:
 		Cost: 2500
 	RenderSprites:
         Image: shad
+	Health:
+		HP: 500
 	Aircraft:
 		CruiseAltitude: 5600
 		LandWhenIdle: false
+        Repulsable: false
 	Armament:
-		Weapon: ^DummyTarget
+		Weapon: ^DummyTargeter
 	RevealsShroud:
 		Range: 15c0
 		Type: CenterPosition
@@ -70,6 +73,10 @@ carriertest:
         Image: shad
         Scale: 15
     -Cargo:
+	-AttackFrontal:
+    AttackTurreted:
+        Voice: Attack
+    Turreted:    
     Spawner:
         SlaveUnit: inteceptortest
         Count: 5
@@ -96,8 +103,9 @@ inteceptortest:
         LandingDistance: 2c0
 	Armament:
 		Weapon: Maverick3
+		LocalOffset: 0,-128,-0, 0,128,-0
 	AmmoPool:
-		Ammo: 2
+		Ammo: 4
 		PipCount: 0
 	Voiced:
 		VoiceSet: BlackEagleVoice
@@ -111,8 +119,8 @@ inteceptortest:
 		Image: beag
         Scale: 6
     -Selectable:
-	SpawnActorOnDeath:
-		Actor: inteceptortesthusk
+	-SpawnActorOnDeath:
+		#Actor: inteceptortesthusk
     
 inteceptortesthusk:
     Inherits: beaghusk
@@ -285,6 +293,8 @@ beag:
 	Inherits: orca
 	Tooltip:
 		Name: Black Eagle
+	Valued:
+		Cost: 1500
 	Buildable:
 		Prerequisites: ~aircraft.korea
 	SpawnActorOnDeath:

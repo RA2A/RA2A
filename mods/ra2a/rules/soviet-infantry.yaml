@@ -183,7 +183,7 @@ deso:
         Queue: Infantry
         BuildAtProductionType: Infantry
         BuildPaletteOrder: 200
-        Prerequisites: naradr, ~infantry.iraq, natech
+        Prerequisites: ~infantry.iraq, natech
         Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
     Valued:
         Cost: 700

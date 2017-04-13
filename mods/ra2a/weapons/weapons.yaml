@@ -31,7 +31,7 @@ DogJaw:
 		Speed: 2c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 1
-		Damage: 100
+		Damage: 125 #change was 100
 		ValidTargets: Infantry
 		Versus:
 			Air: 0
@@ -299,7 +299,7 @@ OPCoilBolt:
 	Burst: 2
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
-		Damage: 55
+		Damage: 65
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -362,7 +362,7 @@ GrandCannonWeapon:
 
 120mm:
 	ReloadDelay: 65
-	Range: 5c768
+	Range: 5c0 #change was 5c768
 	Report: vrhiatta.wav, vrhiattb.wav, vrhiattc.wav, vrhiattd.wav
 	Projectile: BulletAS
 		Speed: 0c768
@@ -414,11 +414,11 @@ GrandCannonWeapon:
 
 120mmx:
 	ReloadDelay: 80
-	Range: 5c768
+	Range: 5c0 #change was 5c768
 	Report: vapoat1a.wav
 	Burst: 2
 	Projectile: BulletAS
-		Speed: 40c0
+		Speed: 0c768
 		Image: 120mm
 		Palette: ra
 		Shadow: true
@@ -534,23 +534,27 @@ Maverick2:
     
 Maverick3: #interceptor weapon
 	Inherits: Maverick
+    Burst: 2
+    BurstDelay: 0
     ReloadDelay: 25
-    Projectile: BulletAS
-        Speed: 100c0
-        ContrailLength: 0
+	Projectile: LaserZap
+		Width: 25
+		BeamDuration: 15
+		UsePlayerColor: true
     ValidTargets: Ground, Air
     Warhead@1Dam: SpreadDamage
 		Spread: 58
-		Damage: 100
+		Damage: 75
 		Versus:
 			Concrete: 125
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
-	Report: vblaatta.wav
+    -Warhead@2Eff:
+    -Warhead@3EffWater:
 
 BlimpBomb:
 	ReloadDelay: 45
-	Range: 0c512
-	MinRange: 0c001
+	Range: 0c129
+	MinRange: 0c128 # 0c001 crashed anyway
 	Report: vkiratta.wav
 	Projectile: GravityBomb
 		Velocity: 50
@@ -647,8 +651,8 @@ TankDestroyerGun:
 			Air: 100
 			Infantry: 25
 			Vehicle: 100
-			Building: 25
-			Concrete: 25
+			Building: 20 #change was 25
+			Concrete: 20
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -766,7 +770,7 @@ SquidPunch:
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 60
+		Damage: 85
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -1056,7 +1060,7 @@ PrismShot:
 
 MirageGun:
 	ReloadDelay: 100
-	Range: 7c0
+	Range: 8c0 #change was 7
 	Report: vmiratta.wav
 	Projectile: BulletAS
 		Speed: 100c0
@@ -1069,7 +1073,7 @@ MirageGun:
 		Versus:
 			Air: 100
 			Infantry: 100
-			Vehicle: 100
+			Vehicle: 120
 			Building: 25
 			Concrete: 25
 		DamageTypes: FlameDeath
@@ -1086,7 +1090,7 @@ MirageGunE:
 		Damage: 150
 
 TeslaTankGun:
-	Range: 4c0
+	Range: 6c0 #change was 4
 	ReloadDelay: 90
 	Burst: 2
 	BurstDelay: 15

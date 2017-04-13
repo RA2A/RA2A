@@ -6,7 +6,7 @@ amcv:
 		Prerequisites: ~gaweap, gadept
 		Description: Deploys into a Construction Yard.
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Selectable:
@@ -56,7 +56,7 @@ cmin:
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
         BaleLoadDelay: 32
-        BaleUnloadDelay: 18
+        BaleUnloadDelay: 9 #change was 18
 		SearchFromProcRadius: 24
 		SearchFromOrderRadius: 12
 		HarvestVoice: Move

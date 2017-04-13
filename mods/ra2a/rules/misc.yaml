@@ -32,7 +32,7 @@ crate:
 		Amount: 1500
 		SelectionShares: 10
 		UseCashTick: yes
-        Effect: dollar
+        #Effect: dollar
 	DuplicateUnitCrateAction:
 		SelectionShares: 10
 		MaxAmount: 5

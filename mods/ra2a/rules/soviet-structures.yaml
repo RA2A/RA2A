@@ -25,6 +25,8 @@ nacnst:
 	Tooltip:
 		Name: Construction Yard
 	BaseBuilding:
+	ProvidesRadar:
+		RequiresCondition: !disabled
 	Transforms:
 		IntoActor: smcv
 		Offset: 1,1
@@ -260,7 +262,7 @@ naradr:
 	ProvidesRadar:
 		RequiresCondition: !disabled
 	RevealsShroud:
-		Range: 10c0
+		Range: 15c0
 	WithIdleOverlay@dish:
 		Sequence: idle-dish
 		PauseOnLowPower: true
@@ -496,7 +498,7 @@ nadept:
 	WithRepairAnimation:
 		Sequence: repair
 	Power:
-		Amount: -25
+		Amount: -50
 
 nanrct:
 	Inherits: ^Building

@@ -30,13 +30,14 @@ DesolatorGun:
 	Range: 5c0
 	ReloadDelay: 100
 	Report: idesat1a.wav
-	Projectile: LaserZap
+	Projectile: RadBeam
 		Width: 70
 		BeamDuration: 15
 		Color: 00FF00
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 125
+        InvalidTargets: Structure
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -64,10 +65,21 @@ ChronoLegionnaireGun:
 	Inherits: DesolatorGun
     -InvalidTargets:
 	Range: 7c0
-	ReloadDelay: 30
+	ReloadDelay: 100
+	Projectile: LaserZap
+		Width: 70
+		BeamDuration: 15
+		Color: 0000FF
 	Warhead@1Dam: SpreadDamage
-		Damage: 175
-
+		Damage: 250
+		Versus:
+			Air: 100
+			Infantry: 100
+			Vehicle: 100
+			Building: 100
+			Concrete: 100
+		DamageTypes: Prone70Percent, TriggerProne, FlameDeath
+        
 FlakGuyGun:
 	ReloadDelay: 25
 	Range: 5c0
