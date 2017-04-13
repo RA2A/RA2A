@@ -118,7 +118,7 @@ htk:
 	Mobile:
 		Speed: 75
 		TurnSpeed: 15
-		Crushes: crate, infantry
+		Crushes: crate
 		RequiresCondition: !notmobile
 	Health:
 		HP: 180
@@ -324,7 +324,7 @@ dtruck:
 		Prerequisites: naradr, ~vehicles.libya
 		Description: Demolition Truck, actively armed with nuclear explosives.
 	Valued:
-		Cost: 3000
+		Cost: 2000
 	Tooltip:
 		Name: Demolition Truck
 	Selectable:

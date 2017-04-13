@@ -6,7 +6,7 @@ M60:
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 20
+		Damage: 16
 		Versus:
 			Air: 100
 			Infantry: 100

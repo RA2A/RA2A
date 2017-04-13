@@ -53,7 +53,7 @@ dog: #also for soviets
     Health:
         HP: 100
     Mobile:
-        Speed: 99
+        Speed: 80
     Passenger:
         PipType: Yellow
     RevealsShroud:

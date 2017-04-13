@@ -186,7 +186,7 @@ fv: #IFV
 		Prerequisites: ~gaweap
 		Description: Multi-Purpose Vehicle.\nWithout passenger:\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Ships\nSpecial Ability: Armament depends on passenger.
 	Mobile:
-		Speed: 128
+		Speed: 95
 		TurnSpeed: 8
 		RequiresCondition: !notmobile
 	Health:
@@ -461,7 +461,7 @@ voidtank:
     Buildable:
         Queue: Vehicle
         BuildPaletteOrder: 119
-        Prerequisites: ~vehicles.germany, gatech ~techlevel.stupidshit
+        Prerequisites: ~vehicles.germany, gatech, ~techlevel.stupidshit
         Description: Weird WIP thing
     Mobile:
         Speed: 70

@@ -128,7 +128,7 @@
 		BuildSounds: uplace.wav
 		UndeploySounds: uselbuil.wav
 		TerrainTypes: Clear, Road, DirtRoad, Rough
-		Adjacent: 4
+		Adjacent: 2
     ExternalCapturable:
         CaptureCompleteTime: 5
     ExternalCapturableBar:
@@ -455,6 +455,12 @@
 		ClosingSequence: close
 	ExternalCondition@PARACHUTE:
 		Condition: parachute
+	Targetable:
+		TargetTypes: Ground, Infantry, DetonateAttack, Disguise
+        RequiresCondition: !parachute
+	Targetable@inair:
+		TargetTypes: Air
+        RequiresCondition: !parachute
 
 ^CivilianInfantry:
 	Inherits: ^Infantry

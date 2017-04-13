@@ -56,7 +56,7 @@ napowr:
 		Prerequisites: ~structures.soviets
 		Description: Provides power for other structures.
 	Valued:
-		Cost: 400
+		Cost: 600
 	Tooltip:
 		Name: Tesla Reactor
 	ProvidesPrerequisite:
@@ -67,7 +67,7 @@ napowr:
 	Selectable:
 		Bounds: 126, 94, 2, -16
 	Health:
-		HP: 400
+		HP: 450
 	Armor:
 		Type: Building
 	RevealsShroud:
@@ -75,7 +75,7 @@ napowr:
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 	Power:
-		Amount: 100
+		Amount: 150
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	ScalePowerWithHealth:

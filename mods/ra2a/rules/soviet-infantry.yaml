@@ -148,7 +148,7 @@ terror:
 		Prerequisites: naradr, ~infantry.cuba
 		Description: Carries C4 charges taped to his body and kamikazes enemies\nblowing them up quickly and efficiently.\n  Strong vs Ground units\n  Weak vs Aircraft
 	Valued:
-		Cost: 400
+		Cost: 300
 	Tooltip:
 		Name: Terrorist
 	Selectable:
