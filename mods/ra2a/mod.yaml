@@ -140,7 +140,7 @@ ChromeLayout:
 	common|chrome/ingame-observer.yaml
 	common|chrome/ingame-chat.yaml
 	common|chrome/ingame-fmvplayer.yaml
-	common|chrome/ingame-menu.yaml
+	ra2a|chrome/ingame-menu.yaml
 	common|chrome/ingame-info.yaml
 	common|chrome/ingame-infoscripterror.yaml
 	common|chrome/ingame-infobriefing.yaml
