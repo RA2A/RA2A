@@ -198,9 +198,9 @@ World:
         Enabled: True
 		Minimum: 3
 		Maximum: 255
-		SpawnInterval: 750
+		SpawnInterval: 1250
 		WaterChance: 0
-		InitialSpawnDelay: 0
+		InitialSpawnDelay: 500
 	MPStartLocations:
 	SpawnMPUnits:
 	PathFinder:

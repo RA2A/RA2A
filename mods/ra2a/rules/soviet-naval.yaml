@@ -1,9 +1,9 @@
 sapc:
 	Inherits: ^Ship
 	Buildable:
-		Queue: Vehicle
+		Queue: Vehicle, Ship
 		BuildPaletteOrder: 10
-		Prerequisites: ~naweap
+		Prerequisites: ~naweap || ~nayard
 		Description: General-purpose naval transport.\nCan carry infantry and vehicles.\n  Unarmed
 	Valued:
 		Cost: 900
@@ -68,7 +68,7 @@ sub:
 	-Targetable:
 	Targetable:
 		TargetTypes: Ground, Water, Repair
-		RequiresCondition: underwater
+        #RequiresCondition: underwater
 	Cloak:
 		CloakTypes: Underwater
 		InitialDelay: 50
@@ -101,7 +101,7 @@ sub:
 	RenderSprites:
 	Targetable@underwater:
 		TargetTypes: Underwater, Repair
-		RequiresCondition: underwater
+        #RequiresCondition: underwater
 
 hyd:
 	Inherits: ^Ship
@@ -135,7 +135,10 @@ hyd:
 		Weapon: UnitExplode
 		EmptyWeapon: UnitExplode
 	WithVoxelBody:
+    RenderVoxels:
+        PlayerPalette: player2
 	RenderSprites:
+    AutoTarget:
 
 sqd:
 	Inherits@1: ^ExistsInWorld
@@ -153,7 +156,7 @@ sqd:
 	Armor:
 		Type: Vehicle
 	Health:
-		HP: 200
+		HP: 300
     SelfHealing:
         PercentageStep: 1
         Step: 0
@@ -188,10 +191,10 @@ sqd:
 		IsPlayerPalette: true
 	Targetable:
 		TargetTypes: Ground, Water
-		RequiresCondition: underwater
+        #RequiresCondition: underwater
 	Targetable@underwater:
 		TargetTypes: Underwater
-		RequiresCondition: underwater
+        #RequiresCondition: underwater
 		IsPlayerPalette: true
 	DetectCloaked:
 		CloakTypes: Underwater

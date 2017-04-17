@@ -27,6 +27,9 @@ CRM60:
 	ReloadDelay: 15
 	Range: 6c0
 	Report: vifvat2a.wav, vifvat2b.wav, vifvat2c.wav
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			Infantry: 250
 
 para:
 	Range: 5c0

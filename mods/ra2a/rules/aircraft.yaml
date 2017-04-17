@@ -62,8 +62,8 @@ carriertest:
 		HP: 500
 	Aircraft:
 		CruiseAltitude: 5600
+        IdealSeparation: 384
 		LandWhenIdle: false
-        Repulsable: false
 	Armament:
 		Weapon: ^DummyTargeter
 	RevealsShroud:
@@ -97,17 +97,16 @@ inteceptortest:
         Name: Interceptor
     -Buildable:
     Aircraft:
-        IdealSeparation: 1
+        IdealSeparation: 0
         AltitudeVelocity: 100c0
         Repulsable: false
     Spawned:
         LandingDistance: 2c0
+    AttackPlane:
+        AttackTurnDelay: 50
 	Armament:
 		Weapon: Maverick3
 		LocalOffset: 0,-128,-0, 0,128,-0
-	AmmoPool:
-		Ammo: 4
-		PipCount: 0
 	Voiced:
 		VoiceSet: BlackEagleVoice
 	RevealsShroud:
@@ -245,9 +244,10 @@ orca:
 		Prerequisites: ~aircraft.allies, ~!aircraft.korea
 		Description: Fast assault fighter\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Aircraft:
-		TurnSpeed: 3
+		TurnSpeed: 15
 		Speed: 200
 		RearmBuildings: gaairc, amradr
+        CanHover: True
 	Selectable:
 		Bounds: 30,24
 	Health:
@@ -260,8 +260,9 @@ orca:
 	Armament:
 		Weapon: Maverick
 	AttackPlane:
-		FacingTolerance: 1
+		FacingTolerance: 20
 		Voice: Attack
+        #AttackTurnDelay: 0
     # AttackTurreted:
         # Voice: Attack
     # Turreted:
@@ -273,13 +274,15 @@ orca:
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
-        InitialStance: ReturnFire
+		TargetWhenIdle: false
+		TargetWhenDamaged: false
 	RenderSprites:
 		Image: falc
 	RenderVoxels:
 		Image: falc
 	SpawnActorOnDeath:
 		Actor: orcahusk
+	ReturnOnIdle:
 
 orcahusk:
 	Inherits: ^PlaneHusk
@@ -362,3 +365,96 @@ pdplanehusk:
 		Speed: 100
 	RenderVoxels:
 		Image: pdplane
+        
+spyp:
+	Inherits: ^Plane
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Spy Plane
+	Aircraft:
+		TurnSpeed: 9
+		Speed: 200
+		Repulsable: False
+	-Selectable:
+	-Targetable@ground:
+	-Targetable@airborne:
+	Health:
+		HP: 150
+	Armor:
+		Type: Air
+    #AttackHeli:
+    AttackBomber:
+    # Armament:
+        # Weapon: ^DummyTargeter
+    # AmmoPool:
+        # Ammo: 1
+    # AttackTurreted:
+        # Voice: Attack
+    # Turreted:
+	Voiced:
+		VoiceSet: HarrierVoice
+	RenderSprites:
+		Image: spyp
+	RenderVoxels:
+		Image: spyp
+	SpawnActorOnDeath:
+		Actor: spyphusk
+    #RejectsOrders:
+        
+spyphusk:
+    Inherits: ^PlaneHusk
+    Tooltip:
+        Name: Spy Plane Husk
+    Aircraft:
+        Speed: 200
+        TurnSpeed: 9
+    RenderVoxels:
+        Image: spyp
+        
+asw:
+	Inherits: ^Plane
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Osprey
+	-Buildable:
+	Aircraft:
+		TurnSpeed: 9
+		Speed: 200
+		Repulsable: False
+	-Selectable:
+	Health:
+		HP: 75
+	Armor:
+		Type: Air
+	RevealsShroud:
+		Range: 8c0
+		Type: CenterPosition
+	Armament:
+		Weapon: OspreyMissile
+	AttackPlane:
+		FacingTolerance: 20
+        AttackTurnDelay: 15
+		Voice: Attack
+	Voiced:
+		VoiceSet: HarrierVoice
+	AutoTarget:
+        InitialStance: ReturnFire
+	RenderSprites:
+		Image: asw
+	RenderVoxels:
+		Image: asw
+	SpawnActorOnDeath:
+		Actor: aswhusk
+    Spawned:
+        
+aswhusk:
+    Inherits: ^PlaneHusk
+    Tooltip:
+        Name: Osprey Husk
+    Aircraft:
+        Speed: 200
+        TurnSpeed: 9
+    RenderVoxels:
+        Image: asw

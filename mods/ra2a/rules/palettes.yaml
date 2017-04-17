@@ -1,13 +1,27 @@
-^Palettes:
+^Palettes: #unittemblack
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+    PlayerColorPalette@2:
+        BaseName: player2
+        BasePalette: player2
+        RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PlayerHighlightPalette:
 	PaletteFromFile@playertem:
 		Name: player
 		Tileset: TEMPERATE
 		Filename: unittem.pal
 		ShadowIndex: 1
+    PaletteFromFile@playertem2:
+        Name: player2
+        Tileset: TEMPERATE
+        Filename: unittemblack.pal
+        ShadowIndex: 1
+    PaletteFromFile@playersno2:
+        Name: player2
+        Tileset: SNOW
+        Filename: unittemblack.pal
+        ShadowIndex: 1
 	PaletteFromFile@temperatecity:
 		Name: city
 		Tileset: TEMPERATE

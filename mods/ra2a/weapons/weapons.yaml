@@ -504,15 +504,16 @@ MammothTusk:
 Maverick:
     Inherits: ^Missile
 	ReloadDelay: 5
-	Range: 6c0
+	Range: 3c0
 	Report: vintatta.wav
 	ValidTargets: Ground, Water
-	Projectile: Missile
-		Speed: 2c0
-		#Arm: 0
+	# Projectile: Missile
+		# Speed: 2c0
+		Arm: 0
+        # Blockable: false
+    Projectile: BulletAS
+        Speed: 2c0
         Blockable: false
-		HorizontalRateOfTurn: 360
-        VerticalRateOfTurn: 6
 	Warhead@1Dam: SpreadDamage
 		Spread: 58
 		Damage: 200
@@ -535,6 +536,7 @@ Maverick2:
 Maverick3: #interceptor weapon
 	Inherits: Maverick
     Burst: 2
+	Range: 6c0
     BurstDelay: 0
     ReloadDelay: 25
 	Projectile: LaserZap
@@ -550,15 +552,33 @@ Maverick3: #interceptor weapon
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
     -Warhead@2Eff:
     -Warhead@3EffWater:
+    
+OspreyMissile: #aka destroyer's plane
+    Inherits: Maverick
+    ValidTargets: Water, Underwater
+    Burst: 3
+    BurstDelay: 7
+    Reload: 60
+    Range: 2c0
+    Warhead@1dam: SpreadDamage
+        Damage: 20
+		Versus:
+            Vehicle: 100
+        ValidTargets: Underwater
+        
+DestroyerOspreyTargeter:
+    Inherits: ^DummyTargeter
+    Range: 7c0
+    ValidTargets: Water, Underwater
 
 BlimpBomb:
 	ReloadDelay: 45
-	Range: 0c129
+	Range: 0c512
 	MinRange: 0c128 # 0c001 crashed anyway
 	Report: vkiratta.wav
 	Projectile: GravityBomb
-		Velocity: 0, 0, -50
-		Acceleration: 0, 0, -10
+		Velocity: 15,0,-10
+		Acceleration: 5,0,-1
 		Image: canister
 		Palette: player
 		Arm: 10
@@ -597,7 +617,7 @@ FlakTrackGun:
 		Versus:
 			Air: 100
 			Infantry: 100
-			Vehicle: 40
+			Vehicle: 35
 			Building: 50
 			Concrete: 25
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
@@ -719,7 +739,7 @@ SonicZap:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 30
+		Damage: 50
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
@@ -730,20 +750,20 @@ SonicZap:
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		ValidTargets: Water, Underwater
-	Warhead@2Dam: SpreadDamage
-		Range: 0, 32
-		Falloff: 50, 50
-		Damage: 8
-		AffectsParent: false
-		ValidStances: Ally
-		Versus:
-			Air: 100
-			Infantry: 100
-			Vehicle: 100
-			Building: 75
-			Concrete: 25
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
-		ValidTargets: Water, Underwater
+	# Warhead@2Dam: SpreadDamage no ally targeting...
+		# Range: 0, 32
+		# Falloff: 50, 50
+		# Damage: 8
+		# AffectsParent: false
+		# ValidStances: Ally
+		# Versus:
+			# Air: 100
+			# Infantry: 100
+			# Vehicle: 100
+			# Building: 75
+			# Concrete: 25
+		# DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		# ValidTargets: Water, Underwater
 
 SquidPunch:
 	ReloadDelay: 32
@@ -758,9 +778,10 @@ SquidPunch:
 		DamageTypes: BulletDeath
 		ValidTargets: Water, Underwater
 
-155mm:
+DestroyerGun:
 	ReloadDelay: 110
 	Range: 8c0
+    #InvalidTargets: Underwater #add this in future when spawner.cs will get armament support
 	Report: vdesatta.wav, vrdesattb.wav
 	Projectile: BulletAS
 		Speed: 0c768
@@ -789,8 +810,8 @@ SquidPunch:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater, SmallScorch
 
-155mmE:
-	Inherits: 155mm
+DestroyerGunE:
+	Inherits: DestroyerGun
 	Burst: 2
 
 Medusa:
@@ -890,11 +911,22 @@ IFVMissileE:
         
 GuardianGIMissile:
 	Inherits: IFVMissile
+	Range: 5c512
     Burst: 1
     
 GuardianGIMissileE:
 	Inherits: IFVMissileE
-    Burst: 1
+	Range: 5c512
+	Warhead@2Eff: CreateEffect
+		Explosions: small_grey_explosion
+		ImpactSounds: gexpifva.wav
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSounds: gexpwasa.wav
+		ValidImpactTypes: Water
+	Warhead@5: LeaveSmudge
+		SmudgeType: SmallCrater
 
 RepairBullet:
     ValidTargets: WeaponRepairable

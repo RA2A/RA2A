@@ -35,6 +35,7 @@ smcv:
 		NoTransformNotification: BuildingCannotPlaceAudio
 	RenderSprites:
 	RenderVoxels:
+        PlayerPalette: player2
 	WithVoxelBody:
 	Voiced:
 		VoiceSet: SovietVehicleVoice
@@ -98,6 +99,7 @@ harv:
 		Palette: effect
 	RenderSprites:
 	RenderVoxels:
+        PlayerPalette: player2
 	WithVoxelTurret:
 	WithVoxelUnloadBody:
     WithMuzzleOverlay:
@@ -156,6 +158,7 @@ htk:
 		Offset: -280,-3,0
 	RenderSprites:
 	RenderVoxels:
+        PlayerPalette: player2
 	WithVoxelTurret:
 	WithVoxelBody:
     WithMuzzleOverlay:
@@ -208,6 +211,7 @@ htnk:
 	RenderSprites:
 	RenderVoxels:
 		NormalsPalette: ts-normals
+        PlayerPalette: player2
 	WithVoxelBody:
 	WithVoxelTurret:
 	WithVoxelBarrel:
@@ -239,7 +243,7 @@ apoc: #todo fix offsets and split barrels
 		TurnSpeed: 5
 	Armament@primary:
 		Weapon: 120mmx
-		LocalOffset: 640,0,384
+		LocalOffset: 640,128,384, 640,-128,384
 		RequiresCondition: !rank-elite
         MuzzleSequence: muzzle
         MuzzlePalette: effect
@@ -247,7 +251,7 @@ apoc: #todo fix offsets and split barrels
         RecoilRecovery: 10
 	Armament@elite:
 		Weapon: 120mmxE
-		LocalOffset: 640,0,384
+		LocalOffset: 640,128,384, 640,-128,384
 		RequiresCondition: rank-elite
         MuzzleSequence: muzzle
         MuzzlePalette: effect
@@ -264,6 +268,7 @@ apoc: #todo fix offsets and split barrels
 		Bounds: 64, 52, 0, -6
 	RenderVoxels:
         Scale: 11.7
+        PlayerPalette: player2
 	WithVoxelBody:
 	WithVoxelTurret:
     WithMuzzleOverlay:
@@ -311,6 +316,7 @@ ttnk:
 	AutoTarget:
 	RenderSprites:
 	RenderVoxels:
+        PlayerPalette: player2
 	WithVoxelBody:
 	WithVoxelTurret:
 	Voiced:
@@ -347,6 +353,7 @@ dtruck:
 		Voice: Attack
 	RenderSprites:
 	RenderVoxels:
+        PlayerPalette: player2
 	WithVoxelBody:
 	AnnounceOnBuild:
 	Voiced:

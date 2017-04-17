@@ -1,9 +1,9 @@
 lcrf:
 	Inherits: ^Ship
 	Buildable:
-		Queue: Vehicle
+		Queue: Vehicle, Ship
 		BuildPaletteOrder: 10
-		Prerequisites: ~gaweap
+		Prerequisites: ~gaweap || ~gayard
 		Description: General-purpose naval transport.\nCan carry infantry and vehicles.\n  Unarmed
 	Valued:
 		Cost: 900
@@ -47,7 +47,7 @@ lcrf:
 	Voiced:
 		VoiceSet: AlliedNavalVoice
 
-dest:
+dest: #todo: plane
 	Inherits: ^Ship
 	Buildable:
 		Queue: Ship
@@ -70,15 +70,17 @@ dest:
 	Selectable:
 		Bounds: 80, 80, 0, -6
 	Armament@primary:
-		Weapon: 155mm
-		LocalOffset: 768,0,0
+		Weapon: DestroyerGun
+		LocalOffset: 1024,0,0
 		FireDelay: 2
 		RequiresCondition: !rank-elite
 	Armament@elite:
-		Weapon: 155mmE
-		LocalOffset: 768,0,0
+		Weapon: DestroyerGunE
+		LocalOffset: 1024,0,0
 		FireDelay: 2
 		RequiresCondition: rank-elite
+    # Armament@slavedummy:
+        # Weapon: DestroyerOspreyTargeter
 	AttackFrontal:
 		Voice: Attack
     AutoTarget:
@@ -93,7 +95,11 @@ dest:
 	RenderSprites:
 	Voiced:
 		VoiceSet: AlliedNavalVoice
-
+    # Spawner:
+        # SlaveUnit: asw
+        # Count: 1
+        # RegenTicks: 150
+        # RearmTicks: 150
 aegis:
 	Inherits: ^Ship
 	Buildable:
@@ -137,7 +143,7 @@ dlph:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 30
-		Prerequisites: gatech, ~gayard
+		Prerequisites: ~gayard
 		Description: Trained dolphin\narmed with sonic beams.\n  Strong vs Ships
 	Valued:
 		Cost: 500
@@ -146,7 +152,7 @@ dlph:
 	Armor:
 		Type: Vehicle
 	Health:
-		HP: 200
+		HP: 300
 	Mobile:
 		TurnSpeed: 6
 		Speed: 90
@@ -176,10 +182,10 @@ dlph:
 		IsPlayerPalette: true
 	Targetable:
 		TargetTypes: Ground, Water
-		RequiresCondition: underwater
+        #RequiresCondition: underwater
 	Targetable@underwater:
 		TargetTypes: Underwater
-		RequiresCondition: underwater
+        #RequiresCondition: underwater
 		IsPlayerPalette: true
 	DetectCloaked:
 		CloakTypes: Underwater

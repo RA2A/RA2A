@@ -60,14 +60,14 @@ cdest:
 	Selectable:
 		Bounds: 80, 80, 0, -6
 	Armament@primary:
-		Weapon: 155mm
+		Weapon: DestroyerGun
 		LocalOffset: 768,0,0
 		FireDelay: 2
 		RequiresCondition: !rank-elite
 		UpgradeMaxEnabledLevel: 0
 		UpgradeMaxAcceptedLevel: 1
 	Armament@elite:
-		Weapon: 155mmE
+		Weapon: DestroyerGunE
 		LocalOffset: 768,0,0
 		FireDelay: 2
 		RequiresCondition: rank-elite
