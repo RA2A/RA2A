@@ -521,7 +521,7 @@ bfrt:
     Mobile:
         TurnSpeed: 6
         Speed: 50
-        Crushes: crate, infantry, vehicles
+        Crushes: crate, infantry, vehicles, wall
     RevealsShroud:
         Range: 10c0
         #Offset: -30,0,85

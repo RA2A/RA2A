@@ -320,15 +320,15 @@ TerrorBomb:
 	Projectile: BulletAS
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 768
 		Damage: 400
-		Falloff: 1024, 1024, 512, 512, 256, 256, 0
+		#Falloff: 1024, 1024, 512, 512, 256, 256, 0
 		Versus:
 			Air: 100
 			Infantry: 100
 			Vehicle: 100
-			Building: 100
-			Concrete: 25
+			Building: 175
+			Concrete: 60
 		AffectsParent: true
 		DamageTypes: Prone70Percent, TriggerProne, FlameDeath
 	Warhead@2Eff: CreateEffect

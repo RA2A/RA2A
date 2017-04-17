@@ -81,14 +81,14 @@ ChronoLegionnaireGun: #todo add chrono logic
     ValidTargets: Ground
     -InvalidTargets:
 	Range: 7c0
-	ReloadDelay: 100
+	ReloadDelay: 30
 	Report: vpriatta.wav
 	Projectile: LaserZap
 		Width: 70
 		BeamDuration: 15
 		Color: 0000FF
 	Warhead@1Dam: SpreadDamage
-		Damage: 250
+		Damage: 75
 		Versus:
 			Air: 100
 			Infantry: 100

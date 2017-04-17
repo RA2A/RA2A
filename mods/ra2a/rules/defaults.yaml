@@ -308,6 +308,8 @@
 		HP: 300
 	Armor:
 		Type: Concrete
+	Crushable:
+		CrushClasses: wall
 
 ^Fence:
 	Inherits: ^Wall
