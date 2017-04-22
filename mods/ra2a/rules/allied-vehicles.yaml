@@ -131,6 +131,7 @@ mtnk:
     WithMuzzleOverlay:
 	RenderSprites:
 	RenderVoxels:
+        #PlayerPalette: player2
 	WithVoxelBody:
 	WithVoxelTurret:
 	WithVoxelBarrel:
@@ -504,11 +505,11 @@ bfrt:
         BuildPaletteOrder: 109 #just before mcv
         Prerequisites: gatech, ~gaweap#, ~techlevel.stupidshit
         Description: Has 5 weapons atm, 3 Navy Seal guns, 2 IFV guns
-        BuildDuration: 625 #build duration in frames, however it applies buildtime multiplier instead of replacing it lol
+        BuildDuration: 1500 #build duration in frames, however it applies buildtime multiplier instead of replacing it lol
         BuildDurationModifier: 100 # to make frames counted normally 
         BuildLimit: 1
     Valued:
-        Cost: 5000
+        Cost: 4000
     Tooltip:
         Name: Battle Fortress
     Selectable:
@@ -520,7 +521,7 @@ bfrt:
     Mobile:
         TurnSpeed: 6
         Speed: 50
-        Crushes: crate, infantry, vehicles
+        Crushes: crate, infantry, vehicles, wall
     RevealsShroud:
         Range: 10c0
         #Offset: -30,0,85

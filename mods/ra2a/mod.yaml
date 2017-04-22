@@ -1,14 +1,10 @@
 Metadata:
 	Title: Red Alert 2 Advanced
 	Description: 
-	Version: {DEV_VERSION}
+	Version: commit-fba590cdb3dd2efa548daed2b3d9424f5d3b5d87
 	Author: the RA2A mod team
 
 RequiresMods:
-	common: {DEV_VERSION}
-	cnc: {DEV_VERSION}
-	as: {DEV_VERSION}
-	yupgi_alert: {DEV_VERSION}
 
 Packages:
 	~^Content/ra2
@@ -57,6 +53,7 @@ Packages:
     ~localmd.mix
     ~loadmd.mix
     ~langmd.mix
+    ~conqmd.mix
 	~cameomd.mix
 	~audiomd.mix
 #
@@ -66,6 +63,7 @@ Packages:
 	ra2a|bits/animations
 	ra2a|bits/vehicles
 	ra2a|bits/vehicles/allied
+	ra2a|bits/vehicles/soviet
 	ra2a|uibits
 
 MapFolders:

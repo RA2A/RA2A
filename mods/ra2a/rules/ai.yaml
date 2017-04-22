@@ -21,7 +21,7 @@ Player:
 			gaweap: 2
 			naweap: 2
 			gaairc: 2
-            engineer: 3
+            engineer: 1
 		BuildingFractions:
 			garefn: 30%
 			narefn: 30%
@@ -69,4 +69,5 @@ Player:
 			ttnk: 1%
             bfrt: 0.5%
             voidtank: 0.5%
-		SquadSize: 8
+            carriertest: 0.5%
+		SquadSize: 12

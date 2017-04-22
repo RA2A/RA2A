@@ -23,7 +23,19 @@ ConscriptGunE:
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 20
-
+        
+BorisGun:
+	Inherits: ConscriptGun
+    Range: 7c0
+    ReloadDelay: 15
+	Warhead@1Dam: SpreadDamage
+		Damage: 150
+        
+BorisGunE:
+	Inherits: BorisGun
+	Warhead@1Dam: SpreadDamage
+		Damage: 200
+        
 DesolatorGun:
 	ValidTargets: Ground
     InvalidTargets: Structure
@@ -34,6 +46,9 @@ DesolatorGun:
 		Width: 70
 		BeamDuration: 15
 		Color: 00FF00
+        Thickness: 0c032
+        WaveLength: 0c032
+        Amplitude: 0c188
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 125
@@ -56,22 +71,24 @@ DesolatorAoEWeapon:
     ReloadDelay: 60
 	Report: idesat2a.wav
 	Warhead@1Radio: CreateRadioactivity
-		Range: 4, 6, 8, 10
+		Range: 2, 4, 6, 8
 		Level: 100
 		Falloff: 100, 90, 50, 0
         MaxLevel: 500
 
-ChronoLegionnaireGun:
+ChronoLegionnaireGun: #todo add chrono logic
 	Inherits: DesolatorGun
+    ValidTargets: Ground
     -InvalidTargets:
 	Range: 7c0
-	ReloadDelay: 100
+	ReloadDelay: 30
+	Report: vpriatta.wav
 	Projectile: LaserZap
 		Width: 70
 		BeamDuration: 15
 		Color: 0000FF
 	Warhead@1Dam: SpreadDamage
-		Damage: 250
+		Damage: 75
 		Versus:
 			Air: 100
 			Infantry: 100
@@ -188,18 +205,24 @@ AssaultBolt:
 		ValidTargets: TeslaBoost
 
 IvanBomber:
-	ReloadDelay: 50
+    #ValidTargets: Vehicles, Infantry, Structure
+    ValidTargets: Ground
+	ReloadDelay: 100
 	Range: 1c849
 	Report: icraatta.wav
-	Projectile: BulletAS
+	Projectile: TrackingExplosionProjectile #using my logic <3 , shouldn't have delay anywhere but in projectile, any warhead is launched after it 
 		Speed: 425
 		Blockable: false
-	Warhead@0Eff: CreateEffect
-		Delay: 2
-		Explosions: bombcurs
-		ExplosionPalette: mouse
+        Delay: 100
+        TrackingImage: explosion
+        TrackingImagePalette: mouse
+        Explosions: bombcurs
+        LocalOffset: 0,0,0
+	# Warhead@0Eff: CreateEffect
+		# Explosions: bombcurs
+		# ExplosionPalette: mouse
 	Warhead@1Dam: SpreadDamage
-		Delay: 100
+#		Delay: 100
 		Spread: 0c512
 		Damage: 400
 		Versus:
@@ -210,7 +233,7 @@ IvanBomber:
 			Concrete: 25
 		DamageTypes: FlameDeath, Prone100Percent
 	Warhead@2Eff: CreateEffect
-		Delay: 100
+#		Delay: 152
 		Explosions: ivan_explosion
 		ImpactSounds: gexpcraa.wav
 

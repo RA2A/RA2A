@@ -36,6 +36,47 @@ e2:
 		VoiceSet: ConscriptVoice
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+        
+boris:
+	Inherits@1: ^Infantry
+	Inherits@2: ^Parachutable
+	Buildable:
+		Queue: Infantry
+		Prerequisites: ~nahand, natech
+		BuildPaletteOrder: 200
+		Description: Cheap rifle infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Conscript
+	Selectable:
+		Bounds: 20, 30, 0, -11
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 65
+	Passenger:
+		PipType: Green
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: Infantry
+	AttackFrontal:
+		Voice: Attack
+	Armament@primary:
+		Weapon: BorisGun
+		RequiresCondition: !rank-elite
+	Armament@elite:
+		Weapon: BorisGunE
+		RequiresCondition: rank-elite
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Voiced:
+		VoiceSet: ConscriptVoice
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	-TakeCover:
+    -Crushable:
 
 flakt:
 	Inherits@1: ^Infantry
@@ -205,9 +246,11 @@ deso:
     Armament@primary:
         Weapon: DesolatorGun
         RequiresCondition: !rank-elite && !deployed
+        LocalOffset: 96,0,384
     Armament@elite:
         Weapon: DesolatorGunE
         RequiresCondition: rank-elite && !deployed
+        LocalOffset: 96,0,384
     AttackFrontal:
         Voice: Attack
     WithInfantryBody:

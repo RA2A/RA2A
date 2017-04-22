@@ -242,3 +242,9 @@ robo:
     idle: robo
     turret: robotur
     #barrel: robobarl TODO split barrel
+    
+spyp: #spy plane
+    idle: 
+    
+asp: #destroyer's osprey
+	idle:

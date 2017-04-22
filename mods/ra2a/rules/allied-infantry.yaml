@@ -112,24 +112,95 @@ e1:
 		Voice: Attack
 	Armament@primary:
 		Weapon: M60
-		RequiresCondition: !rank-elite
+		RequiresCondition: !rank-elite# && !deployed
 	Armament@elite:
 		Weapon: M60E
-		RequiresCondition: rank-elite
-#	Armament@deployed:
-#		Weapon: para
-#		UpgradeTypes: deployed
-#		UpgradeMinEnabledLevel: 1
-#	Armament@elite-deployed:
-#		Weapon: paraE
-#		UpgradeTypes: eliteparaweapon
-#		UpgradeMinEnabledLevel: 1
+		RequiresCondition: rank-elite# && !deployed
+	# Armament@deployed:
+		# Weapon: para
+		# RequiresCondition: deployed && !rank-elite
+        # Recoil: 64
+        # RecoilRecovery: 16
+	# Armament@elite-deployed:
+		# Weapon: paraE
+		# RequiresCondition: deployed && rank-elite
+        # Recoil: 64
+        # RecoilRecovery: 16
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+        # RequiresCondition: !deployed
+    # WithSpriteTurret:
+        # Sequence: deployed #deployed
+        # RequiresCondition: deployed
+    # Turreted:
 	Voiced:
 		VoiceSet: GIVoice
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+    # GrantConditionOnDeploy:
+        # DeployedCondition: deployed
+        # CanDeployOnRamps: true
+        # DeployAnimation: deploy
+        
+ggi:
+	Inherits@1: ^Infantry
+	Inherits@2: ^Parachutable
+	Buildable:
+		Queue: Infantry
+		Prerequisites: ~gapile
+		BuildPaletteOrder: 11
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: G.I.
+	Health:
+		HP: 150
+	Mobile:
+		Speed: 35
+        #RequiresCondition: !deployed
+	Passenger:
+		PipType: Green
+	RevealsShroud:
+		Range: 5c0
+	Armor:
+		Type: Infantry
+	AttackFrontal:
+		Voice: Attack
+	Armament@primary:
+		Weapon: GuardianGIMissile
+		RequiresCondition: !rank-elite #&& !deployed
+	Armament@elite:
+		Weapon: GuardianGIMissileE
+		RequiresCondition: rank-elite #&& !deployed
+	# Armament@deployed:
+		# Weapon: GuardianGIMissile
+		# RequiresCondition: deployed && !rank-elite
+        # Recoil: 64
+        # RecoilRecovery: 16
+	# Armament@elite-deployed:
+		# Weapon: GuardianGIMissileE
+		# RequiresCondition: deployed && rank-elite
+        # Recoil: 64
+        # RecoilRecovery: 16
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+        # RequiresCondition: !deployed
+    # WithSpriteTurret:
+        # Sequence: deployed #deployed
+        # RequiresCondition: deployed
+    # Turreted:
+	Voiced:
+		VoiceSet: GIVoice
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+    # GrantConditionOnDeploy:
+        # DeployedCondition: deployed
+        # CanDeployOnRamps: true
+        # DeployAnimation: deploy
+    # RejectsOrders:
+        # Except: Attack, Guard, Move. Deploy
+        # RequiresCondition: deployed
 
 snipe:
 	Inherits: ^Infantry
@@ -216,7 +287,7 @@ ghost:
 		Queue: Infantry
 		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 110
-		Prerequisites: gatech
+		Prerequisites: gatech, ~gapile
 		Description: Elite commando infantry, armed with\na sub machine gun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\nSpecial Ability: Destroy Building with C4
 	Valued:
 		Cost: 1000
@@ -407,7 +478,7 @@ cleg:
 	Valued:
 		Cost: 1000
 	Health:
-		HP: 125
+		HP: 200
 	Mobile:
 		Speed: 51
 	RevealsShroud:
@@ -423,12 +494,14 @@ cleg:
 		DeployCursor: chronosphere
 		DeployBlockedCursor: chronosphere
 		Voice: Move
-		ChargeDelay: 300
+		ChargeDelay: 150
 		TargetCursor: chronosphere
+        MaxDistance: 15
 	Voiced:
 		VoiceSet: ChronoLegionnaireVoice
 	Armament@Temporal:
 		Weapon: ChronoLegionnaireGun
+        LocalOffset: 96,0,196
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

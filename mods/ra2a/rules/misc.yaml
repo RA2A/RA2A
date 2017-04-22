@@ -126,7 +126,19 @@ CAMERA:
 		Image: camera
 	EditorOnlyTooltip:
 		Name: (reveals area to owner)
-
+        
+camera.spyplane:
+	Inherits: CAMERA
+	EditorOnlyTooltip:
+		Name: (support power proxy camera)
+	DetectCloaked:
+		Range: 10c0
+		#CloakTypes: if we'll ever have any cloaked units, there they go
+    # AmbientSound: #camera clicking noise 
+        # SoundFile: SpyPlaneSnapshot
+        # Interval: 200
+        
+        
 FLAMEGUY:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor

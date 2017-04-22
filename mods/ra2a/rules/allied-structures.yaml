@@ -1,5 +1,6 @@
 gacnst:
 	Inherits: ^Building
+    Inherits@2: ^GainsExperience
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1000

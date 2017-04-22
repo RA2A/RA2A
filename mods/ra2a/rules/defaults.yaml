@@ -7,6 +7,7 @@
 	ScriptTriggers:
 	ConditionManager:
 	Huntable:
+    RevealOnFire:
 
 ^SpriteActor:
 	BodyOrientation:
@@ -18,8 +19,8 @@
 ^GainsExperience:
 	GainsExperience:
 		Conditions:
-			500: rank-veteran
-			1000: rank-elite
+			250: rank-veteran
+			500: rank-elite
 	FirepowerMultiplier@VETERAN:
 		RequiresCondition: rank-veteran && !rank-elite
 		Modifier: 110
@@ -242,6 +243,7 @@
 	CaptureNotification:
 		Notification: TechBuildingCaptured
 		LoseNotification: TechBuildingLost
+	AutoTargetIgnore:
 
 ^Flag:
 	Inherits: ^CivBuilding
@@ -306,6 +308,8 @@
 		HP: 300
 	Armor:
 		Type: Concrete
+	Crushable:
+		CrushClasses: wall
 
 ^Fence:
 	Inherits: ^Wall
@@ -360,10 +364,12 @@
 		StandSequences: stand
 		DefaultAttackSequence: shoot
 	WithDeathAnimation@normal:
+        Scale: 0.65
 		DeathTypes:
 			ExplosionDeath: 1
 			BulletDeath: 2
 	WithDeathAnimation@effect:
+        Scale: 0.65
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
@@ -389,6 +395,7 @@
 	ProximityCaptor:
 		Types: Infantry
 	Crushable:
+        WarnProbability: 0
 		CrushSound: igensqua.wav
 	Guard:
 		Voice: Attack
@@ -590,6 +597,7 @@
 		LightPitch: 150
 		LightAmbientColor: -0.75,-0.75,-0.75
 		LightDiffuseColor: 1.4,1.4,1.4 #1.4,1.4,1.4
+        #PlayerPalette: player2
 	Voiced:
 		VoiceSet: AlliedVehicleVoice
 	Chronoshiftable:
@@ -694,7 +702,7 @@
 ^Plane:
 	Inherits: ^Aircraft
 	Aircraft:
-		CruiseAltitude: 5600
+		CruiseAltitude: 3840
 		CruisingCondition: cruising
 		AltitudeVelocity: 120
 	Hovers@CRUISING:
