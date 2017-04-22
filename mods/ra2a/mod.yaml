@@ -1,10 +1,14 @@
 Metadata:
 	Title: Red Alert 2 Advanced
 	Description: 
-	Version: commit-fba590cdb3dd2efa548daed2b3d9424f5d3b5d87
+	Version: {DEV_VERSION}
 	Author: the RA2A mod team
 
 RequiresMods:
+        common: {DEV_VERSION}
+        cnc: {DEV_VERSION}
+        as: {DEV_VERSION}
+        yupgi_alert: {DEV_VERSION} 
 
 Packages:
 	~^Content/ra2
