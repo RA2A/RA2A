@@ -7,19 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Cnc", "engine\O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Common", "engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj", "{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.GameMonitor", "engine\OpenRA.GameMonitor\OpenRA.GameMonitor.csproj", "{68295755-7902-4602-AC2C-9A8AC36D5EF7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.D2k", "engine\OpenRA.Mods.D2k\OpenRA.Mods.D2k.csproj", "{C0B0465C-6BE2-409C-8770-3A9BF64C4344}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Server", "engine\OpenRA.Server\OpenRA.Server.csproj", "{76F621A1-3D8E-4A99-9F7E-B071EB657817}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Utility", "engine\OpenRA.Utility\OpenRA.Utility.csproj", "{F33337BE-CB69-4B24-850F-07D23E408DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.AS", "mods\as\OpenRA.Mods.AS\OpenRA.Mods.AS.csproj", "{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.AS", "engine\OpenRA.Mods.AS\OpenRA.Mods.AS.csproj", "{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.RA2A", "mods\ra2a\OpenRA.Mods.RA2A\OpenRA.Mods.RA2A.csproj", "{7E1263D2-BA04-48D0-85DB-26C68B782608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.yupgi_alert", "mods\yupgi_alert\OpenRA.Mods.yupgi_alert\OpenRA.Mods.yupgi_alert.csproj", "{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.yupgi_alert", "engine\OpenRA.Mods.yupgi_alert\OpenRA.Mods.yupgi_alert.csproj", "{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +37,6 @@ Global
 		{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}.Debug|x86.Build.0 = Debug|x86
 		{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}.Release|x86.ActiveCfg = Release|x86
 		{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}.Release|x86.Build.0 = Release|x86
-		{68295755-7902-4602-AC2C-9A8AC36D5EF7}.Debug|x86.ActiveCfg = Debug|x86
-		{68295755-7902-4602-AC2C-9A8AC36D5EF7}.Debug|x86.Build.0 = Debug|x86
-		{68295755-7902-4602-AC2C-9A8AC36D5EF7}.Release|x86.ActiveCfg = Release|x86
-		{68295755-7902-4602-AC2C-9A8AC36D5EF7}.Release|x86.Build.0 = Release|x86
 		{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}.Debug|x86.ActiveCfg = Debug|x86
 		{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}.Debug|x86.Build.0 = Debug|x86
 		{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}.Release|x86.ActiveCfg = Release|x86

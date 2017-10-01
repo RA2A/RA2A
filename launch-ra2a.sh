@@ -9,8 +9,6 @@ MODROOT=$(dirname "$MODLAUNCHER")
 
 cd engine
 
-echo $MODROOT/mods
-
 # TODO: Remove ./mods from the search path after we deprecate cross-mod references
 mono OpenRA.Game.exe Engine.LaunchPath="$MODLAUNCHER" "Engine.ModSearchPaths=./mods,$MODROOT/mods" Engine.DefaultMod=$MODID Game.Mod=$MODID "$@"
 

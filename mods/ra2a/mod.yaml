@@ -14,12 +14,12 @@ Packages:
 	~^Content/ra2
 	.
 
-	$common: common
+	./mods/common: common
 	$cnc: cnc
-	$as: as
-	$yupgi_alert: yupgi_alert
+	./mods/as: as
+	./mods/yupgi_alert: yupgi_alert
 	$ra2a: ra2a
-#
+
 	~ra2.mix
 	~language.mix
 	~multi.mix
