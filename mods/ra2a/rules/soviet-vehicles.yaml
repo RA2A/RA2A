@@ -54,7 +54,7 @@ harv:
 	Selectable:
 		Priority: 7
 	Harvester:
-		Capacity: 10
+		Capacity: 20
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
         BaleLoadDelay: 32

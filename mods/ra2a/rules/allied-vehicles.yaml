@@ -52,7 +52,7 @@ cmin:
 	Selectable:
 		Priority: 7
 	Harvester:
-		Capacity: 5
+		Capacity: 10
 		Resources: Ore, Gems
 		UnloadTicksPerBale: 1
         BaleLoadDelay: 32
