@@ -1,6 +1,7 @@
 gacnst:
 	Inherits: ^Building
     Inherits@2: ^GainsExperience
+	Inherits@3: ^4x4hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1000
@@ -64,6 +65,7 @@ gacnst:
 
 gapowr:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
@@ -101,6 +103,7 @@ gapowr:
 
 gapile:
 	Inherits: ^Building
+	Inherits@2: ^3x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
@@ -165,6 +168,7 @@ gapile:
 
 garefn:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshapewithyoffset
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -221,6 +225,7 @@ garefn:
 
 gaairc:
 	Inherits: ^Building
+	Inherits@2: ^3x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
@@ -328,6 +333,7 @@ amradr:
 
 gaweap:
 	Inherits: ^Building
+	Inherits@2: ^5x3hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
@@ -392,6 +398,7 @@ gaweap:
 
 gayard:
 	Inherits: ^Building
+	Inherits@2: ^4x4hitshape
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -514,6 +521,7 @@ gayard:
 
 gadept:
 	Inherits: ^Building
+	Inherits@2: ^3x1hitshapewith2yoffset
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 60
@@ -556,6 +564,7 @@ gadept:
 
 gatech:
 	Inherits: ^Building
+	Inherits@2: ^3x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 70
@@ -598,6 +607,7 @@ gawall:
 
 gapill:
     Inherits: ^SupportBuilding
+	Inherits@2: ^1x1hitshape
     Buildable:
         Queue: Support
         BuildPaletteOrder: 20
@@ -636,6 +646,7 @@ gapill:
 
 nasam:
 	Inherits: ^VoxelLighting
+	Inherits@2: ^1x1hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 30
@@ -683,6 +694,7 @@ nasam:
 
 gtgcan:
 	Inherits: ^VoxelLighting
+	Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 30
@@ -737,6 +749,7 @@ gtgcan:
 
 gaorep: #todo implement functionality 
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	# Buildable:
 		# Queue: Building
 		# BuildPaletteOrder: 80
@@ -765,6 +778,7 @@ gaorep: #todo implement functionality
 
 gaspysat:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	# Buildable:
 		# Queue: Support
 		# BuildPaletteOrder: 90
@@ -811,6 +825,7 @@ gaspysat:
 
 gagap:
 	Inherits: ^SupportBuilding
+	Inherits@2: ^1x1hitshape
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -845,6 +860,7 @@ gagap:
 
 gaweat:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 110
@@ -876,6 +892,7 @@ gaweat:
 
 gacsph:
 	Inherits: ^Building
+	Inherits@2: ^4x3hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 120
@@ -924,6 +941,7 @@ gacsph:
 
 atesla:
 	Inherits: ^SupportBuilding
+	Inherits@2: ^1x1hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 35
@@ -969,6 +987,7 @@ atesla:
         
 cacolo01: #rommel's academy
     Inherits: ^Building
+	Inherits@2: ^5x3hitshape
     Buildable:
         Queue: Building
         BuildPaletteOrder: 300

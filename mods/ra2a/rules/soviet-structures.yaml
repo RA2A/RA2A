@@ -1,5 +1,7 @@
 nacnst:
 	Inherits: ^Building
+    Inherits@2: ^GainsExperience
+	Inherits@3: ^4x4hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 1000
@@ -50,6 +52,7 @@ nacnst:
 
 napowr:
 	Inherits: ^Building
+	Inherits@2: ^3x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
@@ -87,6 +90,7 @@ napowr:
 
 nahand:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
@@ -177,6 +181,7 @@ nahand:
 
 narefn:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshapewithyoffset
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -233,6 +238,7 @@ narefn:
 
 naradr:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
@@ -294,6 +300,7 @@ naradr:
 
 naweap:
 	Inherits: ^Building
+	Inherits@2: ^5x3hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
@@ -355,6 +362,7 @@ naweap:
 
 nayard:
 	Inherits: ^Building
+	Inherits@2: ^4x4hitshape
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -479,6 +487,7 @@ nayard:
 
 nadept:
 	Inherits: ^Building
+	Inherits@2: ^1x3hitshapewith3yoffset
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 60
@@ -520,6 +529,7 @@ nadept:
 
 nanrct:
 	Inherits: ^Building
+	Inherits@2: ^4x4hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 160
@@ -557,10 +567,11 @@ nanrct:
 	PowerTooltip:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-    -Sellable: #fuck everybody for using it xD
+    -Sellable:
 
 natech:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 150
@@ -591,6 +602,7 @@ natech:
 
 naclon:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 170
@@ -661,6 +673,7 @@ naclon:
 
 napsis:
 	Inherits: ^Building
+	Inherits@2: ^2x2hitshape
 	# Buildable:
 		# Queue: Support
 		# BuildPaletteOrder: 40
@@ -697,6 +710,7 @@ napsis:
 
 nairon:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 60
@@ -741,6 +755,7 @@ nairon:
 
 namisl:
 	Inherits: ^Building
+	Inherits@2: ^3x3hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 70
@@ -802,6 +817,7 @@ nawall:
 
 naflak:
 	Inherits: ^VoxelLighting
+	Inherits@2: ^1x1hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 30
@@ -848,6 +864,7 @@ naflak:
 
 tesla:
 	Inherits: ^SupportBuilding
+	Inherits@2: ^1x1hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 30
@@ -904,6 +921,7 @@ tesla:
 
 nalasr:
 	Inherits: ^VoxelLighting
+	Inherits@2: ^1x1hitshape
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 30

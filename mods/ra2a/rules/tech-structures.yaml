@@ -1,5 +1,6 @@
 caoild:
 	Inherits: ^TechBuilding
+	Inherits@2: ^2x2hitshape
 	Selectable:
 		Bounds: 96, 104, -2, -26
 	Building:
@@ -28,6 +29,7 @@ caoild:
 
 caairp:
 	Inherits: ^TechBuilding
+	Inherits@2: ^3x3hitshape
 	Tooltip:
 		Name: Tech Airport
 	Armor:
@@ -79,6 +81,7 @@ caairp:
 
 cahosp:
 	Inherits: ^TechBuilding
+	Inherits@2: ^6x4hitshape
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx xxxx xxxx
 		Dimensions: 6, 4
