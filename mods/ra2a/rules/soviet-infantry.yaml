@@ -15,7 +15,7 @@ e2:
 	Health:
 		HP: 125
 	Mobile:
-		Speed: 40
+		Speed: 30
 	Passenger:
 		PipType: Green
 	RevealsShroud:
@@ -48,13 +48,13 @@ boris:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Conscript
+		Name: Boris
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
 		HP: 500
 	Mobile:
-		Speed: 65
+		Speed: 55
 	Passenger:
 		PipType: Green
 	RevealsShroud:
@@ -95,7 +95,7 @@ flakt:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 40
+		Speed: 30
 	Passenger:
 		PipType: Green
 	RevealsShroud:
@@ -142,7 +142,7 @@ shk:
 	Health:
 		HP: 160
 	Mobile:
-		Speed: 40
+		Speed: 30
 	RevealsShroud:
 		Range: 6c0
 	Armor:
@@ -197,7 +197,7 @@ terror:
 	Health:
 		HP: 75
 	Mobile:
-		Speed: 71
+		Speed: 61
 	RevealsShroud:
 		Range: 6c0
 	Armor:
@@ -227,7 +227,7 @@ deso:
         Prerequisites: ~infantry.iraq, natech
         Description: Carries a radiation-emitting weapon.\nCan deploy for area-of-effect damage.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
     Valued:
-        Cost: 700
+        Cost: 900
     Tooltip:
         Name: Desolator
     Selectable:
@@ -235,7 +235,7 @@ deso:
     Health:
         HP: 250
     Mobile:
-        Speed: 40
+        Speed: 30
         RequiresCondition: !deployed
     RevealsShroud:
         Range: 6c0
@@ -296,7 +296,7 @@ ivan:
 	Health:
 		HP: 200
 	Mobile:
-		Speed: 60
+		Speed: 50
 	RevealsShroud:
 		Range: 6c0
 	Armor:

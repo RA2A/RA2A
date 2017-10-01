@@ -859,7 +859,7 @@ IFVMissile:
 	Report: vifvatta.wav
 	ValidTargets: Ground, Air
 	Projectile: Missile
-		Speed: 384
+		Speed: 768
 		Arm: 2
 		Blockable: false
 		Shadow: true

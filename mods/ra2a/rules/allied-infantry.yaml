@@ -12,7 +12,7 @@ engineer: #also soviet one
 	Health:
 		HP: 75
 	Mobile:
-		Speed: 35
+		Speed: 25
 	Passenger:
 		PipType: Blue
 	EngineerRepair:
@@ -53,7 +53,7 @@ dog: #also for soviets
     Health:
         HP: 100
     Mobile:
-        Speed: 80
+        Speed: 70
     Passenger:
         PipType: Yellow
     RevealsShroud:
@@ -101,7 +101,7 @@ e1:
 	Health:
 		HP: 125
 	Mobile:
-		Speed: 35
+		Speed: 25
 	Passenger:
 		PipType: Green
 	RevealsShroud:
@@ -153,11 +153,11 @@ ggi:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: G.I.
+		Name: G.I. Guardian
 	Health:
 		HP: 150
 	Mobile:
-		Speed: 35
+		Speed: 25
         #RequiresCondition: !deployed
 	Passenger:
 		PipType: Green
@@ -214,7 +214,7 @@ snipe:
 		Prerequisites: radar, ~infantry.england
 		Description: Special anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Mobile:
-		Speed: 40
+		Speed: 30
 	Health:
 		HP: 125
 	Passenger:
@@ -248,7 +248,7 @@ spy:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 56
+		Speed: 46
 	RevealsShroud:
 		Range: 5c0
 	Armor:
@@ -302,7 +302,7 @@ ghost:
 		TargetTypes: Underwater
 		RequiresCondition: water-borne
 	Mobile:
-		Speed: 60
+		Speed: 50
 		TerrainSpeeds:
 			Clear: 100
 			Rough: 100
@@ -361,7 +361,7 @@ tany:
 		TargetTypes: Underwater
 		RequiresCondition: water-borne
 	Mobile:
-		Speed: 71
+		Speed: 61
 		TerrainSpeeds:
 			Clear: 100
 			Rough: 100
@@ -433,7 +433,7 @@ jumpjet:
 		LandWhenIdle: false
 		InitialFacing: 20
 		TurnSpeed: 10
-		Speed: 100
+		Speed: 90
 		AltitudeVelocity: 83
 		Voice: Move
 		AirborneCondition: airborne
@@ -480,7 +480,7 @@ cleg:
 	Health:
 		HP: 200
 	Mobile:
-		Speed: 51
+		Speed: 41
 	RevealsShroud:
 		Range: 8c0
 	Armor:

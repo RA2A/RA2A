@@ -6,7 +6,7 @@ amcv:
 		Prerequisites: ~gaweap, gadept
 		Description: Deploys into a Construction Yard.
 	Valued:
-		Cost: 2500
+		Cost: 3000
 	Tooltip:
 		Name: Mobile Construction Vehicle
 	Selectable:
@@ -17,7 +17,7 @@ amcv:
 	Armor:
 		Type: Vehicle
 	Mobile:
-		Speed: 40
+		Speed: 35
 		TurnSpeed: 5
 		Crushes: fence, crate, infantry
 	RevealsShroud:
@@ -70,7 +70,7 @@ cmin:
 	Armor:
 		Type: Vehicle
 	Mobile:
-		Speed: 50
+		Speed: 45
 		TurnSpeed: 8
 		WaitAverage: 0
 		Crushes: crate, infantry
@@ -98,7 +98,7 @@ mtnk:
 		Prerequisites: ~gaweap, repairpad, ~!vehicles.korea, ~!vehicles.germany
 		Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
-		Speed: 90
+		Speed: 85
 		TurnSpeed: 5
 		Crushes: fence, crate, infantry
 	Health:
@@ -150,7 +150,7 @@ tnkd:
 		Prerequisites: ~vehicles.germany, repairpad
 		Description: Special anti-armor unit.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
-		Speed: 70
+		Speed: 65
 		TurnSpeed: 5
 		Crushes: fence, crate, infantry
 	Health:
@@ -187,7 +187,7 @@ fv: #IFV
 		Prerequisites: ~gaweap
 		Description: Multi-Purpose Vehicle.\nWithout passenger:\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Ships\nSpecial Ability: Armament depends on passenger.
 	Mobile:
-		Speed: 95
+		Speed: 90
 		TurnSpeed: 8
 		RequiresCondition: !notmobile
 	Health:
@@ -323,7 +323,7 @@ sref:
 		Type: Vehicle
 	Mobile:
 		TurnSpeed: 6
-		Speed: 60
+		Speed: 55
 	RevealsShroud:
 		Range: 8c0
 	Turreted:
@@ -367,7 +367,7 @@ mgtk: #todo add special muzzle for mirage
 		Type: Vehicle
 	Mobile:
 		TurnSpeed: 5
-		Speed: 105
+		Speed: 100
 	RevealsShroud:
 		Range: 8c0
 	Armament@primary:
@@ -412,7 +412,7 @@ aabram: #todo shrink voxels
 		# Prerequisites: ~gaweap, ~structures.america
 		# Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
 	Mobile:
-		Speed: 90
+		Speed: 85
 		TurnSpeed: 5
 		Crushes: fence, crate, infantry
 	Health:
@@ -465,7 +465,7 @@ voidtank:
         Prerequisites: ~vehicles.germany, gatech, ~techlevel.stupidshit
         Description: Weird WIP thing
     Mobile:
-        Speed: 70
+        Speed: 65
         TurnSpeed: 5
         Crushes: fence, crate, infantry
     Health:
@@ -520,7 +520,7 @@ bfrt:
         Type: Vehicle
     Mobile:
         TurnSpeed: 6
-        Speed: 50
+        Speed: 45
         Crushes: crate, infantry, vehicles, wall
     RevealsShroud:
         Range: 10c0
@@ -629,7 +629,7 @@ robo:
         Prerequisites: ~gaweap, ~vehicles.korea, repairpad
         Description: Korean main fighting unit.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
     Mobile:
-        Speed: 90
+        Speed: 85
         TerrainSpeeds:
             Clear: 100
             Rough: 100
