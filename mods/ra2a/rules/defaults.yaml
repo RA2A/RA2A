@@ -473,7 +473,7 @@
         RequiresCondition: !parachute
 	Targetable@inair:
 		TargetTypes: Air
-        RequiresCondition: !parachute
+        RequiresCondition: parachute
 
 ^CivilianInfantry:
 	Inherits: ^Infantry
