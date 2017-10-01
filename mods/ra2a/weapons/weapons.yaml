@@ -577,8 +577,8 @@ BlimpBomb:
 	MinRange: 0c128 # 0c001 crashed anyway
 	Report: vkiratta.wav
 	Projectile: GravityBomb
-		Velocity: 15,0,-10
-		Acceleration: 5,0,-1
+		Velocity: 15,0,10
+		Acceleration: 5,0,1
 		Image: canister
 		Palette: player
 		Arm: 10
@@ -750,7 +750,7 @@ SonicZap:
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		ValidTargets: Water, Underwater
-	# Warhead@2Dam: SpreadDamage no ally targeting...
+	# Warhead@2Dam: SpreadDamage #no ally targeting...
 		# Range: 0, 32
 		# Falloff: 50, 50
 		# Damage: 8
@@ -854,7 +854,7 @@ Medusa:
 IFVMissile:
 	ReloadDelay: 50
 	Burst: 2
-	Range: 6c0
+	Range: 5c512
     MinRange: 1c512
 	Report: vifvatta.wav
 	ValidTargets: Ground, Air
@@ -1122,7 +1122,7 @@ MirageGunE:
 		Damage: 150
 
 TeslaTankGun:
-	Range: 6c0 #change was 4
+	Range: 5c512 #change was 4
 	ReloadDelay: 90
 	Burst: 2
 	BurstDelay: 15
@@ -1144,7 +1144,7 @@ TeslaTankGun:
 
 TeslaTankGunE:
 	Inherits: TeslaTankGun
-	Range: 6c0
+	Range: 5c512
 	ReloadDelay: 80
 	BurstDelay: 10
 	Warhead@1Dam: SpreadDamage

@@ -52,7 +52,7 @@ para:
 
 paraE:
 	Inherits: para
-	Range: 7c0
+	Range: 5c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 25
 
@@ -99,7 +99,7 @@ TanyaGun:
 
 TanyaGunE:
 	Inherits: TanyaGun
-	Range: 8c0
+	Range: 5c512
 
 CRMP5:
 	Inherits: TanyaGun
@@ -118,9 +118,9 @@ awp:
 		Versus:
 			Air: 100
 			Infantry: 100
-			Vehicle: 25
-			Building: 25
-			Concrete: 25
+			Vehicle: 5
+			Building: 5
+			Concrete: 5
 		DamageTypes: BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff

@@ -26,7 +26,7 @@ ConscriptGunE:
         
 BorisGun:
 	Inherits: ConscriptGun
-    Range: 7c0
+    Range: 5c512
     ReloadDelay: 15
 	Warhead@1Dam: SpreadDamage
 		Damage: 150
@@ -63,7 +63,7 @@ DesolatorGun:
 
 DesolatorGunE:
 	Inherits: DesolatorGun
-	Range: 8c0
+	Range: 5c512
 	Warhead@1Dam: SpreadDamage
 		Damage: 200
         
